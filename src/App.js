@@ -15,8 +15,14 @@ const App = () =>
         <Route path="/teaching" component={Teaching} />
         <Route render={() => <h1>Page not found</h1>} />
       </Switch>
+      <Footer />
     </div>
   </Router>
+
+const Footer = () =>
+  <footer className="footer">
+    <p>Copyright © 2017</p>
+  </footer>
 
 const Articles = () => <h1>Articles</h1>
 const Projects = () => <h1>Projects</h1>
