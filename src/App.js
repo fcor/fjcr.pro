@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Nav from './components/Nav'
+import Home from './components/Home'
 import './App.css';
 
 const App = () =>
@@ -17,10 +18,6 @@ const App = () =>
     </div>
   </Router>
 
-
-
-
-const Home = () => <h1>Home</h1>
 const Articles = () => <h1>Articles</h1>
 const Projects = () => <h1>Projects</h1>
 const Teaching = () => <h1>Teaching</h1>
