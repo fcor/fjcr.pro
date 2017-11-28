@@ -1,11 +1,30 @@
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: local('Ubuntu Mono'), url(./fonts/UbuntuMono-Regular.ttf) format('truetype');
+}
+
+body{
+  margin: 0;
+  background-color: #313440;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+li{
+  margin-right: 30px;
+}
+
 a{
-  margin: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
 }
 
-a, a:visited{
-  color: blue;
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
 }
 
-a.active {
-  color: red;
+.active {
+  /*font-weight: bold;*/
 }
