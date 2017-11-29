@@ -32,6 +32,12 @@ h2{
   letter-spacing: 4px;
 }
 
+.react-body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .navbar ul {
   list-style: none;
   display: flex;
@@ -46,7 +52,8 @@ h2{
   /*border: 1px solid green;*/
   display: flex;
   flex-direction: row;
-  height: 540px;
+  /*height: 540px;*/
+  flex: 1 0 auto;
 }
 
 .info1{
@@ -60,7 +67,7 @@ h2{
   height: 250px;
   position: absolute;
   right: 0;
-  margin-top: 125px;
+  margin-top: 25vh;
 }
 .logo img{
   position: absolute;
@@ -76,7 +83,7 @@ h2{
   /*border: 1px solid blue;*/
   width: 550px;
   height: 203px;
-  margin-top: 125px;
+  margin-top: 25vh;
 }
 .info-texto p{
   color: white;

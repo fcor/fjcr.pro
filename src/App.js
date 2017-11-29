@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './components/Home'
@@ -6,7 +6,7 @@ import './App.css';
 
 const App = () =>
   <Router>
-    <div>
+    <div className="react-body">
       <Nav />
       <Switch>
         <Route exact path="/" component={Home} />
