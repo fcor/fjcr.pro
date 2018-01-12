@@ -23,7 +23,7 @@ const Home = () =>
           > Right now I'm mostly working with Node.js
         </p>
         <p className="p-info">
-          > My passions are reading, running and listening to Pantera
+          > I love reading, running, movies, music and beer
         </p>
       </div>
       <div className="info-redes">
