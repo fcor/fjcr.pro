@@ -2,14 +2,15 @@ import React from 'react'
 import github from '../images/github.svg'
 import medium from '../images/medium.svg'
 import twitter from '../images/twitter.svg'
+import logo from '../images/logo.svg'
 
-const iconos = [ github, twitter, medium, github, twitter]
+const iconos = [ github, twitter, medium, ]
 
 const Home = () =>
   <div className="contenido">
     <div className="info1">
       <div className="logo">
-        <img src={github} alt="" width="190px"/>
+        <img src={logo} alt="" width="190px"/>
       </div>
     </div>
     <div className="info2">
