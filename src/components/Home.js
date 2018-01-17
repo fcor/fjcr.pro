@@ -2,9 +2,11 @@ import React from 'react'
 import github from '../images/github.svg'
 import medium from '../images/medium.svg'
 import twitter from '../images/twitter.svg'
+import speaker from '../images/speaker.svg'
 import logo from '../images/logo.svg'
+import mail from '../images/mail.svg'
 
-const iconos = [ github, twitter, medium, ]
+const iconos = [github, twitter, medium, speaker, mail]
 
 const Home = () =>
   <div className="contenido">
