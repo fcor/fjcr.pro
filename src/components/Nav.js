@@ -7,11 +7,11 @@ class Nav extends React.Component {
   handleHover(e){
     const col =  colors[Math.floor(Math.random()*colors.length)]
     e.target.style.color = col
-    console.log("in");
+    // console.log("in");
   }
   handleOut(e){
     e.target.style.color = "white";
-    console.log("out");
+    // console.log("out");
   }
 
   render() {

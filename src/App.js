@@ -22,7 +22,7 @@ const App = () =>
 
 const Footer = () =>
   <footer className="footer">
-    <p>Copyright © 2017</p>
+    <p>Copyright © 2018</p>
   </footer>
 
 const Articles = () => <h1>Articles</h1>
