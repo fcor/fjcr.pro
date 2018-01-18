@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './components/Home'
+import Teaching from './components/Teaching'
 import './App.css';
 
 const App = () =>
@@ -26,6 +27,5 @@ const Footer = () =>
 
 const Articles = () => <h1>Articles</h1>
 const Projects = () => <h1>Projects</h1>
-const Teaching = () => <h1>Teaching</h1>
 
 export default App;
