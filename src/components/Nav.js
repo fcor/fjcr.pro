@@ -21,25 +21,25 @@ class Nav extends React.Component {
          onMouseOut={(e) => this.handleOut(e)}>
           <li>
             <NavLink exact activeClassName='active' to='/'>
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink activeClassName='active' to='/projects'>
-          Projects
-        </NavLink>
-      </li>
-      <li>
-        <NavLink activeClassName='active' to='/articles'>
-        Articles
-      </NavLink>
-    </li>
-    <li>
-      <NavLink activeClassName='active' to='/teaching'>
-      Teaching
-    </NavLink>
-  </li>
-</ul>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink activeClassName='active' to='/projects'>
+              Projects
+            </NavLink>
+          </li>
+          <li>
+            <NavLink activeClassName='active' to='/articles'>
+              Articles
+            </NavLink>
+          </li>
+          <li>
+            <NavLink activeClassName='active' to='/teaching'>
+              Teaching
+            </NavLink>
+          </li>
+        </ul>
       </nav>
     )
   }
