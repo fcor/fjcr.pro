@@ -115,6 +115,42 @@ path{
   justify-content: center;
 }
 
+.teaching-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100vw;
+}
+
+.clase{
+  /* border: 1px solid red; */
+  /* width: 10; */
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 100px;
+}
+
+.img-box{
+  height: 280px;
+}
+
+.clase h1{
+  font-size: 21px;
+  width: 450px;
+  height: 20px;
+  text-align: center;
+}
+
+.clase p{
+  width: 450px;
+  text-align: justify;
+  color: white;
+}
+
 .footer{
   /*border: 1px solid red;*/
   width: 100vw;
