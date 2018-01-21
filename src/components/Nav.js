@@ -47,7 +47,7 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { color, navbar } = this.state
+    const { color } = this.state
     const menu = ["Home", "Projects", "Articles", "Teaching"]
 
     return(
