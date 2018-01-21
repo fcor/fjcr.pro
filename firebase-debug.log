@@ -1,0 +1,39 @@
+[debug] [2018-01-21T22:22:04.981Z] ----------------------------------------------------------------------
+[debug] [2018-01-21T22:22:04.984Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hp\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-01-21T22:22:04.984Z] CLI Version:   3.16.0
+[debug] [2018-01-21T22:22:04.984Z] Platform:      win32
+[debug] [2018-01-21T22:22:04.984Z] Node Version:  v8.5.0
+[debug] [2018-01-21T22:22:04.985Z] Time:          Sun Jan 21 2018 17:22:04 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-01-21T22:22:04.985Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-21T22:22:04.998Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-21T22:22:04.998Z] > authorizing via signed-in user
+[debug] [2018-01-21T22:22:05.001Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/fjcr-pro  
+  
+ Sun Jan 21 2018 17:22:05 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-01-21T22:22:07.282Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-21T22:22:07.283Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/fjcr-pro/tokens  
+  
+ Sun Jan 21 2018 17:22:07 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-01-21T22:22:07.986Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'fjcr-pro'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing build directory for upload...
+[debug] [2018-01-21T22:22:09.110Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/fjcr-pro/uploads/-L3Po7S0tGTcCx4uQYdH?fileCount=13&message=  
+  
+ Sun Jan 21 2018 17:22:09 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-01-21T22:22:12.371Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-21T22:22:12.372Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] +  hosting: 13 files uploaded successfully
+[debug] [2018-01-21T22:22:13.084Z] >>> HTTP REQUEST POST https://deploy.firebase.com/v1/projects/fjcr-pro/releases  
+ { hosting: 
+   { public: 'build',
+     ignore: [ 'firebase.json', '**/.*', '**/node_modules/**' ],
+     rewrites: [ [Object] ],
+     headers: [ [Object] ],
+     version: '-L3Po7S0tGTcCx4uQYdH',
+     prefix: '-L3Po7S0tGTcCx4uQYdH/',
+     manifest: [] } } 
+ Sun Jan 21 2018 17:22:13 GMT-0500 (Hora est. Pacífico, Sudamérica)
