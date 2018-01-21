@@ -11,8 +11,8 @@ const App = () =>
       <Nav />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/articles" component={Articles} />
-        <Route path="/projects" component={Projects} />
+        <Route path="/articles" component={Soon} />
+        <Route path="/projects" component={Soon} />
         <Route path="/teaching" component={Teaching} />
         <Route render={() => <h1>Page not found</h1>} />
       </Switch>
@@ -25,7 +25,11 @@ const Footer = () =>
     <p>Copyright © 2018</p>
   </footer>
 
-const Articles = () => <h1>Articles</h1>
-const Projects = () => <h1>Projects</h1>
+const Soon = () =>
+  <div className="contenido">
+    <div className="soon">
+      <h1>Coming soon!</h1>
+    </div>
+  </div>
 
 export default App;

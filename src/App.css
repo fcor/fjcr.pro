@@ -170,6 +170,17 @@ path{
   transform: scale(.95);
 }
 
+.soon{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soon h1{
+  font-size: 40px;
+}
+
 .footer{
   /*border: 1px solid red;*/
   width: 100vw;
