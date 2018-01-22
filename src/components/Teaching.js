@@ -4,7 +4,7 @@ import animation from '../images/animation.jpg'
 import git from '../images/git.jpg'
 
 const Teaching = () =>
-  <div className="contenido">
+  // <div className="caja">
     <div className="teaching-content">
       <Class img={animation}
         title={"Web animations, Bringing your UIs to life"}
@@ -17,7 +17,7 @@ const Teaching = () =>
         link={"http://skl.sh/2zB0rLN"}
       />
     </div>
-  </div>
+   // </div>
 
 const Class = ({ img, title, description, link }) =>
  <div className="clase">

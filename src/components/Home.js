@@ -8,7 +8,7 @@ class Home extends React.Component{
 
   render(){
     return(
-      <div className="contenido">
+      <div className="caja">
         <div className="info1">
           <div className="logo">
             <img src={logo} alt="" width="190px"/>

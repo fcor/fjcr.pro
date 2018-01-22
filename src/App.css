@@ -37,6 +37,16 @@ path{
   transition: .2s;
 }
 
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+
 .react-body{
   display: flex;
   flex-direction: column;
@@ -49,16 +59,30 @@ path{
   flex-direction: row;
 }
 
-.active {
-  /* font-weight: bold; */
-}
-
 .contenido{
   /*border: 1px solid green;*/
   display: flex;
   flex-direction: row;
   /*height: 540px;*/
   flex: 1 0 auto;
+  position: 'absolute';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  top: '40px';
+  overflow: hidden;
+}
+
+.caja{
+  display: flex;
+  height: 100%;
+  /* overflow: hidden; */
+  /* position: 'absolute';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; */
 }
 
 .info1{
@@ -116,11 +140,14 @@ path{
 }
 
 .teaching-content{
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   width: 100vw;
+  /* overflow: hidden; */
+  /* height: 100%; */
 }
 
 .clase{
