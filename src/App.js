@@ -13,7 +13,7 @@ const App = () =>
       <div className="contenido">
         <Route render={({ location }) =>
           <TransitionGroup>
-            <CSSTransition key={location.key} timeout={250} classNames="fade" mountOnEnter={true} unmountOnExit={true}>
+            <CSSTransition key={location.pathname.split('/')[1]} timeout={250} classNames="fade">
               <Switch location={location}>
                   <Route exact path="/" component={Home} />
                   <Route path="/articles" component={Soon}/>
