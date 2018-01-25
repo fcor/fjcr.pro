@@ -1,6 +1,7 @@
 import React from 'react'
 import Icon from './Icon'
-import logo from '../images/logo.svg'
+// import logo from '../images/logo.svg'
+const logo = 'https://killcloud.nyc3.digitaloceanspaces.com/Images-fjcr/logo.svg'
 
 const iconos = ['github', 'twitter', 'medium', 'speaker', 'mail']
 
