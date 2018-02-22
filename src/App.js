@@ -12,25 +12,25 @@ const App = () =>
       <Media query="(min-width: 768px)">
         { matches =>
             matches
-              ? <Content />
-              : <h1>Aca ya va responsive</h1>
+              ? <Content version="desktop" />
+              : <Content version="mobile" />
         }
       </Media>
   </Router>
 
 
-const Content = () =>
+const Content = props =>
   <div className="react-body">
     <Nav />
-    <div className="contenido">
+    <div className="contenido" style={{alignItems: `${(props.version==='mobile') ? 'center' : ''}`}}>
       <Route render={({ location }) =>
-        <TransitionGroup>
+        <TransitionGroup exit={false}>
           <CSSTransition key={location.pathname.split('/')[1]} timeout={250} classNames="fade">
             <Switch location={location}>
-                <Route exact path="/" render={() => <Home />} />
+                <Route exact path="/" render={() => <Home version={props.version} />} />
                 <Route path="/articles" render={() => <Soon />}/>
                 <Route path="/projects" render={() => <Soon />}/>
-                <Route path="/teaching" render={() => <Teaching />}/>
+                <Route path="/teaching" render={() => <Teaching version={props.version} />}/>
                 <Route render={() => <h1>Page not found</h1>} />
             </Switch>
           </CSSTransition>

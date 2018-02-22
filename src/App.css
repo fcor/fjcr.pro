@@ -60,39 +60,24 @@ path{
 }
 
 .contenido{
-  /*border: 1px solid green;*/
   display: flex;
   flex-direction: row;
-  /*height: 540px;*/
   flex: 1 0 auto;
-  position: 'absolute';
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  top: '40px';
   overflow: hidden;
   height: .5vh;
+  justify-content: center;
 }
 
 .caja{
   display: flex;
-  height: 100%;
-  /* overflow: hidden; */
-  /* position: 'absolute';
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0; */
+  /* height: 100%; */
 }
 
 .info1{
-  /*border: 1px solid red;*/
   width: 40vw;
   position: relative;
 }
 .logo{
-  /*border: 1px solid pink;*/
   width: 250px;
   height: 250px;
   position: absolute;
@@ -106,31 +91,50 @@ path{
 }
 
 .info2{
-  /*border: 1px solid red;*/
   width: 60vw;
 }
+
+.info2-mobile{
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .info-texto{
-  /*border: 1px solid blue;*/
-  width: 550px;
-  height: 203px;
+  /* width: 550px; */
+  /* height: 203px; */
   margin-top: 25vh;
 }
-.info-texto p{
+
+.info-texto-mobile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.p-info{
+  margin: 5px 0 15px 0;
   color: white;
   font-size: 18px;
 }
-.p-info{
-  margin: 5px 0 15px 0;
-}
 
 .info-redes{
-  /*border: 1px solid yellow;*/
   width: 550px;
   height: 45px;
   display: flex;
   flex-direction: row;
   padding-left: 5px;
 }
+
+.info-redes.mobile{
+  justify-content: center;
+}
+
+
 .iconoRedes{
   /*border: 1px solid white;*/
   width: 35px;
