@@ -1,5 +1,8 @@
 import React from 'react'
-// import Navbar from './Navbar'
+import LogoBox from './LogoBox'
+import Nav from './Nav'
+import Icons from './Icons'
+import Footer from './Footer'
 
 class Hamburger extends React.Component {
   constructor(props){
@@ -42,7 +45,14 @@ class Hamburger extends React.Component {
 
 const SideMenu = ({ active, onClickMobile }) =>
   <div className={`menu-responsive-box ${active ? 'active' : ''}`}>
-    Aca va ekl menu responsive
+    <div className="side-content">
+      <LogoBox width="80px" />
+      <h2>I write things that make things</h2>
+      <Nav version="mobile" />
+      <Icons />
+    </div>
+    <Footer />
   </div>
+
 
 export default Hamburger

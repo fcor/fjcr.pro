@@ -8,6 +8,8 @@ body{
   padding: 0;
   background-color: #282C34;
   font-family: 'Ubuntu Mono', monospace;
+  width:100vw;
+  overflow: hidden;
 }
 
 li{
@@ -57,6 +59,36 @@ path{
   list-style: none;
   display: flex;
   flex-direction: row;
+}
+
+.navbar.mobile ul{
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+  margin: 30px 0 35px 0;
+}
+
+.navbar.mobile a{
+  font-size: 26px;
+  font-style: italic;
+}
+
+.navbar.mobile li{
+  margin-bottom: 25px;
+  margin-right: 0;
+}
+
+.navbar.mobile li::after{
+  content: ' >';
+  color: white;
+}
+.navbar.mobile li::before{
+  content: '< ';
+  color: white;
+}
+
+.navbar.mobile li:last-child{
+  margin-bottom: 0;
 }
 
 .contenido{
@@ -252,12 +284,13 @@ path{
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
+  box-shadow: 0px 12px 23px -3px rgba(0, 0, 0, 0.30);
 }
 
 .hamburger-menu{
   position: absolute;
   right: 20px;
-  top: 25px;
+  top: 23px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -272,6 +305,10 @@ path{
   height: 3px;
   background: white;
   border-radius: 10px;
+}
+
+.bar-menu.b2{
+  width: 15px;
 }
 
 .b1.active{
@@ -370,6 +407,7 @@ path{
   height: 100vh;
   width: 100vw;
   position: absolute;
+  overflow-x: hidden;
   z-index: 1;
   top: 0;
   right: -100%;
@@ -384,4 +422,24 @@ path{
 
 .menu-responsive-box.active{
   right: 0;
+}
+
+.menu-responsive-box h2{
+  margin: 25px 0 23px 0;
+  color: #7EBAFF;
+  font-weight: normal;
+  width: 232px;
+  text-align: center;
+}
+
+.side-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.side-content img{
+  margin-left: 35px;
 }

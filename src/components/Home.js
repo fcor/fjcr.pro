@@ -1,9 +1,8 @@
 import React from 'react'
 import Icon from './Icon'
+import Icons from './Icons'
 import logo from '../images/logo.svg'
 // const logo = 'https://killcloud.nyc3.digitaloceanspaces.com/Images-fjcr/logo.svg'
-
-const iconos = ['github', 'twitter', 'medium', 'speaker', 'mail']
 
 class Home extends React.Component{
 
@@ -32,13 +31,7 @@ class Home extends React.Component{
               > I love reading, running, movies, music and beer
             </p>
           </div>
-          <div className={`info-redes ${(version === 'desktop') ? '' : 'mobile' }`} >
-            {iconos.map((item) =>
-              <div key={item} className={`iconoRedes ${(version === 'desktop') ? '' : 'mobile' }`}>
-                <Icon name={item}/>
-              </div>
-            )}
-          </div>
+          <Icons version={version} />
         </div>
       </div>
     )

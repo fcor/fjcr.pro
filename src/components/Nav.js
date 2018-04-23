@@ -49,11 +49,12 @@ class Nav extends React.Component {
 
   render() {
     const { color } = this.state
+    const { version } = this.props
     const menu = ["Home", "Projects", "Articles", "Teaching"]
 
     return(
-      <nav className="navbar">
-        <ul className='nav'>
+      <nav className={`navbar ${version === 'mobile' ? 'mobile': ''}`}>
+        <ul>
           {menu.map( (item) =>
             <li key={item}
               onClick={(e) => this.handleClick(e)}

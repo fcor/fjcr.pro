@@ -5,6 +5,7 @@ import Media from "react-media"
 import Menu from './components/Menu'
 import Home from './components/Home'
 import Teaching from './components/Teaching'
+import Footer from './components/Footer'
 import './App.css'
 
 const App = () =>
@@ -40,10 +41,6 @@ const Content = props =>
     <Footer />
   </div>
 
-const Footer = () =>
-  <footer className="footer">
-    <p>Copyright © 2018</p>
-  </footer>
 
 const Soon = () =>
   <div className="caja">

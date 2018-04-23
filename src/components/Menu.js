@@ -1,8 +1,7 @@
 import React from 'react'
 import Nav from './Nav'
 import Hamburger from './Hamburger'
-import { Link } from 'react-router-dom'
-import logo from '../images/logo.svg'
+import LogoBox from './LogoBox'
 
 const Menu = ({version}) => {
      if (version === "desktop") {
@@ -12,7 +11,7 @@ const Menu = ({version}) => {
      } else {
        return(
          <div className="menu-responsive">
-           <LogoBox />
+           <LogoBox width="30px" />
            <Hamburger />
          </div>
          // <Nav version="mobile"/>
@@ -23,12 +22,5 @@ const Menu = ({version}) => {
        )
      }
 }
-
-const LogoBox = () =>
-  <div>
-    <Link to="/">
-      <img src={logo} alt="logo" width="30px"/>
-    </Link>
-  </div>
 
 export default Menu
