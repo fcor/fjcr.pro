@@ -1,7 +1,7 @@
 import React from 'react'
 import Icon from './Icon'
-// import logo from '../images/logo.svg'
-const logo = 'https://killcloud.nyc3.digitaloceanspaces.com/Images-fjcr/logo.svg'
+import logo from '../images/logo.svg'
+// const logo = 'https://killcloud.nyc3.digitaloceanspaces.com/Images-fjcr/logo.svg'
 
 const iconos = ['github', 'twitter', 'medium', 'speaker', 'mail']
 
@@ -22,19 +22,19 @@ class Home extends React.Component{
           <div className={`${(version === 'desktop') ? 'info-texto' : 'info-texto-mobile' }`}>
             <h1>Fabio Cortés</h1>
             <h2>I build stuff</h2>
-            <p className="p-info">
+            <p className={`p-info ${(version === 'desktop') ? '' : 'mobile' }`}>
               > I'm a hardware engineer, teacher and speaker
               <br/>
               <br/>
               > Right now I'm mostly working with Node.js
-            </p>
-            <p className="p-info">
+              <br/>
+              <br/>
               > I love reading, running, movies, music and beer
             </p>
           </div>
           <div className={`info-redes ${(version === 'desktop') ? '' : 'mobile' }`} >
             {iconos.map((item) =>
-              <div key={item} className="iconoRedes">
+              <div key={item} className={`iconoRedes ${(version === 'desktop') ? '' : 'mobile' }`}>
                 <Icon name={item}/>
               </div>
             )}

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Media from "react-media"
-import Nav from './components/Nav'
+import Menu from './components/Menu'
 import Home from './components/Home'
 import Teaching from './components/Teaching'
 import './App.css'
@@ -21,7 +21,7 @@ const App = () =>
 
 const Content = props =>
   <div className="react-body">
-    <Nav />
+    <Menu version={props.version} />
     <div className="contenido" style={{alignItems: `${(props.version==='mobile') ? 'center' : ''}`}}>
       <Route render={({ location }) =>
         <TransitionGroup exit={false}>

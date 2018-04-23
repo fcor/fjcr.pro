@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import logo from '../images/logo.svg'
 const colors = ["#C699F7", "#7EBAFF", "#9CEF9D", "#E34B30"]
 
 class Nav extends React.Component {
