@@ -20,13 +20,16 @@ class Home extends React.Component{
             <h1>Fabio Cortés</h1>
             <h2>I build stuff</h2>
             <p className="p-info">
-              > I'm a hardware engineer, teacher and speaker
+            > I'm a weird engineer, teacher and speaker
               <br/>
               <br/>
-              > Right now I'm mostly working with Node.js
-            </p>
-            <p className="p-info">
+              > Right now I'm mostly working with VR and Creative Coding
+              <br/>
+              <br/>
               > I love reading, running, movies, music and beer
+              <br/>
+              <br/>
+              > If you're unimpressed with my website it's because <br/> &nbsp; i'm to busy learning new things
             </p>
           </div>
           <div className="info-redes" >
