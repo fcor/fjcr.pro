@@ -20,15 +20,18 @@ class Home extends React.Component{
         <div className={`${(version === 'desktop') ? 'info2' : 'info2-mobile' }`}>
           <div className={`${(version === 'desktop') ? 'info-texto' : 'info-texto-mobile' }`}>
             <h1>Fabio Cortés</h1>
-            <h2>I build stuff</h2>
+            <h2>I write things that make things</h2>
             <p className={`p-info ${(version === 'desktop') ? '' : 'mobile' }`}>
-              > I'm a hardware engineer, teacher and speaker
+              > I'm a weird engineer, teacher and speaker
               <br/>
               <br/>
-              > Right now I'm mostly working with Node.js
+              > Right now I'm mostly working with VR and Creative Coding
               <br/>
               <br/>
               > I love reading, running, movies, music and beer
+              <br/>
+              <br/>
+              > If you're unimpressed with my website it's because <br/> &nbsp; i'm to busy learning new things
             </p>
           </div>
           <Icons version={version} />
