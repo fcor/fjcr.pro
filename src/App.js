@@ -35,10 +35,8 @@ const Footer = () =>
   </footer>
 
 const Soon = () =>
-  <div className="caja">
-    <div className="soon">
-      <h1>Coming soon!</h1>
-    </div>
+  <div className="soon">
+    <h1>Coming soon!</h1>
   </div>
 
 export default App;

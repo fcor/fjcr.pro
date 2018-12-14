@@ -87,10 +87,12 @@ path{
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .soon h1{
   font-size: 40px;
+  color: white;
 }
 
 .footer{
