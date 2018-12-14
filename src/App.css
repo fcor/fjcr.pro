@@ -21,18 +21,6 @@ a{
   transition: .2s;
 }
 
-h1{
-  color: white;
-  margin: 10px 0 10px 0;
-}
-h2{
-  color: white;
-  font-style: italic;
-  font-size: 21px;
-  margin: 10px 0 30px 0;
-  letter-spacing: 4px;
-}
-
 path{
   transition: .2s;
 }
@@ -73,71 +61,6 @@ path{
   top: '40px';
   overflow: hidden;
   height: .5vh;
-}
-
-.caja{
-  display: flex;
-  height: 100%;
-  /* overflow: hidden; */
-  /* position: 'absolute';
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0; */
-}
-
-.info1{
-  /*border: 1px solid red;*/
-  width: 40vw;
-  position: relative;
-}
-.logo{
-  /*border: 1px solid pink;*/
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  right: 0;
-  margin-top: 25vh;
-}
-.logo img{
-  position: absolute;
-  right: 40px;
-  top: 2px;
-}
-
-.info2{
-  /*border: 1px solid red;*/
-  width: 60vw;
-}
-.info-texto{
-  /*border: 1px solid blue;*/
-  width: 550px;
-  height: 203px;
-  margin-top: 25vh;
-}
-.info-texto p{
-  color: white;
-  font-size: 18px;
-}
-.p-info{
-  margin: 5px 0 15px 0;
-}
-
-.info-redes{
-  /*border: 1px solid yellow;*/
-  width: 550px;
-  height: 45px;
-  display: flex;
-  flex-direction: row;
-  padding-left: 5px;
-}
-.iconoRedes{
-  /*border: 1px solid white;*/
-  width: 35px;
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .btn{
