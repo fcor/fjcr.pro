@@ -18,8 +18,8 @@ const App = () =>
                   <Route exact path="/" component={Home} />
                   <Route path="/articles" component={Soon}/>
                   <Route path="/projects" component={Soon}/>
-                  <Route path="/teaching" component={Teaching}/>
-                  <Route render={() => <h1>Page not found</h1>} />
+                  <Route path="/teaching" component={Soon}/>
+                  <Route component={NotFound} />
               </Switch>
             </CSSTransition>
           </TransitionGroup>
@@ -31,12 +31,17 @@ const App = () =>
 
 const Footer = () =>
   <footer className="footer">
-    <p>Copyright © 2018</p>
+    <p>Copyright © 2020</p>
   </footer>
 
 const Soon = () =>
   <div className="soon">
     <h1>Coming soon!</h1>
+  </div>
+
+const NotFound = () =>
+  <div className="soon">
+    <h1>Page not found :(</h1>
   </div>
 
 export default App;
