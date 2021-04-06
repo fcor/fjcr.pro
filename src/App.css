@@ -6,8 +6,17 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: #282C34;
   font-family: 'Ubuntu Mono', monospace;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(1, 1, 26, 0.897);
 }
 
 li{

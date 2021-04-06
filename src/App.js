@@ -8,6 +8,7 @@ import './App.css';
 
 const App = () =>
   <Router>
+    <div class="bg"></div>
     <div className="react-body">
       <Nav />
       <div className="contenido">
@@ -31,7 +32,7 @@ const App = () =>
 
 const Footer = () =>
   <footer className="footer">
-    <p>Copyright © 2020</p>
+    <p>Copyright © 2021</p>
   </footer>
 
 const Soon = () =>

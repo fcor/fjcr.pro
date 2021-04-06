@@ -18,15 +18,15 @@ class Home extends React.Component {
             <h1>Fabio Cortés</h1>
             <h2>I write things that make things.</h2>
             <p>
-              > I'm a WebXR engineer & Creative Coder.
+              - I'm a WebXR engineer & Creative Coder.
               <br />
               <br />
-              > Right now I'm working at the Laboratory for Biomolecular Modeling at EPFL.
+              - Right now I'm working at the Laboratory for Biomolecular Modeling at EPFL.
               <br />
               <br />
-              > I'm learning about 3D modeling and openFrameworks.
+              - I'm learning about 3D modeling and openFrameworks.
               <br />
-              <br />> I love reading, running, movies, music and beer.
+              <br />- I love reading, running, movies, music and beer.
             </p>
           </div>
           <div className="info-redes">
