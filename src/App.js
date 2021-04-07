@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Nav from './components/Nav'
 import Home from './components/Home/'
-import Teaching from './components/Teaching/'
+import Articles from './components/Articles/'
 import './App.css';
 
 const App = () =>
@@ -11,13 +11,13 @@ const App = () =>
     <div class="bg"></div>
     <div className="react-body">
       <Nav />
-      <div className="contenido">
+      <div className="content">
         <Route render={({ location }) =>
           <TransitionGroup exit={false}>
             <CSSTransition key={location.pathname.split('/')[1]} timeout={250} classNames="fade">
               <Switch location={location}>
                   <Route exact path="/" component={Home} />
-                  <Route path="/articles" component={Soon}/>
+                  <Route path="/articles" component={Articles}/>
                   <Route path="/projects" component={Soon}/>
                   <Route path="/teaching" component={Soon}/>
                   <Route component={NotFound} />

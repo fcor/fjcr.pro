@@ -1,0 +1,36 @@
+import React from "react";
+import "./styles.css";
+
+import Icon from "../Icon";
+import logo2 from "../../images/logo.png";
+
+const icons = ["github", "twitter", "mail"];
+
+const Home = () => {
+  return (
+    <div className="home-content">
+      <div className="info1">
+        <img src={logo2} alt="Logo" />
+      </div>
+      <div className="info2">
+        <div className="info-texto">
+          <h1 className="title">Fabio Cortés</h1>
+          <h2 className="subtitle">I write things that make things.</h2>
+          <p className="paragraph">
+            &gt; Creative developer exploring the intersection between art and
+            technology.
+          </p>
+        </div>
+        <div className="info-redes">
+          {icons.map((item) => (
+            <div key={item} className="iconoRedes">
+              <Icon name={item} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
