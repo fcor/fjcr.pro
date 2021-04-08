@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-const colors = ["#C699F7", "#7EBAFF", "#9CEF9D", "#E34B30"];
-const menu = ["Home", "Projects", "Talks", "Articles", "Teaching"];
 
-const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)];
+import { getRandomColor } from "../utils/index"
+
+const menu = ["Home", "Projects", "Talks", "Articles", "Teaching"];
 
 const Navbar = () => {
   const [selectedTab, setSelectedTab] = useState("");
-  
+
   const location = useLocation();
 
   const selectedColor = getRandomColor();
