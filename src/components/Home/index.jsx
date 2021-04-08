@@ -17,8 +17,13 @@ const Home = () => {
           <h1 className="title">Fabio Cortés</h1>
           <h2 className="subtitle">I write things that make things.</h2>
           <p className="paragraph">
-            &gt; Creative developer exploring the intersection between art and
-            technology.
+            &gt; I'm a Creative developer from Bogotá, Colombia, and now based in Lausanne, Switzerland. 
+          </p>
+          {/* <p className="paragraph">
+            &gt; Creative developer exploring the intersection between art and technology. 
+          </p> */}
+          <p className="paragraph">
+            &gt; I'm focused on immersive technologies, 3D development and generative art. 
           </p>
         </div>
         <div className="info-redes">
