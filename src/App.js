@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Navbar from "./components/Nav";
 import Home from "./components/Home/";
 import Articles from "./components/Articles/";
+import Teaching from "./components/Teaching/";
 import Talks from "./components/Talks/";
 import "./App.css";
 
@@ -26,7 +27,7 @@ const App = () => (
                   <Route path="/articles" component={Articles} />
                   <Route path="/talks" component={Talks} />
                   <Route path="/projects" component={Soon} />
-                  <Route path="/teaching" component={Soon} />
+                  <Route path="/teaching" component={Teaching} />
                   <Route component={NotFound} />
                 </Switch>
               </CSSTransition>
