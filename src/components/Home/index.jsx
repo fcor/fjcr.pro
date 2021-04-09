@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 
 import Icon from "../Icon";
-import logo2 from "../../images/logo.png";
+import logo from "../../images/logo2.png";
 
 const icons = ["github", "twitter", "mail"];
 
@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="home-content">
       <div className="info1">
-        <img src={logo2} alt="Logo" />
+        <img src={logo} alt="Logo" />
       </div>
       <div className="info2">
         <div className="info-texto">

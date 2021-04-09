@@ -28,9 +28,10 @@ const Articles = () => {
         >
           Manipulate your 3D content with gestures in AR.js
         </a>
-        <p className="paragraph">
-          Learn how to add gesture controls on any Image tracking or Marker
-          Based AR.js scene.
+        <p className="paragraph article-description">
+          Learn how to add gesture controls to manipulate the content from your AR
+          app using known patterns like pinch, zoom and drag, on any Image
+          tracking or Marker Based AR.js scene.
         </p>
       </div>
     </div>
