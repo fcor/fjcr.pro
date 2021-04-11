@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles.css";
-import { getRandomColor } from "../../utils/index";
 import molecularWeb from "../../images/mw.png";
 import homer from "../../images/homer.png";
 import handTracking from "../../images/hand-tracking.png";
