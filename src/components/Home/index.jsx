@@ -4,7 +4,7 @@ import "./styles.css";
 import Icon from "../Icon";
 import logo from "../../images/logo2.png";
 
-const icons = ["github", "twitter", "mail"];
+const icons = ["github", "twitter", "behance", "instagram", "mail"];
 
 const Home = () => {
   return (
