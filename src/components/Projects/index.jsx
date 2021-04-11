@@ -4,6 +4,7 @@ import { getRandomColor } from "../../utils/index";
 import molecularWeb from "../../images/mw.png";
 import homer from "../../images/homer.png";
 import handTracking from "../../images/hand-tracking.png";
+import gestures from "../../images/gestures.png";
 
 const Projects = () => {
   return (
@@ -69,6 +70,27 @@ const Projects = () => {
             <img
               className="project-img"
               src={handTracking}
+              width="400"
+              alt="homer"
+            ></img>
+          </a>
+        </div>
+        <div className="project">
+          <a
+            href="https://github.com/fcor/arjs-gestures"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="project-detail column">
+              <p className="project-title">AR.js Gestures</p>
+              <p className="project-description">
+                Open source library for adding gesture controls to manipulate an
+                AR.js scene using known patterns like pinch, zoom and drag.
+              </p>
+            </div>
+            <img
+              className="project-img"
+              src={gestures}
               width="400"
               alt="homer"
             ></img>

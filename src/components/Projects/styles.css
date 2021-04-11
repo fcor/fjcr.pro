@@ -1,14 +1,14 @@
 .projects-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   /* border: 1px solid red; */
-  width: 900px;
+  width: 70vw;
 }
 
 .project {
-  margin-bottom: 3rem;
+  margin: 0 3rem 3rem 0;
   position: relative;
   cursor: pointer;
 }
