@@ -5,6 +5,7 @@ import molecularWeb from "../../images/mw.png";
 import homer from "../../images/homer.png";
 import handTracking from "../../images/hand-tracking.png";
 import gestures from "../../images/gestures.png";
+import faceTracking from "../../images/facetracking.png";
 
 const Projects = () => {
   return (
@@ -91,6 +92,26 @@ const Projects = () => {
             <img
               className="project-img"
               src={gestures}
+              width="400"
+              alt="homer"
+            ></img>
+          </a>
+        </div>
+        <div className="project">
+          <a
+            href="https://www.behance.net/gallery/117272265/Face-tracking-on-iOS"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="project-detail column">
+              <p className="project-title">Face Tracking on iOS</p>
+              <p className="project-description">
+                Web-based Face Tracking scene made for iOS.
+              </p>
+            </div>
+            <img
+              className="project-img"
+              src={faceTracking}
               width="400"
               alt="homer"
             ></img>
