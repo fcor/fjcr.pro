@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import Navbar from "./components/Nav";
+import Navbar from "./components/Nav/";
 import Home from "./components/Home/";
 import Articles from "./components/Articles/";
 import Teaching from "./components/Teaching";

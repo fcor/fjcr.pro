@@ -1,0 +1,172 @@
+.navbar {
+  position: relative;
+  height: 30px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.nav-item {
+  margin-right: 30px;
+}
+
+.floating-logo {
+  display: none;
+  width: 80px;
+  margin: 8rem 0 3.5rem 0;
+  /* position: absolute; */
+}
+
+.hamburger-menu {
+  display: none;
+  width: 25px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  transition: all 0.5s;
+  position: absolute;
+  top: 20px;
+  right: 28px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary);
+  margin: 2px;
+  border-radius: 2px;
+  transition: 0.5s;
+  background-color: #FFFFFF;
+}
+
+.b1.in {
+  animation: bar1in .5s forwards;
+}
+.b2.in {
+  animation: bar2in .5s forwards;
+}
+.b3.in {
+  animation: bar3in .5s forwards;
+}
+
+.b1.out {
+  animation: bar1out .5s forwards;
+}
+.b2.out {
+  animation: bar2out .5s forwards;
+}
+.b3.out {
+  animation: bar3out .5s forwards;
+}
+
+@keyframes bar1in {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+  100% {
+    transform: translateY(7px) rotate(45deg);
+  }
+}
+
+@keyframes bar2in {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bar3in {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+@keyframes bar1out {
+  0% {
+    transform: translateY(7px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bar2out {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bar3out {
+  0% {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hamburger-menu {
+    display: flex;
+  }
+  .nav {
+    height: 100vh;
+    width: 75vw;
+    position: fixed;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(100vw);
+    transition: 0.25s;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(156.2deg, #060e1f 0%, #120e2c 101.87%);
+  }
+  .nav.in {
+    transform: translateX(25vw);
+  }
+  .nav-item {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.5rem;
+  }
+  .floating-logo {
+    display: block;
+  }
+}

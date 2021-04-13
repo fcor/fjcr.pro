@@ -1,13 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import "./styles.css";
+import logo from "../../images/logo2.png";
 
-import { getRandomColor } from "../utils/index"
+import { getRandomColor } from "../../utils/index";
+
+const animationCS = (isActive) => {
+  if (isActive === null) {
+    return "";
+  } else if (isActive) {
+    return "in";
+  } else if (!isActive) {
+    return "out";
+  }
+};
 
 const menu = ["Home", "Projects", "Talks", "Articles", "Teaching"];
 
 const Navbar = () => {
   const [selectedTab, setSelectedTab] = useState("");
+  const [mobileMenuActive, setMobileMenuActive] = useState(null);
 
   const location = useLocation();
 
@@ -30,6 +43,10 @@ const Navbar = () => {
     }
   };
 
+  const handleClick = (e) => {
+    setMobileMenuActive(!mobileMenuActive);
+  };
+
   useEffect(() => {
     let newLocation;
 
@@ -40,13 +57,15 @@ const Navbar = () => {
     }
 
     setSelectedTab(newLocation);
+    setMobileMenuActive(false);
   }, [location]);
 
   return (
     <nav className="navbar">
-      <ul className="nav">
+      <ul className={`nav ${animationCS(mobileMenuActive)}`}>
+        <img src={logo} alt="Logo" className="floating-logo" />
         {menu.map((item) => (
-          <li key={item}>
+          <li className="nav-item" key={item}>
             {item === "Home" ? (
               <NavLink
                 exact
@@ -70,6 +89,11 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <div onClick={handleClick} className="hamburger-menu">
+        <div className={`bar b1 ${animationCS(mobileMenuActive)}`}></div>
+        <div className={`bar b2 ${animationCS(mobileMenuActive)}`}></div>
+        <div className={`bar b3 ${animationCS(mobileMenuActive)}`}></div>
+      </div>
     </nav>
   );
 };
