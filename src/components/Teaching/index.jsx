@@ -15,7 +15,7 @@ const Teaching = () => {
   return (
     <div className="articles-container column">
       <p className="paragraph">
-        Here are some the courses I've teached recently:
+        Here are some of the courses I've teached recently:
       </p>
       <div className="article column">
         <a

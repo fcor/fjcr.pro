@@ -129,3 +129,27 @@ path{
 .footer p{
   margin: auto;
 }
+
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .paragraph {
+    font-size: 16px;
+    margin: 0 0 14px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 18px;
+  }
+}
