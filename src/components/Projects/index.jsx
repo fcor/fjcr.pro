@@ -8,7 +8,7 @@ import faceTracking from "../../images/facetracking.png";
 
 const Projects = () => {
   return (
-    <div className="articles-container column">
+    <div className="project-section-container column">
       <p className="paragraph">Here is some of my work:</p>
       <div className="projects-container">
         <div className="project">
@@ -27,7 +27,6 @@ const Projects = () => {
             <img
               className="project-img"
               src={molecularWeb}
-              width="400"
               alt="molecularweb"
             ></img>
           </a>
