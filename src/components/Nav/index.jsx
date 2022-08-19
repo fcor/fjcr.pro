@@ -88,6 +88,17 @@ const Navbar = () => {
             )}
           </li>
         ))}
+        <li className="nav-item">
+          <a
+            href="https://www.fjcr.studio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onMouseOver={onHover}
+            onMouseOut={onHoverOut}
+          >
+            Shop
+          </a>
+        </li>
       </ul>
       <div onClick={handleClick} className="hamburger-menu">
         <div className={`bar b1 ${animationCS(mobileMenuActive)}`}></div>

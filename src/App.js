@@ -43,7 +43,7 @@ const App = () => (
 
 const Footer = () => (
   <footer className="footer">
-    <p>Copyright © 2021 🤘 - fabio@fjcr.pro</p>
+    <p>Copyright © 2022 🤘 - fabio@fjcr.pro</p>
   </footer>
 );
 
