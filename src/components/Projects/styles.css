@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 
-.project:hover .project-detail{
+.project:hover .project-detail {
   opacity: 1;
 }
 
@@ -56,37 +56,87 @@
   width: 400px;
 }
 
+.project.title {
+  text-align: center;
+  margin: 0 0 2rem 0;
+}
+
+.project-subtitle {
+  color: white;
+  font-style: italic;
+  font-size: 22px;
+  margin: 10px 0 20px 0;
+  letter-spacing: 2px;
+  text-align: center !important;
+  width: 50vw !important;
+}
+
+.project-detail-container {
+  height: 100%;
+  width: 100vw;
+  padding: 40px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-detail-description {
+  text-align: left;
+  width: 80vw;
+}
+
+.project-large-image-container {
+  width: 60vw;
+  margin: 1rem 0 2.25rem 0;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-small-img-container {
+  justify-content: space-around;
+  width: 60vw;
+  margin: 1rem 0 2.25rem 0;
+}
+
+.project-image-small {
+  width: 320px;
+  border-radius: 8px;
+}
+
 @media screen and (max-width: 1140px) {
-  .project-img{
+  .project-img {
     width: 350px;
   }
 }
 
 @media screen and (max-width: 1020px) {
-  .project-img{
+  .project-img {
     width: 330px;
   }
 }
 
 @media screen and (max-width: 970px) {
-  .project-img{
+  .project-img {
     width: 300px;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .project-img{
+  .project-img {
     width: 280px;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .project-section-container{
+  .project-section-container {
     width: 80%;
     margin: 2rem auto;
   }
 
-  .project-img{
+  .project-img {
     width: 280px;
   }
 
@@ -100,13 +150,13 @@
 }
 
 @media screen and (max-width: 750px) {
-  .project-img{
+  .project-img {
     width: 250px;
   }
 }
 
 @media screen and (max-width: 670px) {
-  .project-img{
+  .project-img {
     width: 320px;
   }
   .projects-container {
@@ -116,7 +166,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .project-img{
+  .project-img {
     width: 280px;
   }
 }

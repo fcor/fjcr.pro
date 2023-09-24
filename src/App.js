@@ -8,6 +8,9 @@ import Teaching from "./components/Teaching";
 import Talks from "./components/Talks/";
 import Projects from "./components/Projects/";
 import "./App.css";
+import Molecularweb from "./components/Projects/molecularweb";
+import Homer from "./components/Projects/homerMetaverse";
+import NuestrasEsperanzas from "./components/Projects/nuestrasEsperanzas";
 
 const App = () => (
   <Router>
@@ -27,8 +30,11 @@ const App = () => (
                   <Route exact path="/" component={Home} />
                   <Route path="/articles" component={Articles} />
                   <Route path="/talks" component={Talks} />
-                  <Route path="/projects" component={Projects} />
+                  <Route exact path="/work" component={Projects} />
                   <Route path="/teaching" component={Teaching} />
+                  <Route path="/molecularweb" component={Molecularweb} />
+                  <Route path="/homers-metaverse" component={Homer} />
+                  <Route path="/nuestras-esperanzas" component={NuestrasEsperanzas} />
                   <Route component={NotFound} />
                 </Switch>
               </CSSTransition>
@@ -43,7 +49,7 @@ const App = () => (
 
 const Footer = () => (
   <footer className="footer">
-    <p>Copyright © 2022 🤘 - fabio@fjcr.pro</p>
+    <p>Copyright © 2023 🤘 - fabio@fjcr.pro</p>
   </footer>
 );
 

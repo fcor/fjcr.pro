@@ -16,7 +16,7 @@ const animationCS = (isActive) => {
   }
 };
 
-const menu = ["Home", "Projects", "Talks", "Articles", "Teaching"];
+const menu = ["Home", "Work", "Talks", "Articles", "Teaching"];
 
 const Navbar = () => {
   const [selectedTab, setSelectedTab] = useState("");

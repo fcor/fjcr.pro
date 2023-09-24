@@ -15,17 +15,15 @@ const Home = () => {
       <div className="info2">
         <div className="info-texto">
           <h1 className="title">Fabio Cortés</h1>
-          <h2 className="subtitle">I write things that make things.</h2>
+          <h2 className="subtitle">I make computers draw things.</h2>
           <p className="paragraph">
-            &gt; I'm a generative artist and creative coder from Bogotá, Colombia, and now based
-            in Lausanne, Switzerland.
+            &gt; I'm a generative artist and creative coder from Bogotá,
+            Colombia, and now based in Lausanne, Switzerland.
           </p>
-          {/* <p className="paragraph">
-            &gt; Creative developer exploring the intersection between art and technology. 
-          </p> */}
           <p className="paragraph">
-            &gt; I'm focused on immersive technologies, graphics programming and
-            generative art.
+            &gt; I strive to craft dazzling visuals that evoke curiosity and
+            wonder, seamlessly merging the realms of science and art within
+            virtual and augmented reality experiences.
           </p>
         </div>
         <div className="info-redes">
