@@ -28,10 +28,10 @@ const App = () => (
               >
                 <Switch location={location}>
                   <Route exact path="/" component={Home} />
-                  <Route path="/articles" component={Articles} />
+                  {/* <Route path="/articles" component={Articles} /> */}
                   <Route path="/talks" component={Talks} />
                   <Route exact path="/work" component={Projects} />
-                  <Route path="/teaching" component={Teaching} />
+                  {/* <Route path="/teaching" component={Teaching} /> */}
                   <Route path="/molecularweb" component={Molecularweb} />
                   <Route path="/homers-metaverse" component={Homer} />
                   <Route path="/nuestras-esperanzas" component={NuestrasEsperanzas} />

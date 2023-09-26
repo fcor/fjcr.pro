@@ -3,10 +3,19 @@
   src: local('Ubuntu Mono'), url(./fonts/UbuntuMono-Regular.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Tasa Explorer';
+  src: local('Tasa Explorer'), url(./fonts/TASAExplorerVF.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Tasa Orbiter';
+  src: local('Tasa Orbiter'), url(./fonts/TASAOrbiterVF.woff2) format('woff2');
+}
+
 body{
   margin: 0;
   padding: 0;
-  font-family: 'Ubuntu Mono', monospace;
   overflow-x: hidden;
 }
 
@@ -34,8 +43,8 @@ a{
   text-decoration: none;
   color: white;
   outline: none;
-  /* font-size: 18px;
-  transition: .2s; */
+  /* font-size: 18px; */
+  transition: .2s; 
 }
 
 path{
@@ -48,24 +57,35 @@ path{
 }
 
 .title{
+  font-family: "Tasa Explorer";
   color: white;
   font-size: 32px;
   font-weight: 700;
   margin: 10px 0 10px 0;
+  /* line-height: 44.6833px; */
+  letter-spacing: 2px;
 }
 
 .subtitle{
   color: white;
-  font-style: italic;
-  font-size: 21px;
+  font-size: 22px;
   margin: 10px 0 20px 0;
-  letter-spacing: 4px;
+  font-family: "Tasa Orbiter";
+  line-height: 36.5633px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-optical-sizing: 60;
 }
 
 .paragraph{
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0 0 20px 0;
+  font-family: "Tasa Orbiter";
+  line-height: 24px;
+  letter-spacing: 0.48px;
+  font-weight: 400;
+  font-optical-sizing: 8;
 }
 
 .fade-enter.fade-enter-active {
@@ -126,6 +146,9 @@ path{
   align-items: center;
   justify-content: center;
   color: white;
+  font-family: 'Tasa Orbiter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 }
 .footer p{
   margin: auto;

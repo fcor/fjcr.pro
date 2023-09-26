@@ -13,6 +13,11 @@
 .nav-item {
   margin-right: 30px;
   color: white;
+  font-family: 'Tasa Orbiter', sans-serif;
+  line-height: 24px;
+  letter-spacing: 0.48px;
+  font-weight: 500;
+  font-optical-sizing: 32;
 }
 
 .floating-logo {
