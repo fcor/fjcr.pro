@@ -118,6 +118,10 @@
   .project-img {
     width: 350px;
   }
+
+  .project-image-small {
+    width: 20vw;
+  }
 }
 
 @media screen and (max-width: 1020px) {
@@ -138,7 +142,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 810px) {
   .project-section-container {
     width: 80%;
     margin: 2rem auto;
@@ -155,12 +159,26 @@
   .project {
     margin: 0 0 2rem 0;
   }
+
+  .project-description {
+    font-size: 14px;
+  }
+
+  .project-large-image-container,
+  .project-small-img-container {
+    width: 80vw;
+  }
+
+  .project-image-small {
+    width: 30vw;
+  }
 }
 
 @media screen and (max-width: 750px) {
   .project-img {
     width: 250px;
   }
+
 }
 
 @media screen and (max-width: 670px) {
