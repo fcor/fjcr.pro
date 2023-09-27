@@ -93,6 +93,11 @@
   margin: 1rem 0 2.25rem 0;
 }
 
+.project-square-image-container {
+  width: 30vw;
+  margin: 1rem 0 2.25rem 0;
+}
+
 .project-image {
   width: 100%;
   border-radius: 8px;

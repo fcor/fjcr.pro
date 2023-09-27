@@ -1,0 +1,24 @@
+.article-description {
+  width: 720px;
+}
+
+.articles-container {
+  height: 100%;
+  margin: 40px 0 0 40px;
+  justify-content: flex-start;
+}
+
+.article .title {
+  cursor: pointer;
+  width: fit-content;
+}
+
+@media screen and (max-width: 800px) {
+  .articles-container{
+    width: 80%;
+    margin: 2rem auto;
+  }
+  .article-description {
+    width: 100%;
+  }
+}

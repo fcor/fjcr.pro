@@ -6,6 +6,7 @@ import homer from "../../images/homer.png";
 import nuestrasEsperanzas from "../../images/ne1.png";
 import gestures from "../../images/gestures.png";
 import duality1 from "../../images/duality1.jpg";
+import culpable1 from "../../images/culpable1.jpg";
 
 const Projects = () => {
   return (
@@ -61,6 +62,24 @@ const Projects = () => {
             <img
               className="project-img"
               src={duality1}
+              width="400"
+              alt="duality"
+            ></img>
+          </div>
+        </NavLink>
+
+        <NavLink to="/culpable">
+          <div className="project">
+            <div className="project-detail column">
+              <p className="project-title">Culpable</p>
+              <p className="project-description">
+                I was invited by Grito to create an artwork for one the songs
+                from their new album "8".
+              </p>
+            </div>
+            <img
+              className="project-img"
+              src={culpable1}
               width="400"
               alt="duality"
             ></img>

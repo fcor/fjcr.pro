@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Navbar from "./components/Nav/";
 import Home from "./components/Home/";
-import Articles from "./components/Articles/";
 import Duality from "./components/Projects/duality";
+import Culpable from "./components/Projects/culpable";
 import Talks from "./components/Talks/";
 import Projects from "./components/Projects/";
 import "./App.css";
@@ -35,6 +35,7 @@ const App = () => (
                   <Route path="/molecularweb" component={Molecularweb} />
                   <Route path="/homers-metaverse" component={Homer} />
                   <Route path="/nuestras-esperanzas" component={NuestrasEsperanzas} />
+                  <Route path="/culpable" component={Culpable} />
                   <Route component={NotFound} />
                 </Switch>
               </CSSTransition>
