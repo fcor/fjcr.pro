@@ -4,7 +4,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Navbar from "./components/Nav/";
 import Home from "./components/Home/";
 import Articles from "./components/Articles/";
-import Teaching from "./components/Teaching";
+import Duality from "./components/Projects/duality";
 import Talks from "./components/Talks/";
 import Projects from "./components/Projects/";
 import "./App.css";
@@ -31,7 +31,7 @@ const App = () => (
                   {/* <Route path="/articles" component={Articles} /> */}
                   <Route path="/talks" component={Talks} />
                   <Route exact path="/work" component={Projects} />
-                  {/* <Route path="/teaching" component={Teaching} /> */}
+                  <Route path="/duality" component={Duality} />
                   <Route path="/molecularweb" component={Molecularweb} />
                   <Route path="/homers-metaverse" component={Homer} />
                   <Route path="/nuestras-esperanzas" component={NuestrasEsperanzas} />

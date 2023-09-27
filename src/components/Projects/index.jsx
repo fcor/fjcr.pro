@@ -5,6 +5,7 @@ import molecularWeb from "../../images/mw.png";
 import homer from "../../images/homer.png";
 import nuestrasEsperanzas from "../../images/ne1.png";
 import gestures from "../../images/gestures.png";
+import duality1 from "../../images/duality1.jpg";
 
 const Projects = () => {
   return (
@@ -43,6 +44,25 @@ const Projects = () => {
               src={homer}
               width="400"
               alt="homer"
+            ></img>
+          </div>
+        </NavLink>
+
+        <NavLink to="/duality">
+          <div className="project">
+            <div className="project-detail column">
+              <p className="project-title">Duality</p>
+              <p className="project-description">
+                A live performance intertwining generative algorithms, analog
+                remixing, and audiovisual improvisation into a distinctive and
+                captivating experience.
+              </p>
+            </div>
+            <img
+              className="project-img"
+              src={duality1}
+              width="400"
+              alt="duality"
             ></img>
           </div>
         </NavLink>
