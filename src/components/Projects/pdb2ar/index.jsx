@@ -50,7 +50,7 @@ const PDB2AR = () => {
             rel="noopener noreferrer"
             style={{ color: color2 }}
           >
-            VMD{" "}
+            VMD
           </a>
         </span>
         , a tool that most biologists are familiar with, so we provide a
@@ -139,6 +139,32 @@ const PDB2AR = () => {
             here.
           </a>
         </span>
+      </p>
+
+      <p className="paragraph project-detail-description">
+        This project was funded by the{" "}
+        <span>
+          <a
+            href="https://www.snf.ch"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: color2 }}
+          >
+            Swiss National Science Foundation{" "}
+          </a>
+        </span>
+        and was made by me and 
+        <span>
+          <a
+            href="https://www.lucianoabriata.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: color2 }}
+          >
+            {" "}Luciano Abriata{" "}
+          </a>
+        </span>
+        at the Laboratory for biomolecular modeling at EPFL.
       </p>
      
     </div>

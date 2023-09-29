@@ -8,9 +8,12 @@ import mw5 from "../../../images/mw5.jpg";
 
 const Molecularweb = () => {
   const [color, setColor] = useState("");
+  const [color2, setColor2] = useState("");
   useEffect(() => {
-    const myColor = getRandomColor();
-    setColor(myColor);
+    const myColor1 = getRandomColor();
+    const myColor2 = getRandomColor();
+    setColor(myColor1);
+    setColor2(myColor2);
   }, []);
   return (
     <div className="project-detail-container column">
@@ -26,12 +29,22 @@ const Molecularweb = () => {
       </p>
 
       <p className="paragraph project-detail-description">
-        As an open source project, with more than 20 different activities,
-        MoleculARweb is used by teachers and students all over the world as an
-        engaging and useful for teaching and learning chemistry, proving the
-        potential of AR in future education and showing the large impact that
-        modern web technologies have in democratizing access to digital learning
-        tools.
+        As an{" "}
+        <span>
+          <a
+            href="https://github.com/molecularwebxr/molecularweb"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: color2 }}
+          >
+            open source{" "}
+          </a>
+        </span>{" "}
+        project, with more than 20 different activities, MoleculARweb is used by
+        teachers and students all over the world as an engaging and useful for
+        teaching and learning chemistry, proving the potential of AR in future
+        education and showing the large impact that modern web technologies have
+        in democratizing access to digital learning tools.
       </p>
 
       <figure className="project-large-image-container">
@@ -105,6 +118,33 @@ const Molecularweb = () => {
         formation of hydrogen bonds, visualization of atom clashes, and
         observing how molecules respond to changes in temperature — all within
         the web browser.
+      </p>
+
+      <p className="paragraph project-detail-description">
+        This project was funded by the{" "}
+        <span>
+          <a
+            href="https://www.snf.ch"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: color2 }}
+          >
+            Swiss National Science Foundation{" "}
+          </a>
+        </span>
+        and was made by me and
+        <span>
+          <a
+            href="https://www.lucianoabriata.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: color2 }}
+          >
+            {" "}
+            Luciano Abriata{" "}
+          </a>
+        </span>
+        at the Laboratory for biomolecular modeling at EPFL.
       </p>
     </div>
   );

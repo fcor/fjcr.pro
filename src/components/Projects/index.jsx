@@ -31,19 +31,20 @@ const Projects = () => {
           </div>
         </NavLink>
 
-        <NavLink to="/homers-metaverse">
+        <NavLink to="/nuestras-esperanzas">
           <div className="project">
             <div className="project-detail column">
-              <p className="project-title">Homer's Metaverse</p>
+              <p className="project-title">Nuestras esperanzas</p>
               <p className="project-description">
-                My first exposure to VR was an episode of The Simpsons from 1995
-                where Homer finds himself in a 3D world behind a book shelf.
-                Here's my version of that scene in VR!
+                Generative artwork inspired by the amazing song "Nuestras
+                esperanzas" by Grito, one of my favorite bands. In collaboration
+                with the band, we released a limited edition of 12 prints and
+                some postcards.
               </p>
             </div>
             <img
               className="project-img"
-              src={homer}
+              src={nuestrasEsperanzas}
               width="400"
               alt="homer"
             ></img>
@@ -105,6 +106,25 @@ const Projects = () => {
           </div>
         </NavLink>
 
+        <NavLink to="/homers-metaverse">
+          <div className="project">
+            <div className="project-detail column">
+              <p className="project-title">Homer's Metaverse</p>
+              <p className="project-description">
+                My first exposure to VR was an episode of The Simpsons from 1995
+                where Homer finds himself in a 3D world behind a book shelf.
+                Here's my version of that scene in VR!
+              </p>
+            </div>
+            <img
+              className="project-img"
+              src={homer}
+              width="400"
+              alt="homer"
+            ></img>
+          </div>
+        </NavLink>
+
         <div className="project">
           <a
             href="https://github.com/fcor/arjs-gestures"
@@ -126,26 +146,6 @@ const Projects = () => {
             ></img>
           </a>
         </div>
-
-        <NavLink to="/nuestras-esperanzas">
-          <div className="project">
-            <div className="project-detail column">
-              <p className="project-title">Nuestras esperanzas</p>
-              <p className="project-description">
-                Generative artwork inspired by the amazing song "Nuestras
-                esperanzas" by Grito, one of my favorite bands. In collaboration
-                with the band, we released a limited edition of 12 prints and
-                some postcards.
-              </p>
-            </div>
-            <img
-              className="project-img"
-              src={nuestrasEsperanzas}
-              width="400"
-              alt="homer"
-            ></img>
-          </div>
-        </NavLink>
       </div>
     </div>
   );
