@@ -74,7 +74,7 @@ path{
   line-height: 36.5633px;
   letter-spacing: 2px;
   font-weight: 400;
-  font-optical-sizing: 60;
+  font-variation-settings: 'opsz' 60;
 }
 
 .paragraph{
@@ -85,7 +85,7 @@ path{
   line-height: 24px;
   letter-spacing: 0.48px;
   font-weight: 400;
-  font-optical-sizing: 8;
+  font-variation-settings: 'opsz' 8;
 }
 
 .fade-enter.fade-enter-active {

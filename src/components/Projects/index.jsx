@@ -7,6 +7,7 @@ import nuestrasEsperanzas from "../../images/ne1.png";
 import gestures from "../../images/gestures.png";
 import duality1 from "../../images/duality1.jpg";
 import culpable1 from "../../images/culpable1.jpg";
+import pdb2ar1 from "../../images/pdb2ar1.jpg";
 
 const Projects = () => {
   return (
@@ -82,6 +83,24 @@ const Projects = () => {
               src={culpable1}
               width="400"
               alt="duality"
+            ></img>
+          </div>
+        </NavLink>
+
+        <NavLink to="/pdb2ar">
+          <div className="project">
+            <div className="project-detail column">
+              <p className="project-title">PDB2AR</p>
+              <p className="project-description">
+                A tool where scientists and educators can build their own WebXR
+                scenes from PDB files, PDB entries or uploading their own 3D models.
+              </p>
+            </div>
+            <img
+              className="project-img"
+              src={pdb2ar1}
+              width="400"
+              alt="pdb2ar"
             ></img>
           </div>
         </NavLink>
