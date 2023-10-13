@@ -11,6 +11,7 @@ const Homer = () => {
     const myColor2 = getRandomColor();
     setColor(myColor1);
     setColor2(myColor2);
+    window.scrollTo(0, 0);
   }, []);
   return (
     <div className="project-detail-container column">
@@ -51,14 +52,23 @@ const Homer = () => {
         </span>
       </p>
 
-      <iframe
-        title="vimeo-player"
-        src="https://player.vimeo.com/video/534958787?h=6b5260ce9d"
-        width="600"
-        height="600"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
+      <div
+        style={{ margin: "1rem 0 2.25rem 0",  width: "80vw", padding: "75% 0 0 0", position: "relative" }}
+      >
+        <iframe
+          src="https://player.vimeo.com/video/534958787?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479"
+          frameBorder="0"
+          style={{
+            position: "absolute",
+            top: "0",
+            left: "0",
+            width: "100%",
+            height: "100%",
+          }}
+          title="Homer's Metaverse"
+        ></iframe>
+      </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
 
       <figure className="project-large-image-container">
         <img
@@ -77,7 +87,6 @@ const Homer = () => {
       </figure>
     </div>
   );
-
 };
 
 export default Homer;

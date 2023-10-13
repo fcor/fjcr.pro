@@ -165,8 +165,11 @@
   }
 
   .project-large-image-container,
-  .project-small-img-container {
+  .project-small-img-container,
+  .project-square-image-container,
+  iframe {
     width: 80vw;
+    /* height: 300px; */
   }
 
   .project-image-small {

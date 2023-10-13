@@ -13,6 +13,7 @@ const NuestrasEsperanzas = () => {
     const myColor2 = getRandomColor();
     setColor(myColor1);
     setColor2(myColor2);
+    window.scrollTo(0, 0);
   }, []);
   return (
     <div className="project-detail-container column">
