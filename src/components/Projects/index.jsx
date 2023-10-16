@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import { NavLink } from "react-router-dom";
 import molecularWeb from "../../images/mw.png";
@@ -10,128 +10,82 @@ import culpable1 from "../../images/culpable1.jpg";
 import pdb2ar1 from "../../images/pdb2ar1.jpg";
 
 const Projects = () => {
+  const [isTouched, setIsTouched] = useState(false);
+  const handleTouch = () => {
+    setIsTouched(!isTouched);
+  };
   return (
     <div className="project-section-container column">
       <p className="paragraph">Selected work</p>
       <div className="projects-container">
-        <NavLink to="/molecularweb">
-          <div className="project">
-            <div className="project-detail column">
-              <p className="project-title">MoleculARweb</p>
-              <p className="project-description">
-                A website for chemistry and structural biology education through
-                augmented reality.
-              </p>
-            </div>
-            <img
-              className="project-img"
-              src={molecularWeb}
-              alt="molecularweb"
-            ></img>
-          </div>
-        </NavLink>
+        <ProjectCard
+          url="/molecularweb"
+          title="MoleculARweb"
+          description="A website for chemistry and structural biology education through
+          augmented reality."
+          image={molecularWeb}
+        />
 
-        <NavLink to="/nuestras-esperanzas">
-          <div className="project">
-            <div className="project-detail column">
-              <p className="project-title">Nuestras esperanzas</p>
-              <p className="project-description">
-                Generative artwork inspired by the amazing song "Nuestras
-                esperanzas" by Grito, one of my favorite bands. In collaboration
-                with the band, we released a limited edition of 12 prints and
-                some postcards.
-              </p>
-            </div>
-            <img
-              className="project-img"
-              src={nuestrasEsperanzas}
-              width="400"
-              alt="homer"
-            ></img>
-          </div>
-        </NavLink>
+        <ProjectCard
+          url="/nuestras-esperanzas"
+          title="Nuestras Esperanzas"
+          description='Generative artwork inspired by the amazing song "Nuestras
+          esperanzas" by Grito, one of my favorite bands. In collaboration
+          with the band, we released a limited edition of 12 prints and
+          some postcards.'
+          image={nuestrasEsperanzas}
+        />
 
-        <NavLink to="/duality">
-          <div className="project">
-            <div className="project-detail column">
-              <p className="project-title">Duality</p>
-              <p className="project-description">
-                A live performance intertwining generative algorithms, analog
-                remixing, and audiovisual improvisation into a distinctive and
-                captivating experience.
-              </p>
-            </div>
-            <img
-              className="project-img"
-              src={duality1}
-              width="400"
-              alt="duality"
-            ></img>
-          </div>
-        </NavLink>
+        <ProjectCard
+          url="/duality"
+          title="Duality"
+          description="A live performance intertwining generative algorithms, analog
+          remixing, and audiovisual improvisation into a distinctive and
+          captivating experience."
+          image={duality1}
+        />
 
-        <NavLink to="/culpable">
-          <div className="project">
-            <div className="project-detail column">
-              <p className="project-title">Culpable</p>
-              <p className="project-description">
-                I was invited by Grito to create an artwork for one the songs
-                from their new album "8".
-              </p>
-            </div>
-            <img
-              className="project-img"
-              src={culpable1}
-              width="400"
-              alt="duality"
-            ></img>
-          </div>
-        </NavLink>
+        <ProjectCard
+          url="/culpable"
+          title="Culpable"
+          description='I was invited by Grito to create an artwork for one the songs
+          from their new album "8".'
+          image={culpable1}
+        />
 
-        <NavLink to="/pdb2ar">
-          <div className="project">
-            <div className="project-detail column">
-              <p className="project-title">PDB2AR</p>
-              <p className="project-description">
-                A tool where scientists and educators can build their own WebXR
-                scenes from PDB files, PDB entries or uploading their own 3D models.
-              </p>
-            </div>
-            <img
-              className="project-img"
-              src={pdb2ar1}
-              width="400"
-              alt="pdb2ar"
-            ></img>
-          </div>
-        </NavLink>
+        <ProjectCard
+          url="/pdb2ar"
+          title="PDB2AR"
+          description="A tool where scientists and educators can build their own WebXR
+          scenes from PDB files, PDB entries or uploading their own 3D
+          models."
+          image={pdb2ar1}
+        />
 
-        <NavLink to="/homers-metaverse">
-          <div className="project">
-            <div className="project-detail column">
-              <p className="project-title">Homer's Metaverse</p>
-              <p className="project-description">
-                My first exposure to VR was an episode of The Simpsons from 1995
-                where Homer finds himself in a 3D world behind a book shelf.
-                Here's my version of that scene in VR!
-              </p>
-            </div>
-            <img
-              className="project-img"
-              src={homer}
-              width="400"
-              alt="homer"
-            ></img>
-          </div>
-        </NavLink>
+        <ProjectCard
+          url="/homers-metaverse"
+          title="Homer's Metaverse"
+          description="My first exposure to VR was an episode of The Simpsons from 1995
+          where Homer finds himself in a 3D world behind a book shelf.
+          Here's my version of that scene in VR!"
+          image={homer}
+        />
 
-        <div className="project">
+        <div
+          className="project"
+          onTouchStart={handleTouch}
+          onTouchEnd={handleTouch}
+        >
           <a
             href="https://github.com/fcor/arjs-gestures"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="project-detail column">
+            <div
+              className={`project-detail column ${
+                isTouched ? "isTouched" : ""
+              }`}
+            >
               <p className="project-title">AR.js Gestures</p>
               <p className="project-description">
                 Open source library for adding gesture controls to manipulate an
@@ -148,6 +102,36 @@ const Projects = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+const ProjectCard = ({ title, image, description, url }) => {
+  const [isTouched, setIsTouched] = useState(false);
+  const handleTouch = () => {
+    setIsTouched(!isTouched);
+  };
+
+  return (
+    <NavLink to={url}>
+      <div
+        className="project"
+        onTouchStart={handleTouch}
+        onTouchEnd={handleTouch}
+      >
+        <div
+          className={`project-detail column ${isTouched ? "isTouched" : ""}`}
+        >
+          <p className="project-title">{title}</p>
+          <p className="project-description">{description}</p>
+        </div>
+        <img
+          className="project-img"
+          src={image}
+          width="400"
+          alt="project card"
+        ></img>
+      </div>
+    </NavLink>
   );
 };
 

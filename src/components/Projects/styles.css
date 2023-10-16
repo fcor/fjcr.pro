@@ -17,7 +17,8 @@
   cursor: pointer;
 }
 
-.project:hover .project-detail {
+.project:hover .project-detail,
+.project-detail.isTouched {
   opacity: 1;
 }
 
