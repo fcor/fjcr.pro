@@ -5,6 +5,7 @@ import mw2 from "../../../images/mw2.jpg";
 import mw3 from "../../../images/mw3.jpg";
 import mw4 from "../../../images/mw4.jpg";
 import mw5 from "../../../images/mw5.jpg";
+import vmk from "../../../images/vmk.gif"
 
 const Molecularweb = () => {
   const [color, setColor] = useState("");
@@ -114,6 +115,15 @@ const Molecularweb = () => {
         feature to eliminate blind spots for the camera, enhancing users'
         control over the elements.
       </p>
+
+      <figure className="project-square-image-container">
+        <img
+          className="project-image"
+          src={vmk}
+          alt="gif from PDB2AR"
+        />
+      </figure>
+
       <p className="paragraph project-detail-description">
         Furthermore, users can simulate molecule interactions, including the
         formation of hydrogen bonds, visualization of atom clashes, and
