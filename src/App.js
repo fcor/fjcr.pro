@@ -52,7 +52,7 @@ const App = () => (
 
 const Footer = () => (
   <footer className="footer">
-    <p>Copyright © 2023 - Never waver, never falter.</p>
+    <p>Copyright © 2024 - Never waver, never falter.</p>
   </footer>
 );
 

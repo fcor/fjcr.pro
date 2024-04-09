@@ -17,13 +17,10 @@ const Home = () => {
           <h1 className="title">Fabio Cortés</h1>
           <h2 className="subtitle">I make computers draw things.</h2>
           <p className="paragraph">
-            &gt; I'm a generative artist and creative coder from Bogotá,
-            Colombia, and now based in Lausanne, Switzerland.
+            I'm a Colombian creative technologist currently based in Lausanne, Switzerland.
           </p>
           <p className="paragraph">
-            &gt; I strive to craft dazzling visuals that evoke curiosity and
-            wonder, seamlessly merging the realms of science and art within
-            virtual and augmented reality experiences.
+            My practice primarily focuses spatial computing, augmented and virtual reality and generative art.
           </p>
         </div>
         <div className="info-redes">
