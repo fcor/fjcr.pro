@@ -20,7 +20,7 @@ const Home = () => {
             I'm a Colombian creative technologist currently based in Lausanne, Switzerland.
           </p>
           <p className="paragraph">
-            My practice primarily focuses on augmented and virtual reality, spatial computing, and generative art.
+            My practice primarily focuses on augmented and virtual reality, spatial computing, and creative coding.
           </p>
         </div>
         <div className="info-redes">

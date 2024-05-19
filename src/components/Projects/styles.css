@@ -115,6 +115,16 @@
   border-radius: 8px;
 }
 
+.vimeo-embed-container {
+  width: 60vw;
+  margin: 1rem 0 2.25rem 0;
+}
+
+.vimeo-iframe{
+  width: 100%;
+  height: calc(60vw/1.77);
+}
+
 @media screen and (max-width: 1140px) {
   .project-img {
     width: 350px;
@@ -168,9 +178,14 @@
   .project-large-image-container,
   .project-small-img-container,
   .project-square-image-container,
+  .vimeo-embed-container,
   iframe {
     width: 80vw;
     /* height: 300px; */
+  }
+
+  .vimeo-iframe{
+    height: calc(80vw/1.77);
   }
 
   .project-image-small {

@@ -21,17 +21,14 @@ const NuestrasEsperanzas = () => {
         Nuestras Esperanzas
       </p>
 
-      <p
-        className="paragraph project-detail-description project-subtitle"
-        style={{ color: color2 }}
-      >
-        "El hardcore son los amigos, lo aprendido junto a ellos, y es vivir,
-        sentir, pensar, plasmar para dejar algo a los demas!"
+      <p className="paragraph project-detail-description project-subtitle" style={{ color: color2 }}>
+        "El hardcore son los amigos, lo aprendido junto a ellos, y es vivir, sentir, pensar, plasmar para dejar algo a
+        los demas!"
       </p>
 
       <p className="paragraph project-detail-description">
-        Generative artwork inspired by the amazing song "Nuestras esperanzas" by
-        Grito, one of my favorite bands, 100% colombian Hardcore!
+        Generative artwork inspired by the amazing song "Nuestras esperanzas" by Grito, one of my favorite bands, 100%
+        colombian Hardcore!
       </p>
 
       <figure className="project-large-image-container">
@@ -58,16 +55,11 @@ const NuestrasEsperanzas = () => {
       </figure>
 
       <p className="paragraph project-detail-description">
-        The pattern is a generative design made in Processing. Edits and
-        post-processing were made on Affinity Designer.
+        The pattern is a generative design made in Processing. Edits and post-processing were made on Affinity Designer.
       </p>
 
       <div className="project-small-img-container row">
-        <img
-          className="project-image-small"
-          src={ne3}
-          alt="generative artwork"
-        />
+        <img className="project-image-small" src={ne3} alt="generative artwork" />
         <img className="project-image-small" src={ne4} alt="postcard" />
       </div>
 
@@ -83,8 +75,7 @@ const NuestrasEsperanzas = () => {
             here.{" "}
           </a>
         </span>
-        It's an open source font made by Barry Schwartz and published
-        exclusively on{" "}
+        It's an open source font made by Barry Schwartz and published exclusively on{" "}
         <span>
           <a
             href="https://www.theleagueofmoveabletype.com/"

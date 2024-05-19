@@ -52,19 +52,12 @@ const Homer = () => {
         </span>
       </p>
 
-      <div
-        style={{ margin: "1rem 0 2.25rem 0",  width: "80vw", padding: "75% 0 0 0", position: "relative" }}
-      >
+      <div className="vimeo-embed-container">
         <iframe
           src="https://player.vimeo.com/video/534958787?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479"
-          frameBorder="0"
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            width: "100%",
-            height: "100%",
-          }}
+          className="vimeo-iframe"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
           title="Homer's Metaverse"
         ></iframe>
       </div>

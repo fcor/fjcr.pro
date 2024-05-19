@@ -20,6 +20,19 @@ const Talks = () => {
       </p>
       <div className="article column">
         <a
+          href="https://www.youtube.com/watch?v=TdVXDzsYAvQ&t=2556s&ab_channel=GlobalXRCommunity"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="title"
+          onMouseOver={onHover}
+          onMouseOut={onHoverOut}
+        >
+           Empowering Research and Collaboration through WebXR 
+        </a>
+        <p className="paragraph">Global XR Conference 2023 - Online</p>
+      </div>
+      <div className="article column">
+        <a
           href="https://avnode.net/performances/mastering-midi-for-live-coding/"
           target="_blank"
           rel="noopener noreferrer"

@@ -12,6 +12,7 @@ import Molecularweb from "./components/Projects/molecularweb";
 import Homer from "./components/Projects/homerMetaverse";
 import NuestrasEsperanzas from "./components/Projects/nuestrasEsperanzas";
 import PDB2AR from "./components/Projects/pdb2ar";
+import Mwxr from "./components/Projects/molecularwebxr"
 
 const App = () => (
   <Router>
@@ -38,6 +39,7 @@ const App = () => (
                   <Route path="/nuestras-esperanzas" component={NuestrasEsperanzas} />
                   <Route path="/culpable" component={Culpable} />
                   <Route path="/pdb2ar" component={PDB2AR} />
+                  <Route path="/molecularwebxr" component={Mwxr} />
                   <Route component={NotFound} />
                 </Switch>
               </CSSTransition>
