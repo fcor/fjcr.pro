@@ -7,6 +7,7 @@ import nuestrasEsperanzas from "../../images/ne1.png";
 import gestures from "../../images/gestures.png";
 import duality1 from "../../images/duality1.jpg";
 import culpable1 from "../../images/culpable1.jpg";
+import draw1 from "../../images/draw1.jpg";
 import pdb2ar1 from "../../images/pdb2ar1.jpg";
 import mwxr1 from "../../images/mwxr1.png";
 
@@ -40,6 +41,13 @@ const Projects = () => {
           scenes from PDB files, PDB entries or uploading their own 3D
           models."
           image={pdb2ar1}
+        />
+
+        <ProjectCard
+          url="/drawing-inspiration"
+          title="Drawing Inspiration"
+          description="A Mixed Reality Approach to Artistic Visualization for Home Decor. 1st place at Develop the Future: Meta & AWS Hackathon for XR & Generative AI."
+          image={draw1}
         />
 
         <ProjectCard
