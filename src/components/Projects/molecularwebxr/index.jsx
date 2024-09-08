@@ -31,6 +31,16 @@ const MolecularWebXR = () => {
         augmented and virtual reality.
       </p>
 
+      <p className="paragraph project-detail-description">
+        Try the app{" "}
+        <span>
+          <a href="https://molecularwebxr.org/" target="_blank" rel="noopener noreferrer" style={{ color: color2 }}>
+            here
+          </a>
+        </span>
+        .
+      </p>
+
       <figure className="project-large-image-container">
         <img className="project-image" src={mwxr2} alt="Screenshot of MolecularWebXR's metaverse" />
       </figure>
@@ -38,7 +48,7 @@ const MolecularWebXR = () => {
       <p className="paragraph project-detail-description">
         MolecularWebXR comes up with a set of rooms with ready-to-use content relevant for education in chemistry and
         structural biology, prepared together with university-level teachers to focus on topics where visualization and
-        object manipulation in three dimensions should help to better grasp the key concepts. tomography.
+        object manipulation in three dimensions should help to better grasp the key concepts.
       </p>
 
       <div className="vimeo-embed-container">
