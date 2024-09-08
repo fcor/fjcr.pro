@@ -90,7 +90,7 @@ const Navbar = () => {
         ))}
         <li className="nav-item">
           <a
-            href="https://www.fjcr.studio/"
+            href="https://fjcr.bigcartel.com/"
             target="_blank"
             rel="noopener noreferrer"
             onMouseOver={onHover}
