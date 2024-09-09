@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#000000" />
     <!--
       manifest.json provides metadata used when your web app is added to the
@@ -15,10 +12,7 @@
     <meta property="og:type" content="profile" />
     <meta property="og:description" content="Generative Artist & Creative Developer" />
     <meta property="og:url" content="https://www.fjcr.pro/" />
-    <meta
-      property="og:image"
-      content="https://killcloud.nyc3.cdn.digitaloceanspaces.com/Images-fjcr/kpp.jpg"
-    />
+    <meta property="og:image" content="https://killcloud.nyc3.cdn.digitaloceanspaces.com/Images-fjcr/kpp.jpg" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <!--
@@ -122,10 +116,8 @@
           image: {
             uniforms: {
               iTime: (gl, loc) => gl.uniform1f(loc, time),
-              iResolution: (gl, loc, ctx) =>
-                gl.uniform2f(loc, ctx.width, ctx.height),
-              iMouse: (gl, loc, ctx) =>
-                gl.uniform2f(loc, ctx.shaderMouseX, ctx.shaderMouseY),
+              iResolution: (gl, loc, ctx) => gl.uniform2f(loc, ctx.width, ctx.height),
+              iMouse: (gl, loc, ctx) => gl.uniform2f(loc, ctx.shaderMouseX, ctx.shaderMouseY),
               iMinDimension: (gl, loc) => gl.uniform1f(loc, minDimension),
             },
           },
@@ -141,6 +133,19 @@
       }
     </style>
   </head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KKX9HHRQH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-0KKX9HHRQH");
+  </script>
+
   <body>
     <noscript> You need to enable JavaScript to run this app. </noscript>
     <div id="root"></div>
