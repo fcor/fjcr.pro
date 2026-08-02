@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getRandomColor } from "../../../utils";
 import pdb2ar2 from "../../../images/pdb2ar2.jpg";

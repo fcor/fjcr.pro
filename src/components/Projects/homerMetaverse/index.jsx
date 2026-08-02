@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getRandomColor } from "../../../utils";
 import homero1 from "../../../images/homero1.png";
 import homero2 from "../../../images/homero2.png";
@@ -56,7 +56,7 @@ const Homer = () => {
         <iframe
           src="https://player.vimeo.com/video/534958787?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479"
           className="vimeo-iframe"
-          frameborder="0"
+          frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
           title="Homer's Metaverse"
         ></iframe>

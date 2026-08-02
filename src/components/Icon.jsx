@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { getRandomColor } from "../utils/index";
 
 const Icon = ({ name }) => {
-  const [color, setColor] = useState("white");
+  const [color, setColor] = useState("var(--color-text)");
 
   const onEnter = () => {
     const newColor = getRandomColor();
@@ -10,7 +10,7 @@ const Icon = ({ name }) => {
   };
 
   const onLeave = () => {
-    setColor("white");
+    setColor("var(--color-text)");
   };
 
   if (name === "github") {

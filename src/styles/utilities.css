@@ -1,0 +1,23 @@
+/*
+ * Reusable "sticker" pattern — a bordered box with a hard offset shadow
+ * (no blur), plus a slight tilt. Used site-wide. Configure per instance:
+ *   --sticker-color         border + shadow color (default black)
+ *   --sticker-border        border color only (defaults to --sticker-color)
+ *   --sticker-shadow        shadow color only (defaults to --sticker-color)
+ *   --sticker-border-style  solid | dashed | ... (default solid)
+ *   --sticker-bg            fill (default page background)
+ */
+.sticker {
+  border: var(--border-width) var(--sticker-border-style, solid)
+    var(--sticker-border, var(--sticker-color, #000));
+  box-shadow: var(--shadow-offset) var(--sticker-shadow, var(--sticker-color, #000));
+  background: var(--sticker-bg, var(--color-bg));
+}
+
+/* Slight rotations — the recurring playful detail. */
+.tilt-l {
+  transform: rotate(-1deg);
+}
+.tilt-r {
+  transform: rotate(1deg);
+}

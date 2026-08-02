@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getRandomColor } from "../../../utils";
 import draw2 from "../../../images/draw2.jpg";
 
@@ -51,7 +51,7 @@ const DrawingInspiration = () => {
         <iframe
           src="https://www.youtube.com/embed/tmKwzoC13y4?si=oaOImHfeKX7dFEOi"
           className="vimeo-iframe"
-          frameborder="0"
+          frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
           title="Drawing Inspiration"
         ></iframe>

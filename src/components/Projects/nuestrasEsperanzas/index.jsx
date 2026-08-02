@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getRandomColor } from "../../../utils";
 import ne2 from "../../../images/ne2.jpg";
 import ne5 from "../../../images/ne5.jpg";

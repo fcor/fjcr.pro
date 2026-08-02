@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getRandomColor } from "../../../utils";
 import mwxr2 from "../../../images/mwxr2.jpg";
 import mwxr4 from "../../../images/mwxr4.jpg";
@@ -55,7 +55,7 @@ const MolecularWebXR = () => {
         <iframe
           src="https://player.vimeo.com/video/947984945?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
           className="vimeo-iframe"
-          frameborder="0"
+          frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
           title="Structural biology in Mixed reality"
         ></iframe>
@@ -76,7 +76,7 @@ const MolecularWebXR = () => {
         <iframe
           src="https://player.vimeo.com/video/742185709?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
           className="vimeo-iframe"
-          frameborder="0"
+          frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
           title="Multi user VR talk at Transcure Conference"
         ></iframe>
@@ -98,7 +98,7 @@ const MolecularWebXR = () => {
         <iframe
           src="https://player.vimeo.com/video/947982294?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
           className="vimeo-iframe"
-          frameborder="0"
+          frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
           title="VR Session at EPFL Open Days 2023"
         ></iframe>

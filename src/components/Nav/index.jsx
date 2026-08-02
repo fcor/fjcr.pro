@@ -1,109 +1,61 @@
-import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import "./styles.css";
-import logo from "../../images/logo2.png";
-
-import { getRandomColor } from "../../utils/index";
+import { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import styles from "./Nav.module.css";
 
 const animationCS = (isActive) => {
   if (isActive === null) {
     return "";
-  } else if (isActive) {
-    return "in";
-  } else if (!isActive) {
-    return "out";
   }
+  return isActive ? styles.in : styles.out;
 };
 
-const menu = ["Home", "Work", "Talks",];
+const menu = ["Work", "Talks", "About"];
 
 const Navbar = () => {
-  const [selectedTab, setSelectedTab] = useState("");
   const [mobileMenuActive, setMobileMenuActive] = useState(null);
 
   const location = useLocation();
 
-  const selectedColor = getRandomColor();
-
-  const onHoverOut = (e) => {
-    const thisTab = e.target.text.toLowerCase();
-    if (thisTab !== selectedTab) {
-      e.target.style.color = "white";
-    }
-  };
-
-  const onHover = (e) => {
-    const thisTab = e.target.text.toLowerCase();
-
-    if (thisTab !== selectedTab) {
-      const col = getRandomColor();
-      e.target.style.color = col;
-      // setSelectedColor(col);
-    }
-  };
-
-  const handleClick = (e) => {
-    setMobileMenuActive(!mobileMenuActive);
+  const toggleMenu = () => {
+    setMobileMenuActive((active) => !active);
   };
 
   useEffect(() => {
-    let newLocation;
-
-    if (location.pathname === "/") {
-      newLocation = "home";
-    } else {
-      newLocation = location.pathname.replace("/", "");
-    }
-
-    setSelectedTab(newLocation);
     setMobileMenuActive(false);
   }, [location]);
 
   return (
-    <nav className="navbar">
-      <ul className={`nav ${animationCS(mobileMenuActive)}`}>
-        <img src={logo} alt="Logo" className="floating-logo" />
-        {menu.map((item) => (
-          <li className="nav-item" key={item}>
-            {item === "Home" ? (
-              <NavLink
-                exact
-                to="/"
-                onMouseOver={onHover}
-                onMouseOut={onHoverOut}
-                activeStyle={{ color: selectedColor }}
-              >
-                {item}
-              </NavLink>
-            ) : (
+    <nav className={styles.navbar}>
+      <NavLink to="/" className={styles.brand}>
+        Fabio J. Cortés
+      </NavLink>
+
+      <div className={`${styles.menu} ${animationCS(mobileMenuActive)}`}>
+        <ul className={`${styles.center} sticker tilt-l`}>
+          {menu.map((item) => (
+            <li key={item}>
               <NavLink
                 to={`/${item.toLowerCase()}`}
-                onMouseOver={onHover}
-                onMouseOut={onHoverOut}
-                activeStyle={{ color: selectedColor }}
+                className={({ isActive }) =>
+                  isActive ? `${styles.link} ${styles.active}` : styles.link
+                }
               >
                 {item}
               </NavLink>
-            )}
-          </li>
-        ))}
-        <li className="nav-item">
-          <a
-            href="https://fjcr.bigcartel.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onMouseOver={onHover}
-            onMouseOut={onHoverOut}
-          >
-            Shop
-          </a>
-        </li>
-      </ul>
-      <div onClick={handleClick} className="hamburger-menu">
-        <div className={`bar b1 ${animationCS(mobileMenuActive)}`}></div>
-        <div className={`bar b2 ${animationCS(mobileMenuActive)}`}></div>
-        <div className={`bar b3 ${animationCS(mobileMenuActive)}`}></div>
+            </li>
+          ))}
+        </ul>
+
+        {/* Placeholder — will open a full-screen contact overlay later. */}
+        <button type="button" className={`${styles.contact} sticker tilt-r`}>
+          Contact
+        </button>
+      </div>
+
+      <div onClick={toggleMenu} className={styles.hamburger}>
+        <div className={`${styles.bar} ${styles.b1} ${animationCS(mobileMenuActive)}`}></div>
+        <div className={`${styles.bar} ${styles.b2} ${animationCS(mobileMenuActive)}`}></div>
+        <div className={`${styles.bar} ${styles.b3} ${animationCS(mobileMenuActive)}`}></div>
       </div>
     </nav>
   );

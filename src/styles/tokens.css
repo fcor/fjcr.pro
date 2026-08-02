@@ -1,0 +1,59 @@
+/*
+ * Design tokens — single source of truth for theme.
+ * Change values here to re-theme the whole site.
+ *
+ * TODO: replace placeholder color hex + font families with final brand values.
+ * Colors below are the pre-redesign values, kept so the site stays coherent.
+ */
+:root {
+  /* ---- Color ----
+   * Warm, light theme. Three near-neutrals form a surface scale
+   * (lightest -> deepest); one ink; two accents.
+   */
+
+  /* Raw palette (source of truth) */
+  --warm-white: #fff8f0;
+  --cream: #f6eddb;
+  --sand: #eae2d0;
+  --charcoal: #45464c;
+  --rust: #ac3326;
+  --teal: #0091a1;
+
+  /* Surfaces (light -> deep) */
+  --color-bg: var(--warm-white);
+  --color-surface: var(--cream);
+  --color-surface-deep: var(--sand);
+
+  /* Text */
+  --color-text: var(--charcoal);
+  --color-text-muted: color-mix(in srgb, var(--charcoal) 65%, transparent);
+  --color-on-accent: var(--warm-white); /* light text on accent fills */
+  --color-title: #000; /* titles / name — pure black */
+
+  /* Accents */
+  --color-accent: var(--rust);
+  --color-accent-2: var(--teal);
+  /* Lighter rust for use ON dark backgrounds — #ac3326 fails AA contrast on
+     black (~3:1); this reaches ~4.4:1. Use for text/links over dark. */
+  --color-accent-bright: #d65547;
+
+  /* ---- Typography ---- */
+  --font-heading: "Anybody", sans-serif; /* titles */
+  --font-body: "Hanken Grotesk", sans-serif; /* body text */
+  --font-nav: "JetBrains Mono", monospace; /* navlinks & short text */
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* ---- Spacing scale ---- */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+
+  /* ---- Misc ---- */
+  --radius: 10px;
+  --transition: 0.2s;
+
+  /* ---- Sticker pattern (bordered box + hard offset shadow) ---- */
+  --border-width: 2px;
+  --shadow-offset: 4px 4px 0 0; /* hard shadow, no blur; color set per use */
+}

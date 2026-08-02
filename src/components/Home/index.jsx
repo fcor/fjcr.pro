@@ -1,37 +1,38 @@
-import React from "react";
-import "./styles.css";
-
-import Icon from "../Icon";
-import logo from "../../images/logo2.png";
-
-const icons = ["github", "twitter", "instagram", "mail"];
+import { useEffect } from "react";
+import styles from "./Home.module.css";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="home-content">
-      <div className="info1">
-        <img src={logo} alt="Logo" />
+    <section className={styles.hero}>
+      <h1 className={styles.heading}>
+        <span className={styles.line}>I make</span>
+        <span className={styles.line}>computers</span>
+        {/* "draw" — kept separate from its container so both can be
+            animated / treated independently later. */}
+        <span className={styles.drawWrap}>
+          <span className={styles.draw}>draw</span>
+        </span>
+        <span className={styles.line}>things.</span>
+      </h1>
+
+      <p className={styles.paragraph}>
+        Exploring the intersection between art and technology <br /> using
+        code as creative medium
+      </p>
+
+      <div className={styles.badges}>
+        <span className={`${styles.badge} ${styles.badgeArtist} sticker`}>
+          Computational Artist
+        </span>
+        <span className={`${styles.badge} ${styles.badgeEngineer} sticker`}>
+          Design Engineer
+        </span>
       </div>
-      <div className="info2">
-        <div className="info-texto">
-          <h1 className="title">Fabio Cortés</h1>
-          <h2 className="subtitle">I make computers draw things.</h2>
-          <p className="paragraph">
-            I'm a Colombian creative technologist currently based in Lausanne, Switzerland.
-          </p>
-          <p className="paragraph">
-            My practice primarily focuses on graphics programming, spatial computing, and creative coding.
-          </p>
-        </div>
-        <div className="info-redes">
-          {icons.map((item) => (
-            <div key={item} className="iconoRedes">
-              <Icon name={item} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 

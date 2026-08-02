@@ -1,10 +1,9 @@
-import React from "react";
 import "./styles.css";
 import { getRandomColor } from "../../utils/index";
 
 const Teaching = () => {
   const onHoverOut = (e) => {
-    e.target.style.color = "white";
+    e.target.style.color = "var(--color-text)";
   };
 
   const onHover = (e) => {

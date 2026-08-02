@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getRandomColor } from "../../../utils";
 import duality2 from "../../../images/duality2.jpg";
 import duality4 from "../../../images/duality4.jpg";
@@ -69,7 +69,7 @@ const Homer = () => {
         <iframe
           src="https://player.vimeo.com/video/819829228?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479"
           className="vimeo-iframe"
-          frameborder="0"
+          frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
           title="Duality live at LPM 2023"
         ></iframe>
@@ -80,7 +80,7 @@ const Homer = () => {
         <iframe
           src="https://player.vimeo.com/video/819829195?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479"
           className="vimeo-iframe"
-          frameborder="0"
+          frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
           title="Duality live at LPM 2023"
         ></iframe>

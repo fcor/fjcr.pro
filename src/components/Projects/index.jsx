@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./styles.css";
 import { NavLink } from "react-router-dom";
 import molecularWeb from "../../images/mw.png";
