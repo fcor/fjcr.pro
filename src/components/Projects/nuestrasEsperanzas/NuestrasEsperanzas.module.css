@@ -1,0 +1,308 @@
+.heroArtifact {
+  position: relative;
+  width: min(100%, 940px);
+  margin: 64px auto 0;
+  padding: 0 48px 80px 0;
+  box-sizing: border-box;
+}
+
+.heroPhoto {
+  margin: 0;
+  padding: 12px;
+  border: var(--border-width) solid var(--color-title);
+  box-shadow: 7px 7px 0 var(--color-title);
+  box-sizing: border-box;
+  background: var(--color-bg);
+}
+
+.heroPhoto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: rotate(-0.35deg);
+  transform-origin: center;
+}
+
+.lyricNote {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(100%, 470px);
+  padding: 20px 24px 22px;
+  border: var(--border-width) solid var(--color-title);
+  box-shadow: 6px 6px 0 var(--color-title);
+  box-sizing: border-box;
+  background: var(--color-bg);
+  transform: rotate(1deg);
+}
+
+.lyricNote span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--color-accent);
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.lyricNote blockquote {
+  margin: 0;
+  color: var(--color-title);
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+.artworkSection,
+.editionSection,
+.processSection {
+  width: min(100%, 1000px);
+  margin-inline: auto;
+}
+
+.artworkSection {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: center;
+  gap: 64px;
+}
+
+.artwork {
+  width: 100%;
+  margin: 0;
+}
+
+.artwork img,
+.editionGallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: var(--border-width) solid var(--color-title);
+  box-shadow: 6px 6px 0 var(--color-title);
+  box-sizing: border-box;
+  background: var(--color-bg);
+  transform-origin: center;
+}
+
+.artwork img {
+  padding: 10px;
+  transform: rotate(0.5deg);
+}
+
+.artwork figcaption,
+.editionGallery figcaption {
+  margin-top: 14px;
+  color: var(--color-text);
+  font-family: var(--font-nav);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.artwork figcaption {
+  margin-left: 14px;
+}
+
+.editionGallery {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  align-items: center;
+  gap: 64px;
+  width: min(100%, 880px);
+  margin: 68px auto 0;
+}
+
+.editionGallery figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.editionGallery img {
+  padding: 9px;
+}
+
+.printPhoto {
+  transform: rotate(-0.6deg);
+}
+
+.postcardPhoto {
+  transform: rotate(0.8deg);
+}
+
+.editionGallery figcaption {
+  margin-left: 12px;
+}
+
+.processSection {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+  column-gap: 72px;
+}
+
+.processSection > :first-child {
+  grid-column: 1;
+}
+
+.processSection > :nth-child(2) {
+  grid-column: 2;
+  margin-top: 0;
+}
+
+.colophon {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 64px 0 0;
+  padding: 0;
+  border-top: 4px solid var(--color-title);
+  border-bottom: 4px solid var(--color-title);
+}
+
+.colophon div {
+  min-width: 0;
+  padding: 28px 30px 32px;
+}
+
+.colophon div + div {
+  border-left: var(--border-width) solid var(--color-title);
+}
+
+.colophon dt {
+  margin-bottom: 13px;
+  color: var(--color-accent);
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.colophon dd {
+  margin: 0;
+  color: var(--color-title);
+  font-family: var(--font-heading);
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .heroArtifact {
+    margin-top: 56px;
+  }
+
+  .artworkSection,
+  .processSection {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .artwork {
+    width: min(100%, 720px);
+    margin-left: auto;
+  }
+
+  .processSection > :first-child,
+  .processSection > :nth-child(2),
+  .colophon {
+    grid-column: auto;
+  }
+
+  .processSection > :nth-child(2) {
+    width: min(100%, 680px);
+  }
+
+  .colophon {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .heroArtifact {
+    width: 100%;
+    margin-top: 52px;
+    padding: 0 0 166px;
+  }
+
+  .heroPhoto {
+    padding: 7px;
+  }
+
+  .lyricNote {
+    right: 8px;
+    width: min(440px, calc(100% - 24px));
+    padding: 18px 20px 20px;
+  }
+
+  .lyricNote blockquote {
+    font-size: 19px;
+    line-height: 25px;
+  }
+
+  .editionGallery {
+    gap: 28px;
+    margin-top: 52px;
+  }
+
+  .artwork img,
+  .editionGallery img {
+    padding: 6px;
+  }
+
+  .colophon {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 8px;
+  }
+
+  .colophon div {
+    padding: 24px 0 27px;
+  }
+
+  .colophon div + div {
+    border-top: var(--border-width) solid var(--color-title);
+    border-left: 0;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .heroArtifact {
+    padding-bottom: 208px;
+  }
+
+  .lyricNote {
+    padding: 16px 17px 18px;
+  }
+
+  .lyricNote span {
+    margin-bottom: 9px;
+  }
+
+  .lyricNote blockquote {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .editionGallery {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 52px;
+    width: min(84%, 390px);
+  }
+
+  .postcardPhoto {
+    width: 88%;
+    margin-left: auto !important;
+  }
+
+  .colophon dd {
+    font-size: 21px;
+    line-height: 27px;
+  }
+}

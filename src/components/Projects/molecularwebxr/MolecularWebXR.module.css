@@ -1,0 +1,221 @@
+.heroArtifact {
+  position: relative;
+  width: min(100%, 960px);
+  margin: 64px auto 0;
+  padding: 0 0 52px 52px;
+  box-sizing: border-box;
+}
+
+.heroFrame {
+  width: 100%;
+}
+
+.heroVideo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.artifactImage {
+  transform-origin: center;
+}
+
+.tiltRight {
+  transform: rotate(0.6deg);
+}
+
+.fieldNote {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: min(330px, 45%);
+  padding: 20px 24px;
+  border: var(--border-width) solid var(--color-title);
+  box-shadow: 6px 6px 0 var(--color-title);
+  box-sizing: border-box;
+  background: var(--color-bg);
+  color: var(--color-title);
+  transform: rotate(1deg);
+}
+
+.fieldNote span {
+  margin-bottom: 12px;
+  color: var(--color-accent);
+  font-family: var(--font-nav);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.fieldNote strong {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: 0;
+}
+
+.meetSection {
+  width: min(100%, 960px);
+  margin-inline: auto;
+}
+
+.sharedRoomFrame {
+  width: min(74%, 680px);
+  margin: 56px 0 0 auto;
+}
+
+.classroomSection {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: center;
+  gap: 64px;
+}
+
+.classroomCopy {
+  padding-top: 32px;
+}
+
+.outreachSection {
+  width: min(100%, 1000px);
+  margin-inline: auto;
+}
+
+.photoArtifact {
+  width: min(94%, 880px);
+  margin: 64px auto 0 0;
+  transform: rotate(-0.7deg);
+  transform-origin: center;
+}
+
+.photoMat,
+.awardMat {
+  padding: 8px;
+  border: 4px solid var(--color-title);
+  box-sizing: border-box;
+  background: var(--color-surface-deep);
+}
+
+.photoArtifact img,
+.awardArtifact img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photoArtifact img {
+  mix-blend-mode: multiply;
+}
+
+.photoArtifact figcaption,
+.awardArtifact figcaption {
+  margin: 12px 8px 0;
+  color: var(--color-text);
+  font-family: var(--font-nav);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  margin-top: 72px;
+}
+
+.creditsSection {
+  display: grid;
+  grid-template-columns: minmax(0, 53fr) minmax(360px, 47fr);
+  align-items: center;
+  gap: 64px;
+  width: min(100%, 1000px);
+  margin-inline: auto;
+}
+
+.awardArtifact {
+  width: 100%;
+  margin: 0;
+  transform: rotate(1deg);
+  transform-origin: center;
+}
+
+@media screen and (max-width: 900px) {
+  .heroArtifact {
+    margin-top: 56px;
+  }
+
+  .classroomSection,
+  .creditsSection {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 56px;
+  }
+
+  .classroomSection > figure {
+    width: min(100%, 760px);
+    margin-left: auto;
+  }
+
+  .awardArtifact {
+    width: min(86%, 520px);
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .heroArtifact {
+    width: 100%;
+    margin-top: 52px;
+    padding: 0 0 104px;
+  }
+
+  .fieldNote {
+    right: 8px;
+    left: auto;
+    width: min(300px, calc(100% - 24px));
+  }
+
+  .sharedRoomFrame {
+    width: 100%;
+    margin-top: 44px;
+  }
+
+  .photoArtifact {
+    width: 100%;
+    margin-top: 48px;
+  }
+
+  .videoGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+    margin-top: 56px;
+  }
+
+  .awardArtifact {
+    width: min(100%, 480px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .fieldNote {
+    padding: 17px 18px;
+  }
+
+  .fieldNote strong {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .photoMat,
+  .awardMat {
+    padding: 5px;
+    border-width: 3px;
+  }
+}

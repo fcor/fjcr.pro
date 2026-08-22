@@ -49,6 +49,10 @@
   --space-3: 1.5rem;
   --space-4: 2rem;
 
+  /* ---- Layout ---- */
+  --layout-max-width: 1100px;
+  --layout-gutter: clamp(24px, 5vw, 64px);
+
   /* ---- Misc ---- */
   --radius: 10px;
   --transition: 0.2s;

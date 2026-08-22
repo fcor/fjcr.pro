@@ -1,175 +1,236 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { getRandomColor } from "../../../utils";
+import { NavLink } from "react-router-dom";
+import BrowserFrame from "../../ProjectDetail/BrowserFrame";
+import {
+  ProjectCopy,
+  ProjectHeader,
+  ProjectNavigation,
+  ProjectPage,
+  ProjectSection,
+  ProjectSectionHeading,
+  ProjectStatement,
+} from "../../ProjectDetail";
+import pdb2ar1 from "../../../images/pdb2ar1.jpg";
 import pdb2ar2 from "../../../images/pdb2ar2.jpg";
 import pdb2ar3 from "../../../images/pdb2ar3.jpg";
 import pdb2ar4 from "../../../images/pdb2ar4.jpg";
-import pdb2ar5 from "../../../images/pdb2ar5.png";
 import pdb2ar6 from "../../../images/pdb2ar6.gif";
+import styles from "./PDB2AR.module.css";
 
-const PDB2AR = () => {
-  const [color, setColor] = useState("");
-  const [color2, setColor2] = useState("");
-  useEffect(() => {
-    const myColor1 = getRandomColor();
-    const myColor2 = getRandomColor();
-    setColor(myColor1);
-    setColor2(myColor2);
-    window.scrollTo(0, 0);
-  }, []);
-  return (
-    <div className="project-detail-container column">
-      <p className="title project" style={{ color }}>
-        PDB2AR
-      </p>
+const PDB2AR = () => (
+  <ProjectPage>
+    <ProjectHeader
+      category="3D & Augmented Reality"
+      title="PDB2AR"
+      summary="A tool where scientists and educators can create their own WebXR experiences from PDB files, PDB entries or 3D models."
+      cta={{
+        href: "https://molecularweb.epfl.ch/pages/pdb2ar.html",
+        label: "Try PDB2AR",
+      }}
+    >
+      <div className={styles.heroArtifact}>
+        <BrowserFrame className={styles.heroFrame}>
+          <img
+            className={styles.heroImage}
+            src={pdb2ar1}
+            alt="A DNA structure being manipulated with virtual hands in PDB2AR"
+            width="800"
+            height="600"
+          />
+        </BrowserFrame>
 
-      <p className="paragraph project-detail-description">
-        A few months after launching{" "}
-        <span>
-          <Link style={{ color: color2 }} to="/molecularweb">
-            MoleculARweb,
-          </Link>
-        </span>{" "}
-        we started to receive a lot of requests from users to add new content.
-        At first we did, but pretty soon we realized how this was not going to
-        escalate since we were a small team with limited resources. So we asked
-        ourselves, how can we automate this process so everyone can create their
-        own immersive content?
-      </p>
+        <aside className={styles.heroNote} aria-label="PDB2AR output">
+          <span>One project</span>
+          <strong>Three immersive apps.</strong>
+          <strong>Augmented reality and VR.</strong>
+        </aside>
+      </div>
+    </ProjectHeader>
 
-      <p className="paragraph project-detail-description">
-        This is how PDB2AR was born, a tool where scientists and educators can
-        create their own immersive experiences.
-      </p>
+    <ProjectSection className={styles.originSection}>
+      <ProjectSectionHeading label="01 / Why we built it">How can we automate this?</ProjectSectionHeading>
 
-      <p className="paragraph project-detail-description">
-        The web app is based on{" "}
-        <span>
-          <a
-            href="https://www.fjcr.studio/product/nuestras-esperanzas"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: color2 }}
-          >
-            VMD
-          </a>
-        </span>
-        , a tool that most biologists are familiar with, so we provide a
-        friendly UI were users can upload PDB files, copy and paste PDB entries
-        or upload 3D models (exported from VMD) so they can customize how do
-        they want to visualize it.
-      </p>
+      <ProjectCopy>
+        <p>
+          A few months after launching <NavLink to="/molecularweb">MoleculARweb</NavLink>, we started receiving a lot of
+          requests to add new content. At first we did it ourselves, but we were a small team with limited resources and
+          this was not going to scale.
+        </p>
+        <p>
+          So we asked ourselves: how can we automate this process so anyone can create their own immersive content? This
+          is how PDB2AR was born.
+        </p>
+      </ProjectCopy>
+    </ProjectSection>
 
-      <p className="paragraph project-detail-description">
-        We start by parsing the PDB string (atomic coordinates), then we detect
-        the elements and users can select which elements wants to visualize and
-        how to represent them.
-      </p>
+    <ProjectSection className={styles.workflowSection}>
+      <div>
+        <ProjectSectionHeading label="02 / The workflow">From a PDB file to a VMD script</ProjectSectionHeading>
 
-      <figure className="project-square-image-container">
-        <img
-          className="project-image"
-          src={pdb2ar2}
-          alt="screenshot from PDB2AR"
-        />
-      </figure>
-
-      <p className="paragraph project-detail-description">
-        Based on the user's selection, we create a script for rendering the
-        scene in VMD, which can be edited. After adding a custom title and
-        submiting, PDB2AR will create 3 immersive apps:
-      </p>
-      <p className="paragraph project-detail-description">
-        - AR with a cube marker.
-      </p>
-      <p className="paragraph project-detail-description">
-        - AR to visualize the molecule in your space
-      </p>
-      <p className="paragraph project-detail-description">
-        - VR app to manipulate your molecule with your hands or controllers
-        using a VR headset
-      </p>
-
-      <figure className="project-square-image-container">
-        <img
-          className="project-image"
-          src={pdb2ar6}
-          alt="gif from PDB2AR"
-        />
-      </figure>
-
-      <p className="paragraph project-detail-description">
-        Since everything is web-based, users will receive an email containing 3
-        URLS, one for each immersive app. No installs, no access barriers,
-        accesible to everyone, everywhere.
-      </p>
-
-      <div className="project-small-img-container row">
-        <img
-          className="project-image-small"
-          src={pdb2ar3}
-          alt="generative artwork"
-        />
-        <img className="project-image-small" src={pdb2ar4} alt="postcard" />
+        <ProjectCopy>
+          <p>
+            PDB2AR is based on{" "}
+            <a href="https://www.ks.uiuc.edu/Research/vmd/" target="_blank" rel="noopener noreferrer">
+              VMD
+            </a>
+            , a tool most biologists are familiar with. Users can upload a PDB file, paste a PDB entry or upload a 3D
+            model exported from VMD.
+          </p>
+          <p>
+            The app parses the atomic coordinates, detects the elements, and lets users choose what they want to show
+            and how to represent it.
+          </p>
+        </ProjectCopy>
       </div>
 
-      <figure className="project-square-image-container">
-        <img className="project-image" src={pdb2ar5} alt="pdb2ar screenshot" />
-      </figure>
+      <BrowserFrame
+        className={styles.configFrame}
+        caption="Selecting which chains, ligands and molecules to include."
+      >
+        <img
+          className={styles.configImage}
+          src={pdb2ar2}
+          alt="PDB2AR controls for selecting molecular chains, ligands and colors"
+          width="821"
+          height="778"
+          loading="lazy"
+        />
+      </BrowserFrame>
 
-      <p className="paragraph project-detail-description">
-        This tool is free and it's available{" "}
-        <span>
-          <a
-            href="https://molecularweb.epfl.ch/pages/pdb2ar.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: color2 }}
-          >
-            here.{" "}
+      <ol className={styles.workflow}>
+        <li>
+          <span>Input / 01</span>
+          <strong>Add the structure</strong>
+          <p>Upload a PDB file, paste a PDB entry or add a 3D model exported from VMD.</p>
+        </li>
+        <li>
+          <span>Selection / 02</span>
+          <strong>Choose what to show</strong>
+          <p>Select the elements and decide how each part of the structure should be represented.</p>
+        </li>
+        <li>
+          <span>Script / 03</span>
+          <strong>Build the VMD script</strong>
+          <p>PDB2AR creates an editable rendering script based on the user's selections.</p>
+        </li>
+      </ol>
+    </ProjectSection>
+
+    <ProjectSection className={styles.outputSection}>
+      <ProjectSectionHeading label="03 / The output" align="right">
+        Three immersive apps
+      </ProjectSectionHeading>
+
+      <ProjectCopy align="right">
+        <p>
+          After adding a custom title and submitting the project, PDB2AR creates three web-based apps from the same
+          structure.
+        </p>
+      </ProjectCopy>
+
+      <div className={styles.outputList}>
+        <div>
+          <span>01</span>
+          <strong>Cube-marker AR</strong>
+          <p>Manipulate the structure using a printed cube marker.</p>
+        </div>
+        <div>
+          <span>02</span>
+          <strong>Markerless AR</strong>
+          <p>Place the structure directly in the user's physical space.</p>
+        </div>
+        <div>
+          <span>03</span>
+          <strong>Virtual reality</strong>
+          <p>Use hands or controllers to manipulate the structure in a VR headset.</p>
+        </div>
+      </div>
+
+      <div className={styles.outputMedia}>
+        <BrowserFrame
+          className={styles.arFrame}
+          caption="The generated marker-based and markerless AR apps."
+        >
+          <div className={styles.phonePair}>
+            <img
+              className={styles.phoneLeft}
+              src={pdb2ar3}
+              alt="A DNA structure displayed with marker-based augmented reality"
+              width="386"
+              height="669"
+              loading="lazy"
+            />
+            <img
+              className={styles.phoneRight}
+              src={pdb2ar4}
+              alt="A DNA structure placed in a room with markerless augmented reality"
+              width="386"
+              height="669"
+              loading="lazy"
+            />
+          </div>
+        </BrowserFrame>
+
+        <BrowserFrame className={styles.vrFrame} caption="Manipulating a generated scene in virtual reality.">
+          <img
+            className={styles.vrImage}
+            src={pdb2ar6}
+            alt="A person manipulating a molecular structure in virtual reality"
+            width="569"
+            height="320"
+            loading="lazy"
+          />
+        </BrowserFrame>
+      </div>
+    </ProjectSection>
+
+    <ProjectStatement
+      label="Web based"
+      note="PDB2AR sends an email with one link for each generated app."
+    >
+      Three URLs. No installation.
+    </ProjectStatement>
+
+    <ProjectSection className={styles.creditsSection}>
+      <ProjectSectionHeading label="04 / Access" align="right">
+        Free and open source
+      </ProjectSectionHeading>
+
+      <ProjectCopy className={styles.creditsCopy} align="right">
+        <p>
+          PDB2AR is free and available{" "}
+          <a href="https://molecularweb.epfl.ch/pages/pdb2ar.html" target="_blank" rel="noopener noreferrer">
+            online
           </a>
-        </span>
-        We open sourced the templates used for the immersive apps {" "}
-        <span>
+          . We also open-sourced the{" "}
           <a
             href="https://github.com/molecularwebxr/pdb2ar-templates"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: color2 }}
           >
-            here.
+            templates used for the immersive apps
           </a>
-        </span>
-      </p>
+          .
+        </p>
+        <p>
+          The project was funded by the{" "}
+          <a href="https://www.snf.ch" target="_blank" rel="noopener noreferrer">
+            Swiss National Science Foundation
+          </a>{" "}
+          and was made by me and{" "}
+          <a href="https://www.lucianoabriata.com/" target="_blank" rel="noopener noreferrer">
+            Luciano Abriata
+          </a>{" "}
+          at EPFL's Laboratory for Biomolecular Modeling.
+        </p>
+      </ProjectCopy>
+    </ProjectSection>
 
-      <p className="paragraph project-detail-description">
-        This project was funded by the{" "}
-        <span>
-          <a
-            href="https://www.snf.ch"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: color2 }}
-          >
-            Swiss National Science Foundation{" "}
-          </a>
-        </span>
-        and was made by me and 
-        <span>
-          <a
-            href="https://www.lucianoabriata.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: color2 }}
-          >
-            {" "}Luciano Abriata{" "}
-          </a>
-        </span>
-        at the Laboratory for biomolecular modeling at EPFL.
-      </p>
-     
-    </div>
-  );
-};
+    <ProjectNavigation
+      className={styles.projectNavigation}
+      nextTo="/nuestras-esperanzas"
+      nextTitle="Nuestras Esperanzas"
+    />
+  </ProjectPage>
+);
 
 export default PDB2AR;

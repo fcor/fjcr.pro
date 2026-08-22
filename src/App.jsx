@@ -14,7 +14,6 @@ import Talks from "./components/Talks/";
 import Projects from "./components/Projects/";
 import "./App.css";
 import Molecularweb from "./components/Projects/molecularweb";
-import Homer from "./components/Projects/homerMetaverse";
 import NuestrasEsperanzas from "./components/Projects/nuestrasEsperanzas";
 import PDB2AR from "./components/Projects/pdb2ar";
 import Mwxr from "./components/Projects/molecularwebxr";
@@ -42,7 +41,6 @@ const AnimatedRoutes = () => {
             <Route path="/work" element={<Projects />} />
             <Route path="/duality" element={<Duality />} />
             <Route path="/molecularweb" element={<Molecularweb />} />
-            <Route path="/homers-metaverse" element={<Homer />} />
             <Route path="/nuestras-esperanzas" element={<NuestrasEsperanzas />} />
             <Route path="/culpable" element={<Culpable />} />
             <Route path="/pdb2ar" element={<PDB2AR />} />

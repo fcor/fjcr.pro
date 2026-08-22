@@ -1,0 +1,37 @@
+.frame {
+  position: relative;
+  display: inline-flex;
+  padding: 6px;
+  background-image: url("../../images/generative-bg1.jpg");
+  background-position: center;
+  background-size: cover;
+  transform: rotate(-2deg);
+  transform-origin: center;
+}
+
+.heading {
+  position: relative;
+  margin: 0;
+  padding: 14px 22px;
+  border: var(--border-width) solid var(--color-title);
+  background: var(--color-bg);
+  color: var(--color-title);
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+  .frame {
+    padding: 5px;
+  }
+
+  .heading {
+    padding: 10px 14px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+}

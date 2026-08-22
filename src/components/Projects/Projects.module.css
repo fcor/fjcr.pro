@@ -1,0 +1,48 @@
+.work {
+  width: 100%;
+  padding-block: 120px;
+  box-sizing: border-box;
+  background: var(--color-bg);
+}
+
+.featuredProjects {
+  margin-top: 88px;
+}
+
+.moreWork {
+  margin-top: 40px;
+}
+
+.compactGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px 28px;
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 900px) {
+  .featuredProjects {
+    display: grid;
+    gap: 96px;
+  }
+
+  .moreWork {
+    margin-top: 104px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .work {
+    padding-block: 64px;
+  }
+
+  .featuredProjects {
+    margin-top: 60px;
+  }
+
+  .compactGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+    margin-top: 48px;
+  }
+}

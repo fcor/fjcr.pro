@@ -1,5 +1,11 @@
 /* Fonts (Anybody / Hanken Grotesk / JetBrains Mono) load via Google Fonts in index.html. */
 
+html{
+  /* Always reserve scrollbar space so short pages (Home/About) don't shift
+     horizontally when navigating to tall pages that do scroll. */
+  scrollbar-gutter: stable;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -9,11 +15,8 @@ body{
 
 .bg {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: -1;
-  width: 100vw;
-  height: 100vh;
   background-color: var(--color-bg);
 }
 
@@ -92,8 +95,9 @@ path{
   overflow: hidden;
 }
 
-/* Route-transition wrapper: fill .content so pages can center vertically. */
-.content > div{
+/* Route-transition wrappers: fill .content so pages can center vertically. */
+.content > div,
+.content > div > div{
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -120,7 +124,7 @@ path{
 }
 
 .soon{
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

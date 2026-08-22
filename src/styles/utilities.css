@@ -21,3 +21,12 @@
 .tilt-r {
   transform: rotate(1deg);
 }
+
+/* Fluid page width that remains readable on very large screens. */
+.site-container {
+  width: min(
+    calc(100% - var(--layout-gutter) - var(--layout-gutter)),
+    var(--layout-max-width)
+  );
+  margin-inline: auto;
+}

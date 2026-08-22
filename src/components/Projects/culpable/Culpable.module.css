@@ -1,0 +1,246 @@
+.heroArtifact {
+  position: relative;
+  width: min(100%, 760px);
+  margin: 64px auto 0;
+  padding: 0 70px 62px 0;
+  box-sizing: border-box;
+}
+
+.cover {
+  margin: 0;
+  padding: 12px;
+  border: var(--border-width) solid var(--color-title);
+  box-shadow: 7px 7px 0 var(--color-title);
+  box-sizing: border-box;
+  background: var(--color-bg);
+}
+
+.cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: rotate(-0.4deg);
+}
+
+.trackLabel {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: min(100%, 340px);
+  padding: 18px 22px;
+  border: var(--border-width) solid var(--color-title);
+  box-shadow: 6px 6px 0 var(--color-title);
+  box-sizing: border-box;
+  background: var(--color-bg);
+  transform: rotate(1deg);
+}
+
+.trackLabel span,
+.trackLabel small {
+  font-family: var(--font-nav);
+  font-size: 11px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.trackLabel span {
+  grid-column: 1 / -1;
+  margin-bottom: 9px;
+  color: var(--color-accent);
+}
+
+.trackLabel strong {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  line-height: 29px;
+}
+
+.trackLabel small {
+  align-self: end;
+  color: var(--color-text);
+}
+
+.invitationSection,
+.artworkSection,
+.personalSection {
+  width: min(100%, 1000px);
+  margin-inline: auto;
+}
+
+.invitationSection {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: center;
+  gap: 68px;
+}
+
+.bandNote {
+  min-width: 0;
+  margin: 0;
+  transform: rotate(0.6deg);
+}
+
+.bandNote img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 9px;
+  border: var(--border-width) solid var(--color-title);
+  box-shadow: 6px 6px 0 var(--color-title);
+  box-sizing: border-box;
+  background: var(--color-bg);
+}
+
+.bandNote figcaption {
+  margin: 14px 0 0 12px;
+  color: var(--color-text);
+  font-family: var(--font-nav);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.lyric {
+  margin-top: 112px;
+}
+
+.artworkSection {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+  column-gap: 72px;
+}
+
+.artworkSection > :first-child,
+.artworkSection > :nth-child(2) {
+  grid-column: 2;
+}
+
+.trackDetails {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 64px 0 0;
+  border-top: 4px solid var(--color-title);
+  border-bottom: 4px solid var(--color-title);
+}
+
+.trackDetails div {
+  padding: 28px 30px 32px;
+}
+
+.trackDetails div + div {
+  border-left: var(--border-width) solid var(--color-title);
+}
+
+.trackDetails dt {
+  margin-bottom: 12px;
+  color: var(--color-accent);
+  font-family: var(--font-nav);
+  font-size: 11px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.trackDetails dd {
+  margin: 0;
+  color: var(--color-title);
+  font-family: var(--font-heading);
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 29px;
+}
+
+.personalSection {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+  column-gap: 72px;
+}
+
+.personalSection > :nth-child(2) {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .heroArtifact {
+    margin-top: 56px;
+  }
+
+  .invitationSection,
+  .artworkSection,
+  .personalSection {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .bandNote {
+    width: min(100%, 650px);
+    margin-left: auto;
+  }
+
+  .artworkSection > :first-child,
+  .artworkSection > :nth-child(2),
+  .trackDetails {
+    grid-column: auto;
+  }
+
+  .artworkSection > :nth-child(2) {
+    margin-top: -16px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .heroArtifact {
+    margin-top: 52px;
+    padding: 0 0 108px;
+  }
+
+  .cover {
+    padding: 7px;
+  }
+
+  .trackLabel {
+    right: 8px;
+    width: min(320px, calc(100% - 24px));
+    padding: 16px 18px;
+  }
+
+  .lyric {
+    margin-top: 104px;
+  }
+
+  .trackDetails {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 8px;
+  }
+
+  .trackDetails div {
+    padding: 24px 0 27px;
+  }
+
+  .trackDetails div + div {
+    border-top: var(--border-width) solid var(--color-title);
+    border-left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heroArtifact {
+    padding-bottom: 118px;
+  }
+
+  .trackLabel strong {
+    font-size: 22px;
+  }
+
+  .bandNote img {
+    padding: 6px;
+  }
+
+  .trackDetails dd {
+    font-size: 21px;
+    line-height: 27px;
+  }
+}
