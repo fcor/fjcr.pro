@@ -270,12 +270,42 @@
 
 @media screen and (max-width: 480px) {
   .setTicket {
-    padding: 14px 16px;
+    z-index: 1;
+    right: 22px;
+    bottom: 28px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px 12px;
+    width: min(286px, calc(100% - 40px));
+    padding: 13px 15px;
+    box-shadow: 4px 4px 0 var(--color-title);
+  }
+
+  .setTicket span,
+  .setTicket small {
+    font-size: 9px;
+    line-height: 14px;
+    letter-spacing: 0.7px;
+  }
+
+  .setTicket span {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .setTicket small {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
   }
 
   .setTicket strong {
-    font-size: 18px;
-    line-height: 22px;
+    grid-row: 2;
+    grid-column: 1 / -1;
+    padding: 8px 0 0;
+    border-top: var(--border-width) solid var(--color-title);
+    border-left: 0;
+    font-size: 17px;
+    line-height: 21px;
   }
 
   .channelBand h3 {

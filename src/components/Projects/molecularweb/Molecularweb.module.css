@@ -210,7 +210,7 @@
   }
 
   .modeList {
-    gap: 80px;
+    gap: 48px;
     margin-top: 48px;
   }
 
@@ -225,7 +225,7 @@
   }
 
   .creditsSection + .projectNavigation {
-    margin-top: 104px;
+    margin-top: 72px;
   }
 }
 

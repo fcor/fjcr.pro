@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import styles from "./Footer.module.css";
 
 const links = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/fabiojcortes/" },
+  // { label: "LinkedIn", href: "https://www.linkedin.com/in/fabiojcortes/" },
   { label: "GitHub", href: "https://github.com/fcor" },
   { label: "Instagram", href: "https://www.instagram.com/fabiojcortes/" },
   { label: "Shop", href: "https://fjcr.bigcartel.com/" },
@@ -25,20 +25,22 @@ const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <span className={`${styles.brand} sticker`}>Fabio J. Cortés</span>
-      <nav className={styles.links}>
-        {links.map(({ label, href }) => (
-          <a
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.link}
-          >
-            {label}
-          </a>
-        ))}
-      </nav>
+      <div className={`chrome-container ${styles.inner}`}>
+        <span className={`${styles.brand} sticker`}>Fabio J. Cortés</span>
+        <nav className={styles.links}>
+          {links.map(({ label, href }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
+      </div>
     </footer>
   );
 };

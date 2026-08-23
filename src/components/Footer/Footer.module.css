@@ -15,14 +15,17 @@
 
 /* ---- Normal footer (all other pages) ---- */
 .footer {
+  width: 100%;
+  background: #000;
+}
+
+.inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
-  width: 100%;
-  padding: 30px 100px;
+  padding-block: 30px;
   box-sizing: border-box;
-  background: #000;
 }
 
 .brand {
@@ -65,17 +68,59 @@
   transform: rotate(-5deg);
 }
 
-@media screen and (max-width: 800px) {
-  .footer {
-    flex-direction: column;
-    gap: var(--space-3);
-    padding: var(--space-4);
-    text-align: center;
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  .inner {
+    gap: 24px;
+    padding-block: 26px;
+  }
+
+  .brand {
+    padding: 9px 15px;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   .links {
-    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .link {
+    font-size: 15px;
+    line-height: 19px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inner {
+    flex-direction: column;
+    gap: 20px;
+    padding-block: 24px;
+    text-align: center;
+  }
+
+  .brand {
+    padding: 8px 14px;
+    box-shadow: 3px 3px 0 var(--color-accent);
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.3px;
+  }
+
+  .links {
+    flex-wrap: nowrap;
     justify-content: center;
-    gap: var(--space-3);
+    gap: 18px;
+  }
+
+  .link {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.4px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .links {
+    flex-wrap: wrap;
   }
 }

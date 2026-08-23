@@ -277,12 +277,40 @@
 }
 
 @media screen and (max-width: 480px) {
+  .heroArtifact {
+    padding-bottom: 120px;
+  }
+
   .sprintNote {
-    padding: 16px 18px 18px;
+    right: 10px;
+    width: min(276px, calc(100% - 40px));
+    padding: 14px 16px 16px;
+    box-shadow: 4px 4px 0 var(--color-title);
+  }
+
+  .sprintNote > span {
+    margin-bottom: 10px;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.8px;
+  }
+
+  .sprintNote dl {
+    gap: 14px;
+  }
+
+  .sprintNote div + div {
+    padding-left: 14px;
+  }
+
+  .sprintNote dt {
+    font-size: 10px;
+    line-height: 15px;
   }
 
   .sprintNote dd {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 22px;
   }
 
   .photoMat {

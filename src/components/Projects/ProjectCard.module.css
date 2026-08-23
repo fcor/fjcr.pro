@@ -220,13 +220,46 @@
   }
 }
 
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .mediaWindow {
+    padding: 12px;
+  }
+
+  .details {
+    width: calc(100% - 24px);
+    margin-top: -24px;
+    padding: 30px;
+  }
+
+  .category {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .title {
+    margin: 16px 0 18px;
+    font-size: 40px;
+    line-height: 43px;
+  }
+
+  .description {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .link {
+    margin-top: 28px;
+    padding: 14px 24px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .project {
-    width: calc(100% - 16px);
+    width: 100%;
   }
 
   .mediaWindow {
-    padding: 8px;
+    padding: 6px;
   }
 
   .toolbar {
@@ -241,13 +274,19 @@
   }
 
   .imageFrame {
-    margin: 12px 8px 0;
+    margin: 10px 6px 0;
+  }
+
+  .image {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
   }
 
   .details {
-    width: calc(100% - 16px);
-    margin-top: -20px;
-    padding: 28px 22px 26px;
+    width: calc(100% - 12px);
+    margin-top: -8px;
+    padding: 22px;
     transform: rotate(1deg);
   }
 
@@ -259,12 +298,13 @@
     padding: 8px 12px;
     font-size: 12px;
     line-height: 18px;
+    white-space: normal;
   }
 
   .title {
-    margin: 18px 0 22px;
-    font-size: 36px;
-    line-height: 40px;
+    margin: 16px 0 18px;
+    font-size: 30px;
+    line-height: 33px;
   }
 
   .description {
@@ -274,7 +314,7 @@
   }
 
   .link {
-    margin-top: 26px;
+    margin-top: 22px;
     padding: 13px 20px;
   }
 }

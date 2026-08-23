@@ -157,20 +157,87 @@
 }
 
 @media screen and (max-width: 600px) {
+  .link {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: var(--border-width) solid var(--color-title);
+  }
+
   .mediaWindow {
-    padding: 8px;
+    width: 112px;
+    margin: 0;
+    padding: 3px;
+  }
+
+  .toolbar {
+    display: none;
   }
 
   .imageFrame {
-    margin: 8px 8px 0;
+    margin: 0;
+    padding: 2px;
+    border-width: 2px;
+  }
+
+  .image {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
 
   .details {
-    padding: 18px 8px 0;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .category {
+    gap: 5px;
+    font-size: 9px;
+    line-height: 14px;
+    letter-spacing: 0.6px;
+  }
+
+  .categoryIcon {
+    width: 10px;
+    height: auto;
+  }
+
+  .titleRow {
+    gap: 12px;
+    margin-top: 6px;
   }
 
   .title {
-    font-size: 27px;
+    font-size: 22px;
+    line-height: 25px;
+  }
+
+  .arrow {
+    width: 16px;
+    height: 16px;
+  }
+
+  .description {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .link {
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .mediaWindow {
+    width: 96px;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 23px;
   }
 }
 

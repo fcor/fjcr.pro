@@ -52,6 +52,10 @@
   /* ---- Layout ---- */
   --layout-max-width: 1100px;
   --layout-gutter: clamp(24px, 5vw, 64px);
+  --chrome-max-width: 1536px;
+  --chrome-gutter: clamp(32px, 4vw, 64px);
+  --page-top-spacing: 60px;
+  --page-top-spacing-mobile: 32px;
 
   /* ---- Misc ---- */
   --radius: 10px;

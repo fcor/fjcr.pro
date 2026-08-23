@@ -1,6 +1,6 @@
 .page {
   width: 100%;
-  padding: 88px 0 128px;
+  padding: var(--page-top-spacing) 0 128px;
   box-sizing: border-box;
   color: var(--color-text);
 }
@@ -15,7 +15,6 @@
 .heading {
   position: sticky;
   top: 56px;
-  padding-top: 10px;
 }
 
 .intro {
@@ -204,8 +203,7 @@
 .archiveList {
   display: flex;
   flex-direction: column;
-  margin-top: 24px;
-  border-top: var(--border-width) solid var(--color-title);
+  margin-top: 0;
 }
 
 .compactTalk {
@@ -268,10 +266,6 @@
 }
 
 @media screen and (max-width: 900px) {
-  .page {
-    padding-top: 72px;
-  }
-
   .layout {
     grid-template-columns: 220px minmax(0, 1fr);
     gap: 40px;
@@ -288,9 +282,35 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .page {
+    padding-top: var(--page-top-spacing-mobile);
+  }
+
+  .archive {
+    margin-top: 56px;
+  }
+
+  .archiveHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .archiveHeader h2 {
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  .compactMeta {
+    flex-direction: column;
+    gap: 1px;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .page {
-    padding: 56px 0 88px;
+    padding: var(--page-top-spacing-mobile) 0 88px;
   }
 
   .layout {
@@ -350,6 +370,11 @@
     padding-inline: 2px;
   }
 
+  .compactPanel h3 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
   .compactAction {
     width: 36px;
     height: 36px;
@@ -357,15 +382,9 @@
 }
 
 @media screen and (max-width: 560px) {
-  .archiveHeader {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .compactMeta {
-    flex-direction: column;
-    gap: 1px;
+  .archiveHeader h2 {
+    font-size: 28px;
+    line-height: 32px;
   }
 }
 

@@ -30,3 +30,12 @@
   );
   margin-inline: auto;
 }
+
+/* Wider shell for global page chrome and expansive compositions. */
+.chrome-container {
+  width: min(
+    calc(100% - var(--chrome-gutter) - var(--chrome-gutter)),
+    var(--chrome-max-width)
+  );
+  margin-inline: auto;
+}

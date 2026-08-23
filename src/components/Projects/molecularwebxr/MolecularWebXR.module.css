@@ -158,6 +158,10 @@
     gap: 56px;
   }
 
+  .classroomCopy {
+    padding-top: 0;
+  }
+
   .classroomSection > figure {
     width: min(100%, 760px);
     margin-left: auto;
@@ -187,6 +191,10 @@
     margin-top: 44px;
   }
 
+  .classroomSection {
+    gap: 40px;
+  }
+
   .photoArtifact {
     width: 100%;
     margin-top: 48px;
@@ -205,12 +213,24 @@
 
 @media screen and (max-width: 480px) {
   .fieldNote {
-    padding: 17px 18px;
+    z-index: 1;
+    right: 22px;
+    bottom: 28px;
+    width: min(276px, calc(100% - 40px));
+    padding: 14px 16px;
+    box-shadow: 4px 4px 0 var(--color-title);
+  }
+
+  .fieldNote span {
+    margin-bottom: 9px;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.8px;
   }
 
   .fieldNote strong {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 17px;
+    line-height: 22px;
   }
 
   .photoMat,

@@ -134,20 +134,6 @@ const NuestrasEsperanzas = () => (
         </p>
       </ProjectCopy>
 
-      <dl className={styles.colophon}>
-        <div>
-          <dt>Pattern</dt>
-          <dd>Processing</dd>
-        </div>
-        <div>
-          <dt>Post-processing</dt>
-          <dd>Affinity Designer</dd>
-        </div>
-        <div>
-          <dt>Typeface</dt>
-          <dd>Prociono</dd>
-        </div>
-      </dl>
     </ProjectSection>
 
     <ProjectNavigation nextTo="/culpable" nextTitle="Culpable" />

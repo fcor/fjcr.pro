@@ -1,6 +1,6 @@
 .work {
   width: 100%;
-  padding-block: 120px;
+  padding-block: var(--page-top-spacing);
   box-sizing: border-box;
   background: var(--color-bg);
 }
@@ -23,7 +23,7 @@
 @media screen and (max-width: 900px) {
   .featuredProjects {
     display: grid;
-    gap: 96px;
+    gap: 72px;
   }
 
   .moreWork {
@@ -33,16 +33,24 @@
 
 @media screen and (max-width: 800px) {
   .work {
-    padding-block: 64px;
+    padding-block: var(--page-top-spacing-mobile);
   }
 
   .featuredProjects {
-    margin-top: 60px;
+    gap: 48px;
+    margin-top: 40px;
   }
 
+  .moreWork {
+    margin-top: 56px;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .compactGrid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 48px;
-    margin-top: 48px;
+    gap: 0;
+    margin-top: 28px;
+    border-top: var(--border-width) solid var(--color-title);
   }
 }
