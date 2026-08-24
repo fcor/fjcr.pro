@@ -2,6 +2,10 @@
   position: relative;
   z-index: 100;
   width: 100%;
+  border-bottom: 4px solid var(--color-title);
+  box-shadow: var(--shadow-offset) var(--color-title);
+  box-sizing: border-box;
+  background: var(--color-bg);
   isolation: isolate;
 }
 
