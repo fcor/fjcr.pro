@@ -8,16 +8,17 @@
 .shell {
   width: min(
     calc(100% - var(--layout-gutter) - var(--layout-gutter)),
-    1252px
+    940px
   );
   min-width: 0;
 }
 
 .content {
   display: grid;
-  grid-template-columns: 380px minmax(0, 1fr);
+  grid-template-columns: 300px minmax(0, 600px);
+  justify-content: center;
   align-items: stretch;
-  gap: 48px;
+  gap: 40px;
   width: 100%;
   margin: 48px 0 0px 0;
   box-sizing: border-box;
@@ -71,9 +72,9 @@
   column-gap: 8px;
   margin: 0;
   font-family: var(--font-nav);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 19px;
   letter-spacing: 0.7px;
 }
 
@@ -110,8 +111,8 @@
   height: 100%;
   max-width: 100%;
   min-width: 0;
-  min-height: 624px;
-  padding: 52px;
+  min-height: 460px;
+  padding: 32px;
   overflow: hidden;
   box-sizing: border-box;
   background: var(--color-surface);
@@ -119,7 +120,7 @@
 
 .bio {
   width: 100%;
-  padding: 26px;
+  padding: 24px;
   border: var(--border-width) solid var(--color-title);
   box-sizing: border-box;
   background: var(--color-bg);
@@ -128,41 +129,41 @@
 }
 
 .bio h2 {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   color: var(--color-title);
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 36px;
+  line-height: 32px;
   letter-spacing: 0;
 }
 
 .bioCopy {
   display: grid;
-  gap: 27px;
+  gap: 20px;
 }
 
 .bioCopy p {
   margin: 0;
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 27px;
+  line-height: 25px;
   letter-spacing: 0;
 }
 
 .mottoSticker {
   position: absolute;
   z-index: 2;
-  right: -62px;
-  bottom: 12px;
-  width: 280px;
+  right: -76px;
+  bottom: 2px;
+  width: 240px;
   max-width: 58%;
   margin: 0;
-  padding: 16px 22px 17px;
+  padding: 14px 18px;
   border: var(--border-width) solid var(--color-title);
-  box-shadow: 5px 5px 0 var(--color-accent);
+  box-shadow: var(--shadow-offset) var(--color-accent);
   box-sizing: border-box;
   background: #000;
   transform: rotate(-7deg);
@@ -180,9 +181,9 @@
 .stickerPrimary {
   color: var(--color-accent-bright);
   font-family: var(--font-heading);
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 800;
-  line-height: 29px;
+  line-height: 25px;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -191,36 +192,31 @@
   margin-top: 4px;
   color: var(--warm-white);
   font-family: var(--font-nav);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 19px;
+  line-height: 17px;
   letter-spacing: 0.7px;
 }
 
 @media screen and (max-width: 1100px) {
   .content {
-    grid-template-columns: 340px minmax(0, 1fr);
-    gap: 40px;
+    grid-template-columns: 280px minmax(0, 560px);
+    gap: 32px;
   }
 
   .bioFrame {
-    padding: 36px;
+    padding: 32px;
   }
 
   .bioCopy {
-    gap: 22px;
-  }
-
-  .bioCopy p {
-    font-size: 18px;
-    line-height: 26px;
+    gap: 18px;
   }
 }
 
 @media screen and (min-width: 901px) and (max-width: 1100px) {
   .content {
-    grid-template-columns: 300px minmax(0, 1fr);
-    gap: 32px;
+    grid-template-columns: 260px minmax(0, 520px);
+    gap: 28px;
     margin-top: 40px;
   }
 
@@ -251,35 +247,22 @@
 
   .bio h2 {
     margin-bottom: 12px;
-    font-size: 28px;
-    line-height: 32px;
   }
 
   .bioCopy {
     gap: 16px;
   }
 
-  .bioCopy p {
-    font-size: 16px;
-    line-height: 23px;
-  }
-
   .mottoSticker {
     right: 16px;
     bottom: -28px;
-    width: 230px;
-    padding: 12px 16px 13px;
-    box-shadow: 4px 4px 0 var(--color-accent);
+    width: 210px;
+    padding: 12px 16px;
   }
 
   .stickerPrimary {
-    font-size: 21px;
-    line-height: 24px;
-  }
-
-  .stickerSecondary {
-    font-size: 12px;
-    line-height: 17px;
+    font-size: 20px;
+    line-height: 23px;
   }
 }
 
@@ -348,17 +331,17 @@
   }
 
   .bio h2 {
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 28px;
   }
 
   .bioCopy {
-    gap: 20px;
+    gap: 18px;
   }
 
   .bioCopy p {
-    font-size: 17px;
-    line-height: 25px;
+    font-size: 15px;
+    line-height: 23px;
   }
 
   .mottoSticker {
@@ -371,14 +354,12 @@
   }
 
   .stickerPrimary {
-    font-size: 22px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 23px;
   }
 
   .stickerSecondary {
     margin-top: 3px;
-    font-size: 13px;
-    line-height: 18px;
   }
 }
 

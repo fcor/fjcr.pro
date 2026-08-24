@@ -33,9 +33,9 @@
   gap: 10px;
   color: var(--color-text);
   font-family: var(--font-nav);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 21px;
   letter-spacing: 0;
 }
 
@@ -76,15 +76,15 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 14px;
+  padding: 8px 10px;
   border: var(--border-width) solid var(--color-accent);
   background: color-mix(in srgb, var(--color-accent) 10%, transparent);
   color: var(--color-accent);
   font-family: var(--font-nav);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 18px;
-  letter-spacing: 1.2px;
+  line-height: 14px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   transform: rotate(-1deg);
 }
@@ -99,7 +99,7 @@
   margin: 0;
   color: var(--color-title);
   font-family: var(--font-heading);
-  font-size: 88px;
+  font-size: 64px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0;
@@ -131,9 +131,9 @@
   box-sizing: border-box;
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 31px;
+  line-height: 27px;
   letter-spacing: 0;
 }
 
@@ -143,9 +143,9 @@
   align-items: center;
   gap: 10px;
   margin: 0 5px 5px 0;
-  padding: 14px 20px;
+  padding: 11px 18px;
   border: var(--border-width) solid var(--color-title);
-  box-shadow: 5px 5px 0 var(--color-title);
+  box-shadow: var(--shadow-offset) var(--color-title);
   background: var(--color-surface-deep);
   color: var(--color-title);
   font-family: var(--font-nav);
@@ -157,7 +157,7 @@
 
 .primaryLink:active {
   transform: translate(2px, 2px);
-  box-shadow: 3px 3px 0 var(--color-title);
+  box-shadow: 2px 2px 0 var(--color-title);
 }
 
 .externalArrow {
@@ -189,9 +189,9 @@
   margin-bottom: 14px;
   color: var(--color-accent);
   font-family: var(--font-nav);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 16px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
@@ -200,7 +200,7 @@
   margin: 0;
   color: var(--color-title);
   font-family: var(--font-heading);
-  font-size: 46px;
+  font-size: 36px;
   font-weight: 600;
   line-height: 1.08;
   letter-spacing: 0;
@@ -215,9 +215,9 @@
   margin: 0;
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 29px;
+  line-height: 26px;
   letter-spacing: 0;
 }
 
@@ -266,9 +266,9 @@
 .statementIndex,
 .statementNote {
   font-family: var(--font-nav);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 19px;
+  line-height: 17px;
   letter-spacing: 0;
 }
 
@@ -281,7 +281,7 @@
   margin: 0;
   color: var(--color-title);
   font-family: var(--font-heading);
-  font-size: 46px;
+  font-size: 36px;
   font-weight: 600;
   line-height: 1.06;
   letter-spacing: 0;
@@ -307,9 +307,9 @@
   gap: 20px;
   color: var(--color-title);
   font-family: var(--font-heading);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 24px;
   letter-spacing: 0;
 }
 
@@ -352,13 +352,13 @@
   }
 
   .category {
-    padding: 7px 12px;
-    font-size: 13px;
-    line-height: 17px;
+    padding: 7px 10px;
+    font-size: 12px;
+    line-height: 14px;
   }
 
   .title {
-    font-size: 76px;
+    font-size: 56px;
   }
 
   .heroIntro {
@@ -368,18 +368,18 @@
   }
 
   .heroIntro p {
-    font-size: 19px;
-    line-height: 29px;
+    font-size: 17px;
+    line-height: 26px;
   }
 
   .primaryLink {
-    padding: 13px 18px;
+    padding: 11px 16px;
   }
 }
 
 @media screen and (max-width: 900px) {
   .title {
-    font-size: 72px;
+    font-size: 52px;
   }
 
   .heroIntro {
@@ -405,7 +405,7 @@
   }
 
   .title {
-    font-size: 64px;
+    font-size: 48px;
   }
 
   .heroIntro {
@@ -415,13 +415,13 @@
   }
 
   .heroIntro p {
-    font-size: 19px;
-    line-height: 29px;
+    font-size: 17px;
+    line-height: 26px;
   }
 
   .sectionHeading h2,
   .statement p {
-    font-size: 38px;
+    font-size: 32px;
   }
 
   .copy {
@@ -520,8 +520,8 @@
   }
 
   .copy p {
-    font-size: 17px;
-    line-height: 27px;
+    font-size: 16px;
+    line-height: 25px;
   }
 
   .copy p + p {

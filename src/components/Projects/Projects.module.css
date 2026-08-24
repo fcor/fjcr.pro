@@ -6,28 +6,29 @@
 }
 
 .featuredProjects {
-  margin-top: 88px;
+  display: grid;
+  gap: 64px;
+  margin-top: 48px;
 }
 
 .moreWork {
-  margin-top: 40px;
+  margin-top: 96px;
 }
 
 .compactGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 48px 28px;
-  margin-top: 60px;
+  gap: 48px 32px;
+  margin-top: 48px;
 }
 
 @media screen and (max-width: 900px) {
   .featuredProjects {
-    display: grid;
-    gap: 72px;
+    gap: 64px;
   }
 
   .moreWork {
-    margin-top: 104px;
+    margin-top: 96px;
   }
 }
 

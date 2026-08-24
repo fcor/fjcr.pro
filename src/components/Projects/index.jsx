@@ -50,7 +50,7 @@ const projects = [
     title: "Drawing Inspiration",
     titleLines: ["Drawing", "Inspiration"],
     description:
-      "A Mixed Reality Approach to Artistic Visualization for Home Decor. 1st place at Develop the Future: Meta & AWS Hackathon for XR & Generative AI.",
+      "A Mixed Reality Approach to Artistic Visualization for Home Decor. 1st place at Develop the Future: Meta & AWS Hackathon for XR & GenAI.",
     image: draw1,
     imageAlt: "Drawing Inspiration preview showing mixed reality artwork",
   },
