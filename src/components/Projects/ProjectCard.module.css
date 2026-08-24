@@ -1,0 +1,326 @@
+.project {
+  --media-width: 560px;
+  --details-width: 380px;
+  --overlap: 160px;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  max-width: calc(var(--media-width) + var(--details-width) - var(--overlap));
+  margin-inline: auto;
+  padding-bottom: 112px;
+  box-sizing: border-box;
+}
+
+.mediaWindow {
+  grid-column: 1;
+  grid-row: 1;
+  width: var(--media-width);
+  padding: 16px;
+  box-sizing: border-box;
+  background: var(--color-bg);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  padding: 0 14px 4px;
+  border-bottom: 4px solid var(--color-title);
+  box-sizing: border-box;
+  background: var(--color-surface-deep);
+}
+
+.control {
+  width: 14px;
+  height: 14px;
+  border: var(--border-width) solid var(--color-title);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.rust {
+  background: var(--color-accent);
+}
+
+.teal {
+  background: var(--color-accent-2);
+}
+
+.black {
+  background: var(--color-title);
+}
+
+.imageFrame {
+  margin: 14px 14px 0;
+  padding: 4px;
+  border: 4px solid var(--color-title);
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.image { 
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+.details {
+  z-index: 1;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  width: var(--details-width);
+  margin-left: calc(var(--overlap) * -1);
+  min-height: 360px;
+  padding: 30px 30px 30px 46px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--color-bg);
+  transform: translateY(40%) rotate(3deg);
+  transform-origin: center;
+}
+
+.reversed .mediaWindow {
+  grid-column: 2;
+}
+
+.reversed .details {
+  grid-column: 1;
+  margin-left: 0;
+  margin-right: calc(var(--overlap) * -1);
+  transform: translateY(40%) rotate(-3deg);
+}
+
+.category {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: var(--border-width) solid var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  color: var(--color-accent);
+  font-family: var(--font-nav);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.categoryIcon {
+  display: block;
+  width: 12px;
+  height: 7px;
+}
+
+.title {
+  margin: 14px 0 16px;
+  color: var(--color-title);
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.title span {
+  display: block;
+}
+
+.description {
+  margin: 0;
+  padding-left: 20px;
+  border-left: 4px solid var(--color-accent);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding: 11px 18px;
+  border: var(--border-width) solid var(--color-title);
+  box-shadow: var(--shadow-offset) var(--color-title);
+  box-sizing: border-box;
+  background: var(--color-surface-deep);
+  color: var(--color-title);
+  font-family: var(--font-nav);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.link:hover .arrow,
+.link:focus-visible .arrow {
+  transform: rotate(-8deg);
+}
+
+.link:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--color-title);
+}
+
+.link:focus-visible {
+  outline: 3px solid var(--color-accent-2);
+  outline-offset: 4px;
+}
+
+.arrow {
+  display: block;
+  width: 14px;
+  height: 14px;
+  transform-origin: center;
+  transition: transform var(--transition);
+}
+
+@media screen and (max-width: 900px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 720px);
+    padding-bottom: 0;
+  }
+
+  .mediaWindow {
+    width: 100%;
+    max-width: none;
+  }
+
+  .details {
+    align-self: center;
+    width: calc(100% - 32px);
+    max-width: none;
+    min-height: 0;
+    margin-inline: 0;
+    margin-top: -32px;
+    padding: 36px;
+    transform: rotate(2deg);
+  }
+
+  .reversed .details {
+    margin-inline: 0;
+    transform: rotate(-2deg);
+  }
+
+  .link {
+    margin-top: 32px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .mediaWindow {
+    padding: 12px;
+  }
+
+  .details {
+    width: calc(100% - 24px);
+    margin-top: -24px;
+    padding: 30px;
+  }
+
+  .category {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .title {
+    margin: 16px 0 18px;
+    font-size: 40px;
+    line-height: 43px;
+  }
+
+  .description {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .link {
+    margin-top: 28px;
+    padding: 14px 24px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project {
+    width: 100%;
+  }
+
+  .mediaWindow {
+    padding: 6px;
+  }
+
+  .toolbar {
+    gap: 8px;
+    height: 30px;
+    padding-inline: 10px;
+  }
+
+  .control {
+    width: 11px;
+    height: 11px;
+  }
+
+  .imageFrame {
+    margin: 10px 6px 0;
+  }
+
+  .image {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
+  .details {
+    width: calc(100% - 12px);
+    margin-top: -8px;
+    padding: 22px;
+    transform: rotate(1deg);
+  }
+
+  .reversed .details {
+    transform: rotate(-1deg);
+  }
+
+  .category {
+    padding: 8px 12px;
+    font-size: 12px;
+    line-height: 18px;
+    white-space: normal;
+  }
+
+  .title {
+    margin: 16px 0 18px;
+    font-size: 30px;
+    line-height: 33px;
+  }
+
+  .description {
+    padding-left: 16px;
+    font-size: 15px;
+    line-height: 23px;
+  }
+
+  .link {
+    margin-top: 22px;
+    padding: 13px 20px;
+  }
+}

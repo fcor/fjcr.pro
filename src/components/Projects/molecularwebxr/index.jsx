@@ -1,139 +1,202 @@
-import React, { useEffect, useState } from "react";
-import { getRandomColor } from "../../../utils";
+import BrowserFrame from "../../ProjectDetail/BrowserFrame";
+import {
+  EmbeddedVideoFrame,
+  ProjectCopy,
+  ProjectHeader,
+  ProjectNavigation,
+  ProjectPage,
+  ProjectSection,
+  ProjectSectionHeading,
+  ProjectStatement,
+} from "../../ProjectDetail";
 import mwxr2 from "../../../images/mwxr2.jpg";
 import mwxr4 from "../../../images/mwxr4.jpg";
 import mwxr7 from "../../../images/mwxr7.png";
+import styles from "./MolecularWebXR.module.css";
 
-const MolecularWebXR = () => {
-  const [color, setColor] = useState("");
-  const [color2, setColor2] = useState("");
-  useEffect(() => {
-    const myColor1 = getRandomColor();
-    const myColor2 = getRandomColor();
-    setColor(myColor1);
-    setColor2(myColor2);
-    window.scrollTo(0, 0);
-  }, []);
-  return (
-    <div className="project-detail-container column">
-      <p className="title project" style={{ color }}>
-        MolecularWebXR
-      </p>
+const heroVideo = "https://killcloud.nyc3.cdn.digitaloceanspaces.com/assets/xr.mp4";
 
-      <p className="paragraph project-detail-description project-subtitle" style={{ color: color2 }}>
-        Welcome to the future of science education and scientific collaboration over molecular structures
-      </p>
+const MolecularWebXR = () => (
+  <ProjectPage>
+    <ProjectHeader
+      category="Mixed Reality"
+      title="MolecularWebXR"
+      titleParts={["Molecular", "WebXR"]}
+      summary="A shared mixed-reality room where students, teachers and researchers can explore molecular structures together, directly from the browser."
+      cta={{
+        href: "https://molecularwebxr.org/",
+        label: "Visit MolecularWebXR",
+      }}
+    >
+      <div className={styles.heroArtifact}>
+        <BrowserFrame className={styles.heroFrame}>
+          <video
+            className={styles.heroVideo}
+            src={heroVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="A shared MolecularWebXR session with participants examining a molecular structure"
+          >
+            Your browser does not support embedded video.
+          </video>
+        </BrowserFrame>
 
-      <p className="paragraph project-detail-description">
-        MolecularWebXR is the Metaverse's ultimate immersive tool for education and peer discussion in chemistry and
-        structural biology. Running on web browsers hence on all modern devices like smartphones, tablets, computers and
-        VR-headsets, MolecularWebXR allows users to interact with each other and with virtual objects seamlessly in
-        augmented and virtual reality.
-      </p>
+        <aside className={styles.fieldNote} aria-label="Project characteristics">
+          <span>Multi-User / WebXR</span>
+          <strong>Mixed reality.</strong>
+          <strong>One link, no installs.</strong>
+        </aside>
+      </div>
+    </ProjectHeader>
 
-      <p className="paragraph project-detail-description">
-        Try the app{" "}
-        <span>
-          <a href="https://molecularwebxr.org/" target="_blank" rel="noopener noreferrer" style={{ color: color2 }}>
-            here
-          </a>
-        </span>
-        .
-      </p>
+    <ProjectSection className={styles.meetSection}>
+      <ProjectSectionHeading label="01 / Shared space">Meet inside the molecule</ProjectSectionHeading>
 
-      <figure className="project-large-image-container">
-        <img className="project-image" src={mwxr2} alt="Screenshot of MolecularWebXR's metaverse" />
-      </figure>
+      <ProjectCopy>
+        <p>
+          Most molecular viewers are designed for one person and one screen. MolecularWebXR turns the same material
+          into a place people can enter together. Participants can talk, point to structures and manipulate the same
+          virtual objects in real time, in augmented or virtual reality.
+        </p>
+        <p>
+          Because it runs on the web, the room can be opened from modern phones, tablets, computers and VR headsets. No
+          dedicated installation or single type of device becomes the price of entry.
+        </p>
+      </ProjectCopy>
 
-      <p className="paragraph project-detail-description">
-        MolecularWebXR comes up with a set of rooms with ready-to-use content relevant for education in chemistry and
-        structural biology, prepared together with university-level teachers to focus on topics where visualization and
-        object manipulation in three dimensions should help to better grasp the key concepts.
-      </p>
+      <BrowserFrame
+        className={styles.sharedRoomFrame}
+        caption="Inside a MolecularWebXR room, participants share the same structures and spatial context."
+      >
+        <img
+          className={`${styles.artifactImage} ${styles.tiltRight}`}
+          src={mwxr2}
+          alt="A MolecularWebXR room displaying molecular structures in mixed reality"
+          width="1427"
+          height="1070"
+          loading="lazy"
+        />
+      </BrowserFrame>
+    </ProjectSection>
 
-      <div className="vimeo-embed-container">
-        <iframe
-          src="https://player.vimeo.com/video/947984945?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-          className="vimeo-iframe"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-          title="Structural biology in Mixed reality"
-        ></iframe>
+    <ProjectSection className={styles.classroomSection}>
+      <div className={styles.classroomCopy}>
+        <ProjectSectionHeading label="02 / Ready to explore">Rooms ready for class</ProjectSectionHeading>
+
+        <ProjectCopy>
+          <p>
+            MolecularWebXR includes rooms with ready-to-use material for chemistry and structural biology. The content
+            was prepared with university teachers around topics where spatial visualization and direct manipulation can
+            make difficult concepts easier to grasp.
+          </p>
+          <p>
+            Teachers and researchers use these rooms for lessons, scientific discussion and outreach. A session can
+            move from a laptop to a headset without changing the shared experience.
+          </p>
+        </ProjectCopy>
       </div>
 
-      <p className="paragraph project-detail-description">
-        By design, access to MolecularWebXR is highly democratized, as the web standard ensures that the software works
-        out of the box in the web browsers of all kinds of devices from high-end VR headsets to smartphones, tablets and
-        computers, leaving nobody out.
-      </p>
+      <EmbeddedVideoFrame
+        src="https://player.vimeo.com/video/947984945?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        title="Structural biology in mixed reality"
+        caption="Exploring structural biology in mixed reality."
+      />
+    </ProjectSection>
 
-      <p className="paragraph project-detail-description">
-        MolecularWebXR is used globally by teachers and researchers to enhance their work and serve as an outreach tool.
-        It facilitates collaboration and allows users to share their work, inspiring others to engage with science.
-      </p>
+    <ProjectStatement
+      label="Browser first"
+      note="From high-end VR headsets to phones and tablets, the web keeps access open."
+    >
+      One link. Almost any device.
+    </ProjectStatement>
 
-      <div className="vimeo-embed-container">
-        <iframe
+    <ProjectSection className={styles.outreachSection}>
+      <ProjectSectionHeading label="03 / Beyond the lab" align="right">
+        Science in public
+      </ProjectSectionHeading>
+
+      <ProjectCopy align="right">
+        <p>
+          MolecularWebXR is used around the world as both a collaborative tool and a way to bring science closer to the
+          public. Interactive sessions let visitors handle research subjects that would otherwise remain diagrams on a
+          screen.
+        </p>
+        <p>
+          At VIZBI 2023 at the European Molecular Biology Laboratory in Heidelberg, researchers explored the platform
+          together. At EPFL Open Days in Lausanne, we ran 20 interactive sessions over two days for the wider community.
+        </p>
+      </ProjectCopy>
+
+      <figure className={styles.photoArtifact}>
+        <div className={styles.photoMat}>
+          <img
+            src={mwxr4}
+            alt="Visitors wearing VR headsets during a MolecularWebXR conference session"
+            width="4032"
+            height="2268"
+            loading="lazy"
+          />
+        </div>
+        <figcaption>Visitors trying MolecularWebXR during a public session.</figcaption>
+      </figure>
+
+      <div className={styles.videoGrid}>
+        <EmbeddedVideoFrame
           src="https://player.vimeo.com/video/742185709?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-          className="vimeo-iframe"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-          title="Multi user VR talk at Transcure Conference"
-        ></iframe>
-      </div>
-
-      <p className="paragraph project-detail-description">
-        We are frequently invited to showcase MolecularWebXR at various events, where we conduct interactive sessions
-        designed to spark community interest in science. Below are some pictures and videos from these sessions. The
-        first is from the European Molecular Biology Laboratory in Heidelberg, Germany, at the Visualizing Biology
-        Conference (Vizbi 2023). The second is from the EPFL Open Days in Lausanne, Switzerland, where we held 20
-        interactive sessions over two days to engage the community with the university's ongoing research.
-      </p>
-
-      <figure className="project-large-image-container">
-        <img className="project-image" src={mwxr4} alt="people using molecularwebxr in a conference" />
-      </figure>
-
-      <div className="vimeo-embed-container">
-        <iframe
+          title="Multi-user VR talk at the TransCure conference"
+          caption="A multi-user VR talk at the TransCure conference."
+        />
+        <EmbeddedVideoFrame
           src="https://player.vimeo.com/video/947982294?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-          className="vimeo-iframe"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-          title="VR Session at EPFL Open Days 2023"
-        ></iframe>
+          title="MolecularWebXR at EPFL Open Days 2023"
+          caption="One of 20 interactive sessions held during EPFL Open Days."
+        />
+      </div>
+    </ProjectSection>
+
+    <ProjectSection className={styles.creditsSection}>
+      <div>
+        <ProjectSectionHeading label="04 / Small team">Built by two people</ProjectSectionHeading>
+
+        <ProjectCopy>
+          <p>
+            MolecularWebXR was nominated for Education Experience of the Year and Mixed Reality Experience of the Year
+            at The Polys WebXR Awards 2023, alongside work from organizations including Niantic, Meta and the World
+            Bank.
+          </p>
+          <p>
+            The project was made by me and{" "}
+            <a href="https://www.lucianoabriata.com/" target="_blank" rel="noopener noreferrer">
+              Luciano Abriata
+            </a>{" "}
+            at EPFL's Laboratory for Biomolecular Modeling, with funding from the{" "}
+            <a href="https://www.snf.ch" target="_blank" rel="noopener noreferrer">
+              Swiss National Science Foundation
+            </a>
+            .
+          </p>
+        </ProjectCopy>
       </div>
 
-      <p className="paragraph project-detail-description">
-        MolecularWebXR was nominated for Education Experience of the Year and Mixed Reality Experience of the Year at
-        The Polys WebXR Awards 2023, competing against major players like Niantic, Meta, and the World Bank. This was a
-        huge achievement for our small team of just one developer and one biologist, with no promotion or advertising,
-        but a relentless commitment to democratizing access to digital learning tools and making them accessible to
-        everyone, everywhere.
-      </p>
-
-      <p className="paragraph project-detail-description">
-        This project was funded by the{" "}
-        <span>
-          <a href="https://www.snf.ch" target="_blank" rel="noopener noreferrer" style={{ color: color2 }}>
-            Swiss National Science Foundation{" "}
-          </a>
-        </span>
-        and was made by me and
-        <span>
-          <a href="https://www.lucianoabriata.com/" target="_blank" rel="noopener noreferrer" style={{ color: color2 }}>
-            {" "}
-            Luciano Abriata{" "}
-          </a>
-        </span>
-        at the Laboratory for biomolecular modeling at EPFL.
-      </p>
-
-      <figure className="project-square-image-container">
-        <img className="project-image" src={mwxr7} alt="nominations to polys webxr awards" />
+      <figure className={styles.awardArtifact}>
+        <div className={styles.awardMat}>
+          <img
+            src={mwxr7}
+            alt="MolecularWebXR nominations for the 2023 Polys WebXR Awards"
+            width="2048"
+            height="2048"
+            loading="lazy"
+          />
+        </div>
+        <figcaption>Two nominations at The Polys WebXR Awards 2023.</figcaption>
       </figure>
-    </div>
-  );
-};
+    </ProjectSection>
+
+    <ProjectNavigation nextTo="/drawing-inspiration" nextTitle="Drawing Inspiration" />
+  </ProjectPage>
+);
 
 export default MolecularWebXR;

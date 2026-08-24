@@ -29,12 +29,12 @@
   /* width: 450px; */
   height: 20px;
   text-align: center;
-  color: white;
+  color: var(--color-text);
 }
 
 .clase p{
   width: 440px;
   margin: 0 0 15px 0;
   text-align: center;
-  color: white;
+  color: var(--color-text);
 }

@@ -1,129 +1,208 @@
-import React, { useEffect, useState } from "react";
-import { getRandomColor } from "../../../utils";
+import BrowserFrame from "../../ProjectDetail/BrowserFrame";
+import {
+  ProjectCopy,
+  ProjectHeader,
+  ProjectNavigation,
+  ProjectPage,
+  ProjectSection,
+  ProjectSectionHeading,
+} from "../../ProjectDetail";
 import mw1 from "../../../images/mw1.png";
 import mw2 from "../../../images/mw2.jpg";
 import mw3 from "../../../images/mw3.jpg";
 import mw4 from "../../../images/mw4.jpg";
 import mw5 from "../../../images/mw5.jpg";
 import vmk from "../../../images/vmk.gif";
+import styles from "./Molecularweb.module.css";
 
-const Molecularweb = () => {
-  const [color, setColor] = useState("");
-  const [color2, setColor2] = useState("");
-  useEffect(() => {
-    const myColor1 = getRandomColor();
-    const myColor2 = getRandomColor();
-    setColor(myColor1);
-    setColor2(myColor2);
-    window.scrollTo(0, 0);
-  }, []);
-  return (
-    <div className="project-detail-container column">
-      <p className="title project" style={{ color }}>
-        MoleculARweb
-      </p>
+const Molecularweb = () => (
+  <ProjectPage>
+    <ProjectHeader
+      category="Augmented Reality"
+      title="MoleculARweb"
+      summary="A free website with interactive AR activities where students and teachers can explore molecular structure, reactivity, dynamics and interactions."
+      cta={{
+        href: "https://molecularweb.org/",
+        label: "Try MoleculARweb",
+      }}
+    >
+      <div className={styles.heroArtifact}>
+        <BrowserFrame className={styles.heroFrame}>
+          <img
+            className={styles.heroImage}
+            src={mw1}
+            alt="The MoleculARweb virtual modeling kit running in augmented reality"
+            width="1920"
+            height="1080"
+          />
+        </BrowserFrame>
 
-      <p className="paragraph project-detail-description">
-        MoleculARweb is a free website with out-of-the-box interactive AR activities that works in laptops, tablets and
-        smartphones, where students and teachers can naturally handle virtual objects to explore molecular structure,
-        reactivity, dynamics and interactions.
-      </p>
+        <aside className={styles.heroNote} aria-label="Project availability">
+          <span>Free and open source</span>
+          <strong>More than 20 activities.</strong>
+          <strong>Runs in the browser.</strong>
+        </aside>
+      </div>
+    </ProjectHeader>
 
-      <p className="paragraph project-detail-description">
-        Try the app{" "}
-        <span>
-          <a href="https://molecularweb.org/" target="_blank" rel="noopener noreferrer" style={{ color: color2 }}>
-            here
-          </a>
-        </span>
-        .
-      </p>
+    <ProjectSection className={styles.activitiesSection}>
+      <ProjectSectionHeading label="01 / The activities">Chemistry and biology in AR</ProjectSectionHeading>
 
-      <p className="paragraph project-detail-description">
-        As an{" "}
-        <span>
+      <ProjectCopy>
+        <p>
+          MoleculARweb is made up of mini-apps that we call activities. They cover different concepts in chemistry and
+          biology, from 3D visualizations to interactive simulations.
+        </p>
+        <p>
+          There are more than 20 activities. MoleculARweb is free and{" "}
           <a
             href="https://github.com/molecularwebxr/molecularweb"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: color2 }}
           >
-            open source{" "}
+            open source
           </a>
-        </span>{" "}
-        project, with more than 20 different activities, MoleculARweb is used by teachers and students all over the
-        world as an engaging and useful for teaching and learning chemistry, proving the potential of AR in future
-        education and showing the large impact that modern web technologies have in democratizing access to digital
-        learning tools.
-      </p>
+          , and it is used by teachers and students around the world.
+        </p>
+      </ProjectCopy>
+    </ProjectSection>
 
-      <figure className="project-large-image-container">
-        <img className="project-image" src={mw1} alt="Screenshot of molecularweb" />
-      </figure>
+    <ProjectSection className={styles.modesSection}>
+      <ProjectSectionHeading label="02 / Two modes" align="right">
+        Marker-based and markerless AR
+      </ProjectSectionHeading>
 
-      <p className="paragraph project-detail-description">
-        The app comprises various mini-apps, referred to as "activities," designed to help students and educators delve
-        into various concepts in chemistry and biology. These activities range from pure 3D visualizations to
-        interactive simulations, and the app offers two distinct modes: Marker-based AR and Markerless AR.
-      </p>
-      <p className="paragraph project-detail-description">
-        In the marker-based activities, users are required to print a set of black and white markers on regular paper to
-        display and manipulate 3D elements. In desktop mode, users have access to controls for tasks such as rotation
-        and scaling of molecules. On mobile devices, users can employ finger gestures to rotate and zoom in on 3D
-        elements.
-      </p>
+      <ProjectCopy align="right">
+        <p>
+          The activities can use printed markers or place the 3D content directly in the user's space. Some also include
+          a regular 3D mode for laptops and mobile devices.
+        </p>
+      </ProjectCopy>
 
-      <div className="project-small-img-container row">
-        <img className="project-image-small" src={mw4} alt="Screenshot of molecularweb" />
-        <img className="project-image-small" src={mw5} alt="Screenshot of molecularweb" />
+      <div className={styles.modeList}>
+        <div className={styles.mode}>
+          <div className={styles.modeCopy}>
+            <span>Mode / 01</span>
+            <h3>Marker-based AR</h3>
+            <p>
+              Users print black-and-white markers on regular paper and use them to display and manipulate 3D elements.
+              Desktop controls allow rotation and scaling, while mobile devices use finger gestures.
+            </p>
+          </div>
+
+          <BrowserFrame
+            className={styles.modeFrame}
+            caption="Two marker-based activities running on a mobile device."
+          >
+            <div className={styles.phonePair}>
+              <img
+                className={styles.phoneLeft}
+                src={mw4}
+                alt="A marker-based activity showing a protein secondary structure"
+                width="540"
+                height="1024"
+                loading="lazy"
+              />
+              <img
+                className={styles.phoneRight}
+                src={mw5}
+                alt="A marker-based activity showing a green molecular structure"
+                width="540"
+                height="1024"
+                loading="lazy"
+              />
+            </div>
+          </BrowserFrame>
+        </div>
+
+        <div className={`${styles.mode} ${styles.modeReverse}`}>
+          <BrowserFrame
+            className={styles.modeFrame}
+            caption="The same activity in markerless AR and regular 3D mode."
+          >
+            <div className={styles.phonePair}>
+              <img
+                className={styles.phoneLeft}
+                src={mw2}
+                alt="A bacteriophage activity placed outdoors with markerless augmented reality"
+                width="558"
+                height="728"
+                loading="lazy"
+              />
+              <img
+                className={styles.phoneRight}
+                src={mw3}
+                alt="The bacteriophage activity displayed in regular 3D mode"
+                width="558"
+                height="728"
+                loading="lazy"
+              />
+            </div>
+          </BrowserFrame>
+
+          <div className={styles.modeCopy}>
+            <span>Mode / 02</span>
+            <h3>Markerless AR and 3D</h3>
+            <p>
+              Some visualization activities work without markers. Users can place the elements in their physical space,
+              walk around them and even move inside larger molecular structures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </ProjectSection>
+
+    <ProjectSection className={styles.kitSection}>
+      <div>
+        <ProjectSectionHeading label="03 / Main feature">The virtual modeling kit</ProjectSectionHeading>
+
+        <ProjectCopy>
+          <p>
+            The virtual modeling kit is the AR equivalent of the plastic molecular models traditionally used in schools.
+            There are no limits on the number of atoms or elements. Users can upload or paste PDB files, or create custom
+            molecules with the JSMol editor.
+          </p>
+          <p>
+            Cube markers remove blind spots for the camera and give users better control. The kit can simulate hydrogen
+            bonds, atom clashes and changes in temperature, all in the browser.
+          </p>
+        </ProjectCopy>
       </div>
 
-      <p className="paragraph project-detail-description">
-        Some activities are designed for visualization and, in addition to marker-based AR, can be used without markers.
-        This allows users to place elements in their physical space, providing the freedom to walk around and even
-        immerse themselves within the molecules.
-      </p>
+      <BrowserFrame className={styles.kitFrame} caption="Building and manipulating a molecule with the virtual modeling kit.">
+        <img
+          className={styles.kitImage}
+          src={vmk}
+          alt="The MoleculARweb virtual modeling kit in use"
+          width="600"
+          height="293"
+          loading="lazy"
+        />
+      </BrowserFrame>
+    </ProjectSection>
 
-      <div className="project-small-img-container row">
-        <img className="project-image-small" src={mw3} alt="Screenshot of molecularweb" />
-        <img className="project-image-small" src={mw2} alt="Screenshot of molecularweb" />
-      </div>
+    <ProjectSection className={styles.creditsSection}>
+      <ProjectSectionHeading label="04 / Project" align="right">
+        Made at EPFL
+      </ProjectSectionHeading>
 
-      <p className="paragraph project-detail-description">
-        The flagship feature of MoleculARweb is the virtual modeling kit, which serves as the AR equivalent of the
-        plastic molecular models traditionally used in schools for teaching chemistry. Here, there are no limitations
-        regarding the number of atoms or elements. Users can upload, copy, and paste PDB (Atomic coordinates) files or
-        create custom molecules using the JSMol editor. Cube markers are utilized for this feature to eliminate blind
-        spots for the camera, enhancing users' control over the elements.
-      </p>
+      <ProjectCopy className={styles.creditsCopy} align="right">
+        <p>
+          This project was funded by the{" "}
+          <a href="https://www.snf.ch" target="_blank" rel="noopener noreferrer">
+            Swiss National Science Foundation
+          </a>{" "}
+          and was made by me and{" "}
+          <a href="https://www.lucianoabriata.com/" target="_blank" rel="noopener noreferrer">
+            Luciano Abriata
+          </a>{" "}
+          at EPFL's Laboratory for Biomolecular Modeling.
+        </p>
+      </ProjectCopy>
+    </ProjectSection>
 
-      <figure className="project-square-image-container">
-        <img className="project-image" src={vmk} alt="gif from PDB2AR" />
-      </figure>
-
-      <p className="paragraph project-detail-description">
-        Furthermore, users can simulate molecule interactions, including the formation of hydrogen bonds, visualization
-        of atom clashes, and observing how molecules respond to changes in temperature — all within the web browser.
-      </p>
-
-      <p className="paragraph project-detail-description">
-        This project was funded by the{" "}
-        <span>
-          <a href="https://www.snf.ch" target="_blank" rel="noopener noreferrer" style={{ color: color2 }}>
-            Swiss National Science Foundation{" "}
-          </a>
-        </span>
-        and was made by me and
-        <span>
-          <a href="https://www.lucianoabriata.com/" target="_blank" rel="noopener noreferrer" style={{ color: color2 }}>
-            {" "}
-            Luciano Abriata{" "}
-          </a>
-        </span>
-        at the Laboratory for biomolecular modeling at EPFL.
-      </p>
-    </div>
-  );
-};
+    <ProjectNavigation className={styles.projectNavigation} nextTo="/pdb2ar" nextTitle="PDB2AR" />
+  </ProjectPage>
+);
 
 export default Molecularweb;

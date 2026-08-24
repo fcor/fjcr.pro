@@ -1,92 +1,125 @@
-import React, { useEffect, useState } from "react";
-import { getRandomColor } from "../../../utils";
+import {
+  ProjectCopy,
+  ProjectHeader,
+  ProjectNavigation,
+  ProjectPage,
+  ProjectSection,
+  ProjectSectionHeading,
+  ProjectStatement,
+} from "../../ProjectDetail";
 import culpable2 from "../../../images/culpable2.jpg";
 import culpable3 from "../../../images/culpable3.jpg";
+import styles from "./Culpable.module.css";
 
-const NuestrasEsperanzas = () => {
-  const [color, setColor] = useState("");
-  const [color2, setColor2] = useState("");
-  useEffect(() => {
-    const myColor1 = getRandomColor();
-    const myColor2 = getRandomColor();
-    setColor(myColor1);
-    setColor2(myColor2);
-    window.scrollTo(0, 0);
-  }, []);
-  return (
-    <div className="project-detail-container column">
-      <p className="title project" style={{ color }}>
-        Culpable
-      </p>
+const Culpable = () => (
+  <ProjectPage>
+    <ProjectHeader
+      category="Generative Design"
+      title="Culpable"
+      summary='Code-based artwork for "Culpable", the third song from Grito&apos;s album 8, inspired by the song and the symbolic Arhuaca scorpion.'
+      cta={{
+        href: "https://www.youtube.com/watch?v=ukudtRv3A4Q&ab_channel=Grito-Topic",
+        label: "Listen to the song",
+      }}
+    >
+      <div className={styles.heroArtifact}>
+        <figure className={styles.cover}>
+          <img
+            src={culpable2}
+            alt="Culpable artwork showing a geometric red scorpion"
+            width="1080"
+            height="1080"
+          />
+        </figure>
 
-      <p
-        className="paragraph project-detail-description project-subtitle"
-        style={{ color: color2 }}
-      >
-        "Hazlo tu mismo, pero no lo hagas solo"
-      </p>
+        <aside className={styles.trackLabel} aria-label="Album and track">
+          <span>Grito / Album 8</span>
+          <strong>Track 03</strong>
+          <small>Culpable</small>
+        </aside>
+      </div>
+    </ProjectHeader>
 
-      <p className="paragraph project-detail-description">
-        In june 2023, Grito invited different artists to collaborate for the art
-        of their new album "8". Each artist was assigned with one of the songs and
-        the job was to create an unique artwork inspired by the song and its
-        message.
-      </p>
+    <ProjectSection className={styles.invitationSection}>
+      <div>
+        <ProjectSectionHeading label="01 / The invitation">One song for each artist</ProjectSectionHeading>
 
-      <p className="paragraph project-detail-description">
-        I received the third song, Culpable.
-      </p>
+        <ProjectCopy>
+          <p>
+            In June 2023, Grito invited different artists to collaborate on the art for their new album, "8". Each
+            artist was assigned one song and asked to create a unique artwork inspired by the song and its message.
+          </p>
+          <p>I received the third song: Culpable.</p>
+        </ProjectCopy>
+      </div>
 
-      <figure className="project-square-image-container">
+      <figure className={styles.bandNote}>
         <img
-          className="project-image"
-          src={culpable2}
-          alt="generative artwork"
-        />
-      </figure>
-
-      <p className="paragraph project-detail-description">
-        Creating this code-based artwork, inspired by the song and the symbolic
-        scorpion from the indigenous Arhuacas community in Colombia, was a labor
-        of love, a true celebration of the unity of art and music and a tribute
-        to the values we stand for.
-      </p>
-      <p className="paragraph project-detail-description">
-        I can't help but think back to the 19-year-old me who wouldn't believe
-        that someday I'd have the chance to blend my passions for music and art,
-        all thanks to the amazing band that played that unforgettable night at
-        the legendary Teatro La Mama in Bogota.
-      </p>
-
-      <p className="paragraph project-detail-description">
-        This collaboration is not just about art, it's a journey that connects
-        me to my roots, my inspiration, and the values that have shaped who I am
-        today.
-      </p>
-
-      <figure className="project-square-image-container">
-        <img
-          className="project-image"
           src={culpable3}
-          alt="generative artwork"
+          alt="A note from Grito about Fabio and the Culpable collaboration"
+          width="1080"
+          height="1080"
+          loading="lazy"
         />
+        <figcaption>Grito's note about the collaboration.</figcaption>
       </figure>
+    </ProjectSection>
 
-      <p className="paragraph project-detail-description">
-        Listen to the song{" "}
-        <span>
-          <a
-            href="https://www.youtube.com/watch?v=ukudtRv3A4Q&ab_channel=Grito-Topic"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: color2 }}
-          >
-            here.
-          </a>
-        </span>
-      </p>
-    </div>
-  );
-};
+    <ProjectStatement
+      className={styles.lyric}
+      label="From the song"
+      note="Do it yourself, but don't do it alone."
+    >
+      <span lang="es">Hazlo tu mismo, pero no lo hagas solo.</span>
+    </ProjectStatement>
 
-export default NuestrasEsperanzas;
+    <ProjectSection className={styles.artworkSection}>
+      <ProjectSectionHeading label="02 / The artwork" align="right">
+        A scorpion made with code
+      </ProjectSectionHeading>
+
+      <ProjectCopy align="right">
+        <p>
+          Creating this code-based artwork, inspired by the song and the symbolic scorpion from the Indigenous Arhuaca
+          community in Colombia, was a labor of love: a celebration of art and music, and a tribute to the values we
+          stand for.
+        </p>
+      </ProjectCopy>
+
+      <dl className={styles.trackDetails}>
+        <div>
+          <dt>Album</dt>
+          <dd>8</dd>
+        </div>
+        <div>
+          <dt>Track</dt>
+          <dd>03 / Culpable</dd>
+        </div>
+        <div>
+          <dt>Artwork</dt>
+          <dd>Code + symbolism</dd>
+        </div>
+      </dl>
+    </ProjectSection>
+
+    <ProjectSection className={styles.personalSection}>
+      <ProjectSectionHeading label="03 / Personal">The 19-year-old me</ProjectSectionHeading>
+
+      <ProjectCopy>
+        <p>
+          I can't help but think back to the 19-year-old me, who wouldn't believe that someday I'd have the chance to
+          blend my passions for music and art, all thanks to the amazing band that played that unforgettable night at
+          the legendary Teatro La Mama in Bogota.
+        </p>
+        <p>
+          This collaboration is not just about art. It's a journey that connects me to my roots, my inspiration and the
+          values that have shaped who I am today.
+        </p>
+      </ProjectCopy>
+    </ProjectSection>
+
+    <ProjectNavigation nextTo="/molecularwebxr" nextTitle="MolecularWebXR" />
+  </ProjectPage>
+);
+
+export default Culpable;

@@ -1,0 +1,301 @@
+.heroArtifact {
+  position: relative;
+  width: min(100%, 940px);
+  margin: 64px auto 0;
+  padding: 0 54px 50px 0;
+  box-sizing: border-box;
+}
+
+.heroFrame {
+  width: 100%;
+}
+
+.heroImage,
+.configImage,
+.vrImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: center;
+}
+
+.heroImage {
+  transform: rotate(-0.5deg);
+}
+
+.heroNote {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: min(350px, 45%);
+  padding: 20px 24px;
+  border: var(--border-width) solid var(--color-title);
+  box-shadow: 6px 6px 0 var(--color-title);
+  box-sizing: border-box;
+  background: var(--color-bg);
+  color: var(--color-title);
+  transform: rotate(1deg);
+}
+
+.heroNote span {
+  margin-bottom: 12px;
+  color: var(--color-accent);
+  font-family: var(--font-nav);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.heroNote strong {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: 0;
+}
+
+.originSection,
+.workflowSection,
+.outputSection,
+.creditsSection {
+  width: min(100%, 1000px);
+  margin-inline: auto;
+}
+
+.workflowSection {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: center;
+  gap: 64px;
+}
+
+.configFrame {
+  width: 100%;
+}
+
+.configImage {
+  transform: rotate(0.5deg);
+}
+
+.workflow {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 8px 0 0;
+  padding: 0;
+  border-top: 4px solid var(--color-title);
+  border-bottom: 4px solid var(--color-title);
+  list-style: none;
+}
+
+.workflow li {
+  min-width: 0;
+  padding: 32px 28px 36px;
+}
+
+.workflow li + li {
+  border-left: var(--border-width) solid var(--color-title);
+}
+
+.workflow span,
+.outputList span {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--color-accent);
+  font-family: var(--font-nav);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.workflow strong,
+.outputList strong {
+  display: block;
+  color: var(--color-title);
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0;
+}
+
+.workflow p,
+.outputList p {
+  margin: 16px 0 0;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0;
+}
+
+.outputList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 56px;
+  border-top: 4px solid var(--color-title);
+  border-bottom: 4px solid var(--color-title);
+}
+
+.outputList > div {
+  min-width: 0;
+  padding: 30px 26px 34px;
+}
+
+.outputList > div + div {
+  border-left: var(--border-width) solid var(--color-title);
+}
+
+.outputMedia {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: start;
+  gap: 40px;
+  margin-top: 64px;
+}
+
+.arFrame,
+.vrFrame {
+  width: 100%;
+}
+
+.phonePair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 8px;
+  padding: 6px;
+  background: var(--color-bg);
+}
+
+.phonePair img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: center;
+}
+
+.phoneLeft {
+  transform: rotate(-0.6deg);
+}
+
+.phoneRight {
+  transform: rotate(0.6deg);
+}
+
+.vrImage {
+  transform: rotate(-0.4deg);
+}
+
+.creditsSection .creditsCopy {
+  width: min(100%, 700px);
+}
+
+.creditsSection + .projectNavigation {
+  margin-top: 96px;
+}
+
+@media screen and (max-width: 900px) {
+  .heroArtifact {
+    margin-top: 56px;
+  }
+
+  .workflowSection {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .configFrame {
+    width: min(100%, 720px);
+    margin-left: auto;
+  }
+
+  .workflow {
+    grid-column: auto;
+    margin-top: 0;
+  }
+
+  .outputMedia {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .arFrame {
+    width: min(82%, 600px);
+  }
+
+  .vrFrame {
+    width: min(100%, 760px);
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .heroArtifact {
+    width: 100%;
+    margin-top: 52px;
+    padding: 0 0 110px;
+  }
+
+  .heroNote {
+    right: 8px;
+    width: min(320px, calc(100% - 24px));
+  }
+
+  .workflow,
+  .outputList {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .workflow li,
+  .outputList > div {
+    padding: 27px 0 30px;
+  }
+
+  .workflow li + li,
+  .outputList > div + div {
+    border-top: var(--border-width) solid var(--color-title);
+    border-left: 0;
+  }
+
+  .outputList {
+    margin-top: 48px;
+  }
+
+  .outputMedia {
+    margin-top: 56px;
+  }
+
+  .arFrame,
+  .vrFrame,
+  .configFrame {
+    width: 100%;
+  }
+
+  .creditsSection + .projectNavigation {
+    margin-top: 72px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heroNote {
+    padding: 17px 18px;
+  }
+
+  .heroNote strong {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .workflow strong,
+  .outputList strong {
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
