@@ -182,7 +182,7 @@ const createPatternSketch = ({ host, preset, reducedMotion, canvasClassName }) =
     const phase = hash2(column, row, preset.seed) * p.TWO_PI;
     const quarterTurn =
       Math.floor(hash2(column, row, preset.seed + 29) * 4) * p.HALF_PI;
-    const movement = Math.sin(time * 0.16 + phase) * 0.055;
+    const movement = Math.sin(time * 0.16 + phase) * 0.075;
 
     // Clip every motif to its cell, matching the shader's modular tile logic.
     const context = p.drawingContext;
