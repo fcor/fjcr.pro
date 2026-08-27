@@ -5,9 +5,12 @@
   overflow: hidden;
   pointer-events: none;
   background-color: var(--color-surface);
-  background-image: var(--pattern-fallback);
   background-position: center;
   background-size: cover;
+}
+
+.backdrop[data-fallback="true"] {
+  background-image: var(--pattern-fallback);
 }
 
 .canvas {
@@ -17,6 +20,14 @@
   display: block;
   width: 100%;
   height: 100%;
+  /* No transition here: p5 appends the canvas before this class is applied,
+     so a transition on the hidden state animates 1 -> 0 instead of holding. */
+  opacity: 0;
+}
+
+.backdrop[data-ready="true"] .canvas {
+  opacity: 1;
+  transition: opacity 150ms ease-in;
 }
 
 .wash {
@@ -27,7 +38,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .canvas {
+  .backdrop[data-ready="true"] .canvas {
     opacity: 0.92;
+    transition: none;
   }
 }

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import fallbackImage from "../../images/generative-bg1.jpg";
 import styles from "./ProceduralBackdrop.module.css";
 
@@ -24,7 +24,7 @@ const presets = {
     quietness: 0.2,
     scale: 6.5,
     seed: 91,
-    speed: 0.45,
+    speed: .45,
     washOpacity: 0.66,
   },
   talks: {
@@ -143,7 +143,7 @@ const drawMotif = (p, kind, size, paperColor) => {
   }
 };
 
-const createPatternSketch = ({ host, preset, reducedMotion, canvasClassName }) => (p) => {
+const createPatternSketch = ({ host, preset, reducedMotion, canvasClassName, onFirstFrame }) => (p) => {
   const palette = [
     COLORS.ink,
     COLORS.rust,
@@ -154,6 +154,7 @@ const createPatternSketch = ({ host, preset, reducedMotion, canvasClassName }) =
 
   let renderer;
   let resizeSketch = () => {};
+  let hasDrawn = false;
 
   const drawCell = ({ column, row, x, y, cellSize, time }) => {
     const tileTone = hash2(column, row, preset.seed + 73);
@@ -265,6 +266,11 @@ const createPatternSketch = ({ host, preset, reducedMotion, canvasClassName }) =
         });
       }
     }
+
+    if (!hasDrawn) {
+      hasDrawn = true;
+      onFirstFrame();
+    }
   };
 
   p.resizePattern = () => resizeSketch();
@@ -272,6 +278,7 @@ const createPatternSketch = ({ host, preset, reducedMotion, canvasClassName }) =
 
 const ProceduralBackdrop = ({ variant = "home" }) => {
   const hostRef = useRef(null);
+  const [status, setStatus] = useState("loading");
   const preset = presets[variant] ?? presets.home;
 
   useEffect(() => {
@@ -283,6 +290,7 @@ const ProceduralBackdrop = ({ variant = "home" }) => {
     let instance;
     let resizeObserver;
     let updatePlayback;
+    let revealFrame;
 
     const startSketch = async () => {
       const { default: P5 } = await import("p5");
@@ -294,6 +302,15 @@ const ProceduralBackdrop = ({ variant = "home" }) => {
           preset,
           reducedMotion,
           canvasClassName: styles.canvas,
+          onFirstFrame: () => {
+            // Let the browser paint the canvas at opacity 0 once, otherwise
+            // the reveal transition is skipped and the pattern pops in.
+            revealFrame = requestAnimationFrame(() => {
+              revealFrame = requestAnimationFrame(() => {
+                if (!cancelled) setStatus("ready");
+              });
+            });
+          },
         }),
         host,
       );
@@ -315,10 +332,12 @@ const ProceduralBackdrop = ({ variant = "home" }) => {
 
     startSketch().catch((error) => {
       console.error("Unable to start the p5 pattern backdrop.", error);
+      if (!cancelled) setStatus("failed");
     });
 
     return () => {
       cancelled = true;
+      cancelAnimationFrame(revealFrame);
       resizeObserver?.disconnect();
 
       if (updatePlayback) {
@@ -335,6 +354,8 @@ const ProceduralBackdrop = ({ variant = "home" }) => {
       ref={hostRef}
       className={styles.backdrop}
       data-pattern-variant={variant}
+      data-ready={status === "ready"}
+      data-fallback={status === "failed"}
       style={{
         "--pattern-fallback": `url("${fallbackImage}")`,
         "--pattern-wash-opacity": preset.washOpacity,
