@@ -1,8 +1,16 @@
 .work {
+  position: relative;
+  isolation: isolate;
   width: 100%;
   padding-block: var(--page-top-spacing);
   box-sizing: border-box;
+  overflow: hidden;
   background: var(--color-bg);
+}
+
+.contentLayer {
+  position: relative;
+  z-index: 1;
 }
 
 .featuredProjects {

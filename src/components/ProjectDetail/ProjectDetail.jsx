@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import ArrowIcon from "../ArrowIcon";
+import ProceduralBackdrop from "../ProceduralBackdrop";
 import categoryCode from "../../images/category-code.svg";
 import BrowserFrame from "./BrowserFrame";
 import styles from "./ProjectDetail.module.css";
@@ -14,6 +15,7 @@ export const ProjectPage = ({ children, className = "" }) => {
 
   return (
     <main className={classNames(styles.page, className)}>
+      <ProceduralBackdrop variant="projectDetail" />
       <div className={classNames("site-container", styles.container)}>{children}</div>
     </main>
   );

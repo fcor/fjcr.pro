@@ -1,4 +1,5 @@
 import ArrowIcon from "../ArrowIcon";
+import ProceduralBackdrop from "../ProceduralBackdrop";
 import SectionHeading from "../SectionHeading";
 import styles from "./Talks.module.css";
 
@@ -106,6 +107,7 @@ const Talks = () => {
 
   return (
     <main className={styles.page}>
+      <ProceduralBackdrop variant="talks" />
       <div className={`site-container ${styles.layout}`}>
         <header className={styles.heading}>
           <SectionHeading as="h1">Speaking</SectionHeading>

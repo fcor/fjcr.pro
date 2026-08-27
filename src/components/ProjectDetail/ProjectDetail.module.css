@@ -1,4 +1,6 @@
 .page {
+  position: relative;
+  isolation: isolate;
   width: 100%;
   padding: 72px 0 128px;
   box-sizing: border-box;
@@ -15,6 +17,7 @@
 
 .container {
   position: relative;
+  z-index: 1;
 }
 
 .utilityRow {

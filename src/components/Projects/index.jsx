@@ -1,6 +1,7 @@
 import "./styles.css";
 import styles from "./Projects.module.css";
 import SectionHeading from "../SectionHeading";
+import ProceduralBackdrop from "../ProceduralBackdrop";
 import CompactProjectCard from "./CompactProjectCard";
 import ProjectCard from "./ProjectCard";
 import molecularWeb from "../../images/mw.png";
@@ -103,7 +104,8 @@ const Projects = () => {
 
   return (
     <main className={styles.work}>
-      <div className="site-container">
+      <ProceduralBackdrop variant="projects" />
+      <div className={`site-container ${styles.contentLayer}`}>
         <SectionHeading as="h1">Selected Work</SectionHeading>
 
         <div className={styles.featuredProjects}>

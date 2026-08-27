@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import ProceduralBackdrop from "../ProceduralBackdrop";
 import SectionHeading from "../SectionHeading";
 import portrait from "../../images/about-portrait.jpg";
 import styles from "./About.module.css";
@@ -47,6 +48,7 @@ const About = () => {
 
   return (
     <main className={styles.about}>
+      <ProceduralBackdrop variant="about" />
       <div className={`site-container ${styles.shell}`}>
         <SectionHeading as="h1">ABOUT ME</SectionHeading>
 

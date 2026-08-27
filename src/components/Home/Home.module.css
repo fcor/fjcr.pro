@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   display: flex;
   flex: 1;
   justify-content: center;
@@ -6,15 +7,28 @@
   /* Vertical padding shrinks on shorter viewports so the hero fits one screen. */
   padding-block: clamp(24px, 4.5vh, 64px);
   box-sizing: border-box;
+  overflow: hidden;
   background: var(--color-bg);
 }
 
 .inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.copy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: var(--space-1);
+  max-width: 100%;
+  padding: clamp(28px, 4vw, 64px);
+  box-sizing: border-box;
+  background: rgb(255 248 240 / 0.94);
+  transform: rotate(0.35deg);
 }
 
 /* ---- Heading: "I make / computers / draw / things." ---- */
@@ -105,6 +119,10 @@
     justify-content: center;
   }
 
+  .copy {
+    transform: none;
+  }
+
   .heading {
     font-size: 48px;
     line-height: 0.9;
@@ -146,6 +164,11 @@
     align-items: flex-start;
     width: min(calc(100% - 64px), 290px);
     text-align: left;
+  }
+
+  .copy {
+    width: 100%;
+    padding: 24px 20px;
   }
 
   .paragraph {

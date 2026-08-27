@@ -1,11 +1,16 @@
 .about {
+  position: relative;
+  isolation: isolate;
   width: 100%;
   padding: var(--page-top-spacing) 0;
   box-sizing: border-box;
+  overflow: hidden;
   color: var(--color-text);
 }
 
 .shell {
+  position: relative;
+  z-index: 1;
   width: min(
     calc(100% - var(--layout-gutter) - var(--layout-gutter)),
     940px
