@@ -9,11 +9,11 @@ import {
   ProjectSectionHeading,
   ProjectStatement,
 } from "../../ProjectDetail";
-import pdb2ar1 from "../../../images/pdb2ar1.jpg";
-import pdb2ar2 from "../../../images/pdb2ar2.jpg";
-import pdb2ar3 from "../../../images/pdb2ar3.jpg";
-import pdb2ar4 from "../../../images/pdb2ar4.jpg";
-import pdb2ar6 from "../../../images/pdb2ar6.gif";
+import pdb2ar1 from "../../../images/pdb2ar1.webp";
+import pdb2ar2 from "../../../images/pdb2ar2.webp";
+import pdb2ar3 from "../../../images/pdb2ar3.webp";
+import pdb2ar4 from "../../../images/pdb2ar4.webp";
+import pdb2ar6 from "../../../images/pdb2ar6.mp4";
 import styles from "./PDB2AR.module.css";
 
 const PDB2AR = () => (
@@ -171,13 +171,17 @@ const PDB2AR = () => (
         </BrowserFrame>
 
         <BrowserFrame className={styles.vrFrame} caption="Manipulating a generated scene in virtual reality.">
-          <img
+          <video
             className={styles.vrImage}
             src={pdb2ar6}
-            alt="A person manipulating a molecular structure in virtual reality"
-            width="569"
+            aria-label="A person manipulating a molecular structure in virtual reality"
+            width="568"
             height="320"
-            loading="lazy"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
           />
         </BrowserFrame>
       </div>

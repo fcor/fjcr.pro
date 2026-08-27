@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ProceduralBackdrop from "../ProceduralBackdrop";
 import SectionHeading from "../SectionHeading";
-import portrait from "../../images/about-portrait.jpg";
+import portrait from "../../images/about-portrait.webp";
 import styles from "./About.module.css";
 
 const motto = "Make cool shit and kick some asses.";

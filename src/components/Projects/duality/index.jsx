@@ -8,9 +8,9 @@ import {
   ProjectStatement,
 } from "../../ProjectDetail";
 import BrowserFrame from "../../ProjectDetail/BrowserFrame";
-import duality1 from "../../../images/duality1.jpg";
-import duality2 from "../../../images/duality2.jpg";
-import duality4 from "../../../images/duality4.jpg";
+import duality1 from "../../../images/duality1.webp";
+import duality2 from "../../../images/duality2.webp";
+import duality4 from "../../../images/duality4.webp";
 import styles from "./Duality.module.css";
 
 const PerformanceVideo = ({ caption, label, src, title }) => (

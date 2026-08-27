@@ -7,12 +7,12 @@ import {
   ProjectSection,
   ProjectSectionHeading,
 } from "../../ProjectDetail";
-import mw1 from "../../../images/mw1.png";
-import mw2 from "../../../images/mw2.jpg";
-import mw3 from "../../../images/mw3.jpg";
-import mw4 from "../../../images/mw4.jpg";
-import mw5 from "../../../images/mw5.jpg";
-import vmk from "../../../images/vmk.gif";
+import mw1 from "../../../images/mw1.webp";
+import mw2 from "../../../images/mw2.webp";
+import mw3 from "../../../images/mw3.webp";
+import mw4 from "../../../images/mw4.webp";
+import mw5 from "../../../images/mw5.webp";
+import vmk from "../../../images/vmk.mp4";
 import styles from "./Molecularweb.module.css";
 
 const Molecularweb = () => (
@@ -170,13 +170,17 @@ const Molecularweb = () => (
       </div>
 
       <BrowserFrame className={styles.kitFrame} caption="Building and manipulating a molecule with the virtual modeling kit.">
-        <img
+        <video
           className={styles.kitImage}
           src={vmk}
-          alt="The MoleculARweb virtual modeling kit in use"
+          aria-label="The MoleculARweb virtual modeling kit in use"
           width="600"
-          height="293"
-          loading="lazy"
+          height="292"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
         />
       </BrowserFrame>
     </ProjectSection>

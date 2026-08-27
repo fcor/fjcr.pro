@@ -7,8 +7,8 @@ import {
   ProjectSectionHeading,
   ProjectStatement,
 } from "../../ProjectDetail";
-import culpable2 from "../../../images/culpable2.jpg";
-import culpable3 from "../../../images/culpable3.jpg";
+import culpable2 from "../../../images/culpable2.webp";
+import culpable3 from "../../../images/culpable3.webp";
 import styles from "./Culpable.module.css";
 
 const Culpable = () => (

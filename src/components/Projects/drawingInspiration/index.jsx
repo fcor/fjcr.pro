@@ -9,8 +9,8 @@ import {
   ProjectSectionHeading,
   ProjectStatement,
 } from "../../ProjectDetail";
-import draw1 from "../../../images/draw1.jpg";
-import draw2 from "../../../images/draw2.jpg";
+import draw1 from "../../../images/draw1.webp";
+import draw2 from "../../../images/draw2.webp";
 import styles from "./DrawingInspiration.module.css";
 
 const DrawingInspiration = () => (

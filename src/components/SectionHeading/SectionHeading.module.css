@@ -2,7 +2,7 @@
   position: relative;
   display: inline-flex;
   padding: 6px;
-  background-image: url("../../images/generative-bg1.jpg");
+  background-image: url("../../images/generative-bg1.webp");
   background-position: center;
   background-size: cover;
   transform: rotate(-2deg);

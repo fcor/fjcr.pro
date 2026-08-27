@@ -6,10 +6,10 @@ import {
   ProjectSection,
   ProjectSectionHeading,
 } from "../../ProjectDetail";
-import ne2 from "../../../images/ne2.jpg";
-import ne3 from "../../../images/ne3.jpg";
-import ne4 from "../../../images/ne4.jpg";
-import ne5 from "../../../images/ne5.jpg";
+import ne2 from "../../../images/ne2.webp";
+import ne3 from "../../../images/ne3.webp";
+import ne4 from "../../../images/ne4.webp";
+import ne5 from "../../../images/ne5.webp";
 import styles from "./NuestrasEsperanzas.module.css";
 
 const NuestrasEsperanzas = () => (

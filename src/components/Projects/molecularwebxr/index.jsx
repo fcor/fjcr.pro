@@ -9,9 +9,9 @@ import {
   ProjectSectionHeading,
   ProjectStatement,
 } from "../../ProjectDetail";
-import mwxr2 from "../../../images/mwxr2.jpg";
-import mwxr4 from "../../../images/mwxr4.jpg";
-import mwxr7 from "../../../images/mwxr7.png";
+import mwxr2 from "../../../images/mwxr2.webp";
+import mwxr4 from "../../../images/mwxr4.webp";
+import mwxr7 from "../../../images/mwxr7.webp";
 import styles from "./MolecularWebXR.module.css";
 
 const heroVideo = "https://killcloud.nyc3.cdn.digitaloceanspaces.com/assets/xr.mp4";

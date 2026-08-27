@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import fallbackImage from "../../images/generative-bg1.jpg";
+import fallbackImage from "../../images/generative-bg1.webp";
 import styles from "./ProceduralBackdrop.module.css";
 
 const MAX_RENDER_PIXELS = 1500000;

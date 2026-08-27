@@ -4,14 +4,14 @@ import SectionHeading from "../SectionHeading";
 import ProceduralBackdrop from "../ProceduralBackdrop";
 import CompactProjectCard from "./CompactProjectCard";
 import ProjectCard from "./ProjectCard";
-import molecularWeb from "../../images/mw.png";
-import nuestrasEsperanzas from "../../images/ne1.png";
-import gestures from "../../images/gestures.png";
-import duality1 from "../../images/duality1.jpg";
-import culpable1 from "../../images/culpable1.jpg";
-import draw1 from "../../images/draw1.jpg";
-import pdb2ar1 from "../../images/pdb2ar1.jpg";
-import mwxr1 from "../../images/mwxr1.png";
+import molecularWeb from "../../images/mw.webp";
+import nuestrasEsperanzas from "../../images/ne1.webp";
+import gestures from "../../images/gestures.webp";
+import duality1 from "../../images/duality1.webp";
+import culpable1 from "../../images/culpable1.webp";
+import draw1 from "../../images/draw1.webp";
+import pdb2ar1 from "../../images/pdb2ar1.webp";
+import mwxr1 from "../../images/mwxr1.webp";
 
 const projects = [
   {
