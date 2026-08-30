@@ -1,4 +1,3 @@
-import "./styles.css";
 import styles from "./Projects.module.css";
 import SectionHeading from "../SectionHeading";
 import ProceduralBackdrop from "../ProceduralBackdrop";

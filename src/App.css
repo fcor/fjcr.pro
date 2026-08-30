@@ -1,9 +1,11 @@
 /* Fonts (Anybody / Hanken Grotesk / JetBrains Mono) load via Google Fonts in index.html. */
 
 html{
-  /* Always reserve scrollbar space so short pages (Home/About) don't shift
-     horizontally when navigating to tall pages that do scroll. */
-  scrollbar-gutter: stable;
+  /* Scrollbar on every page: no horizontal shift between short and tall
+     pages. Not scrollbar-gutter: stable — it leaves the strip unpainted. */
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--charcoal) var(--sand);
 }
 
 body{
@@ -20,16 +22,6 @@ body{
   background-color: var(--color-bg);
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-}
-
 a{
   text-decoration: none;
   color: var(--color-text);
@@ -44,37 +36,6 @@ path{
 .fade-enter {
   opacity: 0;
   z-index: 1;
-}
-
-.title{
-  font-family: var(--font-heading);
-  color: var(--color-text);
-  font-size: 32px;
-  font-weight: 700;
-  margin: 10px 0 10px 0;
-  letter-spacing: 0.48px;
-}
-
-.subtitle{
-  color: var(--color-text);
-  font-size: 22px;
-  margin: 10px 0 20px 0;
-  font-family: var(--font-body);
-  line-height: 36.5633px;
-  letter-spacing: 2px;
-  font-weight: 400;
-  font-variation-settings: 'opsz' 60;
-}
-
-.paragraph{
-  color: var(--color-text);
-  font-size: 16px;
-  margin: 0 0 20px 0;
-  font-family: var(--font-body);
-  line-height: 24px;
-  letter-spacing: 0.48px;
-  font-weight: 400;
-  font-variation-settings: 'opsz' 8;
 }
 
 .fade-enter.fade-enter-active {
@@ -104,25 +65,6 @@ path{
   min-width: 0;
 }
 
-.btn{
-  padding: 12px;
-  color: var(--color-on-accent);
-  font-size: 18px;
-  text-align: center;
-  background: color-mix(in srgb, var(--color-accent) 80%, transparent);
-  border-radius: var(--radius);
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-
-.btn:hover{
-  background: var(--color-accent);
-}
-
-.btn:active{
-  transform: scale(.95);
-}
-
 .soon{
   width: 100%;
   display: flex;
@@ -140,43 +82,4 @@ path{
 figure{
   margin: 0;
   padding: 0;
-}
-
-@media screen and (max-width: 800px) {
-  .title {
-    font-size: 24px;
-  }
-
-  .subtitle {
-    font-size: 16px;
-  }
-
-  .paragraph {
-    font-size: 16px;
-    margin: 0 0 14px 0;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .title {
-    font-size: 20px;
-  }
-  .subtitle {
-    font-size: 16px;
-  }
-  footer {
-    font-size: 12px;
-  }
-  .paragraph {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .title {
-    font-size: 18px;
-  }
-  .subtitle {
-    font-size: 14px;
-  }
 }
