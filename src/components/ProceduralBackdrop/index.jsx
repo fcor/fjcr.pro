@@ -36,12 +36,12 @@ const presets = {
     washOpacity: 0.7,
   },
   projects: {
-    intensity: 0.86,
-    quietness: 0.15,
-    scale: 12,
-    seed: 1,
-    speed: 1.55,
-    washOpacity: 0.63,
+    intensity: 0.72,
+    quietness: 0.35,
+    scale: 3.5,
+    seed: 20,
+    speed: 0.4,
+    washOpacity: 0.72,
   },
   about: {
     intensity: 0.82,
